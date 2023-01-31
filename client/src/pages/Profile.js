@@ -27,8 +27,15 @@ const styles = {
     backgroundSize: 'cover',
   },
   experienceCard: {
-    margin: '30px 0 30px 0'
-  }
+    margin: '30px 10px 30px 40px',
+    border: '1px solid white',
+  },
+  icon: {
+    margin: '5px'
+  },
+  width: {
+    width: '24rem'
+  },
 }
 
 export default function StudentList() {
@@ -43,28 +50,48 @@ export default function StudentList() {
           <p>Dallas, TX</p>
           <p>Email@email.com</p>
           <div className='d-flex flex-row'>
-            <p>Diamond</p>
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>Rank: </p>
+            <div style={styles.icon}><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
       </Card>
 
       <div style={styles.experience} className='d-flex justify-content-center col mb-8'>
-        <h4>Experiences</h4>
-        <Card style={styles.experienceCard}>
-          <img src="https://picsum.photos/id/28/600/400" alt="profile" />
-          <h4>Hiking</h4>
+
+
+        <Card style={styles.experienceCard} className='d-flex row mb-12'>
+          <img src="https://picsum.photos/id/52/300/200" alt="experience" />
+          <Card.Body>
+            <Card.Title><h2>Fishing</h2></Card.Title>
+            <Card.Text style={styles.width}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Card.Text>
+          </Card.Body>
         </Card>
 
-        <Card style={styles.experienceCard}>
-          <img src="https://picsum.photos/id/37/600/400" alt="profile" />
-          <h4>Camping</h4>
+        <Card style={styles.experienceCard} className='d-flex row mb-12'>
+          <img src="https://picsum.photos/id/24/300/200" alt="experience" />
+          <Card.Body>
+            <Card.Title><h2>Reading</h2></Card.Title>
+            <Card.Text style={styles.width}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Card.Text>
+          </Card.Body>
         </Card>
 
-        <Card style={styles.experienceCard}>
-          <img src="https://picsum.photos/id/75/600/400" alt="profile" />
-          <h4>Vinyard Tour</h4>
+        <Card style={styles.experienceCard} className='d-flex row mb-12'>
+          <img src="https://picsum.photos/id/39/300/200" alt="experience" />
+          <Card.Body>
+            <Card.Title><h2>Music</h2></Card.Title>
+            <Card.Text style={styles.width}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Card.Text>
+          </Card.Body>
         </Card>
 
       </div>

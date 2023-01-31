@@ -12,15 +12,16 @@ export const LOGIN = gql`
 `;
 
 export const ADD_ORDER = gql`
-  mutation addOrder($experiences: [ID]!) {
-    addOrder(experiences: $experiences) {
+  mutation addOrder($activities: [ID]!) {
+    addOrder(activities: $activities) {
       purchaseDate
-      experiences {
+      activities {
         _id
         name
         description
         price
         quantity
+        XP
         category {
           name
         }
@@ -35,12 +36,18 @@ export const ADD_USER = gql`
     $lastName: String!
     $email: String!
     $password: String!
+    $location: String!
+    $username: String!
+    $bio: String!
   ) {
     addUser(
       firstName: $firstName
       lastName: $lastName
       email: $email
       password: $password
+      location: $location
+      username: $username
+      bio: $bio
     ) {
       token
       user {

@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 import {
-    UPDATE_EXPERIENCES,
+    UPDATE_ACTIVITIES,
     ADD_TO_CART,
     UPDATE_CART_QUANTITY,
     REMOVE_FROM_CART,
@@ -9,44 +9,46 @@ import {
     UPDATE_CURRENT_CATEGORY,
     CLEAR_CART,
     TOGGLE_CART,
+    UPDATE_CART_XP,
+    UPDATE_USER_XP,
 } from './actions';
 
 export const reducer = (state, action) => {
     switch (action.type) {
-        case UPDATE_EXPERIENCES:
+        case UPDATE_ACTIVITIES:
             return {
                 ...state,
-                experiences: [...action.experiences],
+                activities: [...action.activities],
             };
 
         case ADD_TO_CART:
             return {
                 ...state,
                 cartOpen: true,
-                cart: [...state.cart, action.experience],
+                cart: [...state.cart, action.activity],
             };
 
         case ADD_MULTIPLE_TO_CART:
             return {
                 ...state,
-                cart: [...state.cart, ...action.experiences],
+                cart: [...state.cart, ...action.activities],
             };
 
         case UPDATE_CART_QUANTITY:
             return {
                 ...state,
                 cartOpen: true,
-                cart: state.cart.map((experience) => {
-                    if (action._id === experience._id) {
-                        experience.purchaseQuantity = action.purchaseQuantity;
+                cart: state.cart.map((activity) => {
+                    if (action._id === activity._id) {
+                        activity.purchaseQuantity = action.purchaseQuantity;
                     }
-                    return experience;
+                    return activity;
                 }),
             };
 
         case REMOVE_FROM_CART:
-            let newState = state.cart.filter((experience) => {
-                return experience._id !== action._id;
+            let newState = state.cart.filter((activity) => {
+                return activity._id !== action._id;
             });
 
             return {
@@ -80,11 +82,26 @@ export const reducer = (state, action) => {
                 currentCategory: action.currentCategory,
             };
 
+        case UPDATE_CART_XP:
+            return {
+                ...state,
+                cartOpen: true,
+                cart: state.cart.map((activity) => {
+                    if (action.XP === activity.XP) {
+                        activity.XP = action.XP;
+                    }
+                    return activity.XP;
+                })
+            }
+            
+        case UPDATE_USER_XP:
+            return {count: state.count + activity.XP}
+
         default:
             return state;
     }
 }
 
-export function useExperienceReducer(initialState) {
+export function useActivityReducer(initialState) {
     return useReducer(reducer, initialState);
 }

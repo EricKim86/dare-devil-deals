@@ -81,9 +81,9 @@ export default function StudentList() {
 
       <div style={styles.icon}>
       <h2>Follow Us</h2>
-      <a href='www.google.com' target="blank"><i style={styles.space} class='fa-brands fa-facebook'></i></a>
-      <a href='www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-instagram'></i></a>
-      <a href='www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-twitter'></i></a>
+      <a href='https://www.google.com' target="blank"><i style={styles.space} class='fa-brands fa-facebook'></i></a>
+      <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-instagram'></i></a>
+      <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-twitter'></i></a>
     </div>
 
     </div>

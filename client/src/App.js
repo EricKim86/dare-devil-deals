@@ -13,6 +13,7 @@ import Feed from './pages/Feed';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Shop from './pages/Shop';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import Profile from './pages/Profile';
@@ -70,7 +71,7 @@ function App() {
                             />
                             <Route
                                 path="/shop/"
-                                element={<shop />}
+                                element={<Shop />}
                             />
                         </Routes>
                     </StoreProvider>

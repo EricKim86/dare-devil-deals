@@ -17,7 +17,6 @@ function Signup(props) {
                 firstName: formState.firstName,
                 lastName: formState.lastName,
                 location: formState.location,
-                bio: formState.bio,
             },
         });
         const token = mutationResponse.data.addUser.token;
@@ -59,7 +58,7 @@ function Signup(props) {
                     />
                 </div>
                 <div className="flex-row space-between my-2">
-                    <label htmlFor="lastName">location:</label>
+                    <label htmlFor="lastName">Location:</label>
                     <input
                         placeholder="Location"
                         name="location"
@@ -91,11 +90,13 @@ function Signup(props) {
                 <div className="flex-row space-between my-2">
                     <label htmlFor="bio">Bio:</label>
                     <textarea
-                        placeholder="Tell us about youself"
+                        placeholder="Tell us about yourself"
                         name="bio"
                         type="bio"
                         id="bio"
                         onChange={handleChange}
+                        rows="10" 
+                        cols="50"
                     />
                 </div>
                 <div className="flex-row flex-end">

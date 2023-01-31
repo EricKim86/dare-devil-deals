@@ -22,7 +22,7 @@ const styles = {
     fontSize: '50px'
   },
   space: {
-    margin: '0 10px 0 10px'
+    margin: '0 10px 40px 10px'
   }
 }
 
@@ -30,10 +30,11 @@ export default function StudentList() {
 
   return (
     <div style={styles.container}>
+      <h1>Dare Devil Deals</h1>
       <img class="img-fluid" src="https://picsum.photos/id/30/600/400" alt='logo' />
       <br />
       <br />
-      <h1>Enjoy a wonderful experience</h1>
+      <h1>Enjoy unique experiences</h1>
       <p>We take all the guess work out and provide a streamlined easy experience for you.</p>
       <div style={styles.center} className="d-flex row mb-3">
         <Card style={styles.buffer} >
@@ -73,18 +74,18 @@ export default function StudentList() {
           <Card.Body>
             <Card.Title><h2>Join Today</h2></Card.Title>
             <Card.Text style={styles.width}>
-             Join today to start enjoying our amazing new experiences
+              Join today to start enjoying our amazing new experiences
             </Card.Text>
           </Card.Body>
         </Card>
       </div>
 
       <div style={styles.icon}>
-      <h2>Follow Us</h2>
-      <a href='https://www.google.com' target="blank"><i style={styles.space} class='fa-brands fa-facebook'></i></a>
-      <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-instagram'></i></a>
-      <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-twitter'></i></a>
-    </div>
+        <h2>Follow Us</h2>
+        <a href='https://www.google.com' target="blank"><i style={styles.space} class='fa-brands fa-facebook'></i></a>
+        <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-instagram'></i></a>
+        <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-twitter'></i></a>
+      </div>
 
     </div>
   );

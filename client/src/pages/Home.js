@@ -5,10 +5,12 @@ const styles = {
   container: {
     margin: '20px',
     color: 'white',
+    justifyContent: 'center',
+    textAlign: 'center'
   },
   center: {
     justifyContent: 'center',
-
+    textAlign: 'center'
   },
   width: {
     width: '24rem'
@@ -30,7 +32,6 @@ export default function StudentList() {
 
   return (
     <div style={styles.container}>
-      <h1>Dare Devil Deals</h1>
       <img class="img-fluid" src="https://picsum.photos/id/30/600/400" alt='logo' />
       <br />
       <br />

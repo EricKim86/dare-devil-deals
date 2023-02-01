@@ -3,10 +3,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
-    // order: {
-    //     type: String,
-    //     required: true
-    // },
     id: {
         type: Number,
         required: true
@@ -15,10 +11,6 @@ const orderSchema = new Schema({
         type: String,
         required: true
     },
-    // points: {
-    //     type: Number,
-    //     required: true,
-    // },
     experience: [
     {
         type: Schema.Types.ObjectId,

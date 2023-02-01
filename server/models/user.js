@@ -18,7 +18,7 @@ const userSchema = new Schema({
     required: true
   },
   email: {
-    type: string,
+    type: String,
     required: true
   },
   bio: {
@@ -45,12 +45,10 @@ const userSchema = new Schema({
       ref: 'Experiences'
     }
   ],
-  userLevel: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'userLevel'
-    }
-  ],
+  points:
+  {
+    type: Number,
+  },
   orders: [
     {
       type: Schema.Types.ObjectId,

@@ -2,14 +2,21 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
+const styles = {
+  container: {
+    color: 'white',
+    textAlign: 'left'
+  },
+}
+
 function Nav() {
 
   function showNavigation() {
-    if (Auth.loggedIn()) {
+    // if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-            <Link to="/Home">
+            <Link to="/">
               Home
             </Link>
             <li className="mx-1">
@@ -36,28 +43,27 @@ function Nav() {
           </li>
         </ul>
       );
-    } else {
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-        </ul>
-      );
-    }
+  //   } else {
+  //     return (
+  //       <ul className="flex-row">
+  //         <li className="mx-1">
+  //           <Link to="/signup">
+  //             Signup
+  //           </Link>
+  //         </li>
+  //         <li className="mx-1">
+  //           <Link to="/login">
+  //             Login
+  //           </Link>
+  //         </li>
+  //       </ul>
+  //     );
+    // }
   }
 
   return (
-    <header className="flex-row px-1">
+    <header style={styles.container} className="flex-row px-1">
       <h1>Dare Devil Deals</h1>
-
       <nav>
         {showNavigation()}
       </nav>

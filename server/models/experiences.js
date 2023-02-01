@@ -3,10 +3,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const experienceSchema = new Schema({
-    // experience: {
-    //     type: String,
-    //     required: true
-    // },
     id: {
         type: Number,
         required: true
@@ -30,6 +26,9 @@ const experienceSchema = new Schema({
     points: {
         type: Number,
         required: true,
+    },
+    quantity: {
+        type: Number
     },
     activityLevel: {
         type: Number,

@@ -13,7 +13,7 @@ import Home from './pages/Home';
 import Feed from './pages/Feed';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import Nav from './components/Nav';
+import Navigation from './components/Nav';
 import Shop from './pages/Shop';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
@@ -44,7 +44,7 @@ function App() {
             <Router>
                 <div>
                     <StoreProvider>
-                        <Nav />
+                        <Navigation />
                         <Routes>
                             <Route
                                 path="/"

@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
+// const { Schema } = mongoose;
 
-const activitySchema = new Schema({
-    level: {
-        type: Number,
-        required: true
-    },
-});
+// const activitySchema = new Schema({
+//     level: {
+//         type: Number,
+//         required: true
+//     },
+// });
 
-const Level = mongoose.model('Activity Level', activitySchema);
+// const Level = mongoose.model('activityLevel', activitySchema);
 
-module.exports = Level;
+// module.exports = Level;

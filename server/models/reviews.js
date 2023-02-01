@@ -3,12 +3,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const reviewSchema = new Schema({
-    experience: [
-    {
-        type: Schema.Types.ObjectId,
-        ref: 'Experiences'
-    }
-],
     id: {
         type: Number,
         required: true
@@ -16,7 +10,17 @@ const reviewSchema = new Schema({
     description: {
         type: String,
         required: true
-    }
+    },
+    rating: {
+        type: String,
+        required: true
+    },
+    experiences: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Experiences'
+        }
+    ],
 });
 
 const Reviews = mongoose.model('Reviews', reviewSchema);

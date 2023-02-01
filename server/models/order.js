@@ -3,18 +3,22 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
-    order: {
-        type: String,
-        required: true
-    },
+    // order: {
+    //     type: String,
+    //     required: true
+    // },
     id: {
         type: Number,
         required: true
     },
-    points: {
-        type: Number,
-        required: true,
+      purchaseDate: {
+        type: String,
+        required: true
     },
+    // points: {
+    //     type: Number,
+    //     required: true,
+    // },
     experience: [
     {
         type: Schema.Types.ObjectId,
@@ -23,6 +27,6 @@ const orderSchema = new Schema({
 ]
 });
 
-const Order = mongoose.model('Order', orderSchema);
+const Order = mongoose.model('Orders', orderSchema);
 
 module.exports = Order;

@@ -1,56 +1,37 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_ACTIVITIES = gql`
-  query getActivities($category: ID) {
-    activities(category: $category) {
+export const QUERY_EXPERIENCES = gql`
+  query getExperiences($experiences: ID) {
+    experiences(experiences: $experiences) {
       _id
       name
       description
-      price
-      quantity
-      intensity
-      XP
       image
-      category {
-        _id
-      }
+      price
+      points
+      activityLevel
     }
   }
 `;
 
 export const QUERY_CHECKOUT = gql`
-  query getCheckout($products: [ID]!) {
-    checkout(products: $products) {
+  query getCheckout($experiences: [ID]!) {
+    checkout(experiences: $experiences) {
       session
     }
   }
 `;
 
-export const QUERY_ALL_ACTIVITIES = gql`
+export const QUERY_ALL_EXPERIENCES = gql`
   {
-    activities {
+    experiences {
       _id
       name
       description
+      image
       price
-      quantity
-      intensity
-      XP
-      category {
-        name
-        price
-        intensity
-        XP
-      }
-    }
-  }
-`;
-
-export const QUERY_CATEGORIES = gql`
-  {
-    categories {
-      _id
-      name
+      points
+      activityLevel
     }
   }
 `;
@@ -63,15 +44,14 @@ export const QUERY_USER = gql`
       orders {
         _id
         purchaseDate
-        activities {
+        experiences {
           _id
           name
           description
-          price
-          quantity
-          intensity
-          XP
           image
+          price
+          points
+          activityLevel
         }
       }
     }

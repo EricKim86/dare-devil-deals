@@ -39,3 +39,7 @@ Reviews: async  (parent, { experiences, name, id }) => {
   return Reviews.find(params).populate("experiences");
 },
 
+//Find one point query
+point: async (parent, { pointId }) => {
+  return Points.findOne({ _id: pointId });
+

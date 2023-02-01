@@ -13,6 +13,6 @@ const userlevelSchema = new Schema ({
     }
 })
 
-const Userlevel = mongoose.model('User Level', userlevelSchema);
+const UserLevel = mongoose.model('userLevel', userlevelSchema);
 
-module.exports = Userlevel;
+module.exports = UserLevel;

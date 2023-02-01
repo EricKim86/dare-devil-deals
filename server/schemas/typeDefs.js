@@ -13,28 +13,37 @@ type User {
     userName: String
     email: String
     password: String
-    Bio: String
-    orders: [Order]
-    likedExperiences: [Experiences]
-    dislikedExperiences: [Experiences]
+    image: String
+    bio: String 
+    orders: [Orders]
+    experiences: [Experiences]
+    reviews: [Reviews]
+    userLevel: [userLevel]
 }
 
 type Order {
   _id: ID
   purchaseDate: String
-  products: [Experiences]
+  experiences: [Experiences]
 }
 
-type Product {
+type Experiences {
     _id: ID
     name: String
     description: String
     image: String
-    quantity: Int
     price: Float
-    category: Category
-
+    points: Points
+    activityLevel: activityLevel
 }
+
+type Review {
+  _id: ID
+  description: String
+  rating: String
+  experiences: [Experiences]
+}
+
 
 type Checkout {
   session: ID
@@ -46,19 +55,19 @@ type Auth {
 }
 
 type Query {
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
+    Experiences: [Experiences]
+    Experiences(_id: ID!): Experiences
     user: User
+    user(_id: ID!): User
     order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    checkout(experiences: [ID]!): Checkout
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
-    updateUser(firstName: String, lastName: String, userName: String!, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
+    addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String!, bio: String!): Auth
+    addOrder(experiences: [ID]!): Order
+    updateUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String!, bio: String!): User
+    addReview(experiences: [ID]! description: String!, rating: String!)
     login(email: String!, password: String!): Auth
   }
 `;

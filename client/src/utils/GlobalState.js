@@ -1,12 +1,12 @@
 import React, { createContext, useContext } from "react";
-import { useActivityReducer } from './reducers';
+import { useExperiencesReducer } from './reducers';
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
 
 const StoreProvider = ({ value = [], ...props }) => {
-  const [state, dispatch] = useActivityReducer({
-    activities: [],
+  const [state, dispatch] = useExperiencesReducer({
+    experiences: [],
     cart: [],
     cartOpen: false,
     categories: [],

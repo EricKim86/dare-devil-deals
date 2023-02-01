@@ -10,6 +10,6 @@ const pointsSchema = new Schema({
     },
 });
 
-const Points = mongoose.model('Xp', pointsSchema);
+const Points = mongoose.model('Points', pointsSchema);
 
 module.exports = Points;

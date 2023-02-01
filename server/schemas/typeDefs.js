@@ -35,3 +35,7 @@ Reviews: async  (parent, { experiences, name, id }) => {
       $regex: id,
     };
   }
+
+  return Reviews.find(params).populate("experiences");
+},
+

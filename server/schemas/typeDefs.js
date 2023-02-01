@@ -9,5 +9,11 @@ const resolvers = {
       return await Experiences.find();
     },
 
+    
+    //Find One
+Experiences: async (parent, { experiencesId }) => {
+  return Experiences.findOne({ _id: experiencesId });
+},
+
 
 

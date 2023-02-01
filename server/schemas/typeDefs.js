@@ -15,5 +15,23 @@ Experiences: async (parent, { experiencesId }) => {
   return Experiences.findOne({ _id: experiencesId });
 },
 
+//Reviews query-Find by Experiences 
 
+Reviews: async  (parent, { experiences, name, id }) => {
+  const params = {};
 
+  if (experiences) {
+    params.experiences = experiences;
+  }
+
+  if (name) {
+    params.name = {
+      $regex: name,
+    };
+  }
+
+  if (id) {
+    params.id = {
+      $regex: id,
+    };
+  }

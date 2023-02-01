@@ -7,8 +7,8 @@ import {
     ADD_MULTIPLE_TO_CART,
     CLEAR_CART,
     TOGGLE_CART,
-    // UPDATE_CART_XP,
-    // UPDATE_USER_XP,
+    // UPDATE_CART_POINTS,
+    // UPDATE_USER_POINTS,
 } from './actions';
 
 export const reducer = (state, action) => {
@@ -70,20 +70,20 @@ export const reducer = (state, action) => {
 
         
     
-        // case UPDATE_CART_XP:
+        // case UPDATE_CART_POINTS:
         //     return {
         //         ...state,
         //         cartOpen: true,
         //         cart: state.cart.map((activity) => {
-        //             if (action.XP === activity.XP) {
-        //                 activity.XP = action.XP;
+        //             if (action.points === activity.points) {
+        //                 activity.points = action.points;
         //             }
-        //             return activity.XP;
+        //             return activity.points;
         //         })
         //     }
             
-        // case UPDATE_USER_XP:
-        //     return {count: state.count + activity.XP}
+        // case UPDATE_USER_POINTS:
+        //     return {count: state.count + activity.points}
 
         default:
             return state;

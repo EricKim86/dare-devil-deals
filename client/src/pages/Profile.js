@@ -26,9 +26,13 @@ const styles = {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   },
+  experienceImage: {
+    borderRadius: '5px 0 0 5px'
+  },
   experienceCard: {
     margin: '30px 10px 30px 40px',
     border: '1px solid white',
+    borderRadius: '5px',
   },
   icon: {
     margin: '5px'
@@ -65,7 +69,7 @@ export default function StudentList() {
 
 
         <Card style={styles.experienceCard} className='d-flex row mb-12'>
-          <img src="https://picsum.photos/id/52/300/200" alt="experience" />
+          <img style={styles.experienceImage} src="https://picsum.photos/id/52/300/200" alt="experience" />
           <Card.Body>
             <Card.Title><h2>Fishing</h2></Card.Title>
             <Card.Text style={styles.width}>
@@ -75,7 +79,7 @@ export default function StudentList() {
         </Card>
 
         <Card style={styles.experienceCard} className='d-flex row mb-12'>
-          <img src="https://picsum.photos/id/24/300/200" alt="experience" />
+          <img style={styles.experienceImage} src="https://picsum.photos/id/24/300/200" alt="experience" />
           <Card.Body>
             <Card.Title><h2>Reading</h2></Card.Title>
             <Card.Text style={styles.width}>
@@ -85,7 +89,7 @@ export default function StudentList() {
         </Card>
 
         <Card style={styles.experienceCard} className='d-flex row mb-12'>
-          <img src="https://picsum.photos/id/39/300/200" alt="experience" />
+          <img style={styles.experienceImage} src="https://picsum.photos/id/39/300/200" alt="experience" />
           <Card.Body>
             <Card.Title><h2>Music</h2></Card.Title>
             <Card.Text style={styles.width}>

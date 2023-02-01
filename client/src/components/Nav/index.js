@@ -31,6 +31,8 @@ function Navigation() {
             <Nav.Link href="/Profile">Profile </Nav.Link>
             <Nav.Link href="/Feed">Feed </Nav.Link>
             <Nav.Link href="/Shop">Shop </Nav.Link>
+            <Nav.Link href="/Review">RCT </Nav.Link>
+            <Nav.Link href="/Experience">ECT </Nav.Link>
           </Nav>
     
         </Container>

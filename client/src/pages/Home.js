@@ -6,7 +6,7 @@ import Social from "../images/logos/social-media.avif"
 import Save from "../images/logos/save.avif"
 import Cart from "../images/logos/go-cart.avif"
 import Concert from "../images/logos/concert.avif"
-
+import Art from "../images/logos/art.avif"
 import Raft from "../images/logos/raft.avif"
 
 const styles = {
@@ -93,7 +93,7 @@ export default function StudentList() {
       </div>
 
       <div style={styles.center} className="d-flex row mb-3">
-        <Card style={styles.buffer}>
+        <Card>
           <Card.Body>
             <Card.Title><h2>Diversity in Experiences</h2></Card.Title>
             <Card.Text style={styles.width}>
@@ -101,6 +101,18 @@ export default function StudentList() {
             </Card.Text>
           </Card.Body>
         </Card>
+      </div>
+
+      <div style={styles.center} className="d-flex row mb-3">
+        <Card style={styles.buffer}>
+          <Card.Body>
+            <Card.Title><h2>Family Friendly</h2></Card.Title>
+            <Card.Text style={styles.width}>
+              In addition to thrilling new experiences, we offer numerous family friendly experiences fun for the entire family.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card.Img style={styles.image} variant="left" src={Art} alt='logo' />
       </div>
 
       <div style={styles.center} className="d-flex row mb-3">

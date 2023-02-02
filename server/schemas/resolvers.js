@@ -128,3 +128,15 @@ Mutation: {
 
       return { token, user };
     },
+    addOrder: async (parent, { experiences }, context) => {
+        console.log(context);
+        if (context.user) {
+          const order = new Order({ experiences });
+  
+          await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+  
+          return order;
+        }
+  
+        throw new AuthenticationError('Not logged in');
+      },

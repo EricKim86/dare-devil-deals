@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 
 import ExperienceCard from '../components/ExperienceCard/';
 import MealCard from '../components/MealCard/';
+import AccessoryCard from '../components/AccessoryCard/';
 
 import Delivery from "../images/logos/delivery.avif"
 import Fun from "../images/logos/fun.avif"
@@ -105,9 +106,9 @@ function Shop() {
         <br />
         <h3>SELECT <span style={styles.gray}>your desired meal</span></h3>
         <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> American</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> Mexican</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> Italian</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> Chinese</Button>
+        <Button style={styles.space} variant="primary"><i class="fas fa-pepper-hot"></i> Mexican</Button>
+        <Button style={styles.space} variant="primary"><i class="fas fa-pizza-slice"></i> Italian</Button>
+        <Button style={styles.space} variant="primary"><i class="fas fa-seedling"></i> Chinese</Button>
         <Row>
           <Col><MealCard /></Col>
           <Col><MealCard /></Col>
@@ -116,11 +117,13 @@ function Shop() {
         <br />
         <h3>SELECT <span style={styles.gray}>your must have accessories</span></h3>
         <Row>
-          <Col><MealCard /></Col>
-          <Col><MealCard /></Col>
-          <Col><MealCard /></Col>
+          <Col><AccessoryCard /></Col>
+          <Col><AccessoryCard /></Col>
+          <Col><AccessoryCard /></Col>
         </Row>
       </Container>
+      <br />
+      <h3>SHOP <span style={styles.gray}>with 100% confidence with Dare Devil Deals</span></h3>
       <Container>
         <Row>
           <Col>

@@ -34,6 +34,7 @@ function Navigation() {
             <Nav.Link href="/Review">RCT </Nav.Link>
             <Nav.Link href="/Experience">ECT </Nav.Link>
             <Nav.Link href="/User">UCT </Nav.Link>
+            <Nav.Link href="/Meal">MCT </Nav.Link>
           </Nav>
     
         </Container>

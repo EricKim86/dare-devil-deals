@@ -22,6 +22,7 @@ import Profile from './pages/Profile';
 import Review from './components/ReviewCard';
 import Experience from './components/ExperienceCard';
 import User from './components/UserCard';
+import Meal from './components/MealCard';
 
 
 const httpLink = createHttpLink({
@@ -90,6 +91,10 @@ function App() {
                             <Route
                                 path="/user/"
                                 element={<User />}
+                            />
+                             <Route
+                                path="/meal/"
+                                element={<Meal />}
                             />
                         </Routes>
                     </StoreProvider>

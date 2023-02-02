@@ -44,7 +44,7 @@ const styles = {
   }
 }
 
-export default function StudentList() {
+export default function Home() {
 
   return (
     <div style={styles.container}>

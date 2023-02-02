@@ -18,8 +18,10 @@ import Shop from './pages/Shop';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import Profile from './pages/Profile';
+
 import Review from './components/ReviewCard';
 import Experience from './components/ExperienceCard';
+import User from './components/UserCard';
 
 
 const httpLink = createHttpLink({
@@ -81,9 +83,13 @@ function App() {
                                 path="/review/"
                                 element={<Review />}
                             />
-                              <Route
+                            <Route
                                 path="/experience/"
                                 element={<Experience />}
+                            />
+                            <Route
+                                path="/user/"
+                                element={<User />}
                             />
                         </Routes>
                     </StoreProvider>

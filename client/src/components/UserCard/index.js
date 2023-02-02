@@ -1,10 +1,12 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const styles = {
     container: {
         margin: '20px',
         color: 'white',
+        justifyContent: 'center',
         textAlign: 'center',
     },
     body: {
@@ -28,11 +30,10 @@ export default function ReviewCard() {
             <Card style={styles.body}>
                 <Card.Img style={styles.profileImage} variant="top" src='https://picsum.photos/id/65/200/200' />
                 <Card.Body>
-                    <Card.Title><h3>Brittany Rodgers</h3></Card.Title>
-                    <Card.Title><h6>Posted: January, 2, 2023</h6></Card.Title>
-                    <Card.Text>
-                        "This Experience was wonderful!  More text explaining the experience goes here to fill up space so I can see how it looks once it is formatted."
-                    </Card.Text>
+                    <Card.Title><h3>Corgiz4Life27</h3></Card.Title>
+                    <Card.Title><h6>Brittany Rodgers</h6></Card.Title>
+                    <Card.Title><h6>250 Points</h6></Card.Title>
+                    <Button variant="primary"><i class="fa fa-user" aria-hidden="true"></i> View Profile</Button>
                 </Card.Body>
             </Card>
         </div>

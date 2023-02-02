@@ -6,28 +6,25 @@ const styles = {
   product: {
     width: '25rem',
     backgroundColor: 'white',
-    margin: '10px 10px 10px 10px',
+    margin: '10px 20px 10px 20px',
     borderRadius: '3%',
   },
   image: {
     borderRadius: '3% 3% 0 0',
   },
   indent: {
-    margin: '0px 0px 10px 0px'
-  },
-  center: {
-    justifyContent: 'center',
+    margin: '0px 0px 10px 0px',
+    padding: '5px',
   },
   space: {
     margin: '0px 0px 0px 12px',
   },
 }
 
-export default function StudentList() {
+export default function ExperienceCard() {
 
   return (
-    <div style={styles.center} className='container row text-primary'>
-
+    <div className='container row text-primary'>
       <Card style={styles.product}>
         <Card.Img style={styles.image} variant="top" src="https://picsum.photos/id/5/400/300" alt='logo' />
         <Card.Body>

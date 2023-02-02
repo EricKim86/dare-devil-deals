@@ -1,7 +1,7 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Accessories from "../../images/logos/toilet-paper.avif"
+// import Accessories from "../../images/logos/toilet-paper.avif"
 
 const styles = {
   product: {
@@ -31,7 +31,7 @@ export default function ExperienceCard() {
   return (
     <div className='container row text-primary'>
       <Card style={styles.product}>
-        <Card.Img style={styles.image} variant="top" src={Accessories} alt='logo' />
+        <Card.Img style={styles.image} variant="top" src='' alt='logo' />
         <Card.Body>
           <Card.Title><h3>Toilet Paper</h3></Card.Title>
           <Card.Text>

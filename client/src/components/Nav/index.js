@@ -10,15 +10,8 @@ import Navbar from 'react-bootstrap/Navbar';
 const styles = {
   container: {
     color: 'white',
-    fontSize: '28px'
+    fontSize: '28px',
   },
-  width: {
-    width: '70%',
-    margin: '5px 0 0 0',
-  },
-  space: {
-    margin: '0, 10px, 0 10px',
-  }
 }
 
 function Navigation() {
@@ -28,13 +21,12 @@ function Navigation() {
     return (
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Nav style={styles.width} className="me-auto">
+          <Nav>
             <Row>
               <Col><Nav.Link href="/">Home </Nav.Link></Col>
               <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
               <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
               <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
-              <Col><Nav.Link href="/Experience">Experience</Nav.Link></Col>
             </Row>
           </Nav>
 
@@ -66,11 +58,15 @@ function Navigation() {
   }
 
   return (
-    <header style={styles.container} className="flex-row px-1">
-      <h1>Dare Devil Deals</h1>
-      <nav style={styles.width}>
+    <header style={styles.container}>
+      <Container>
+        <Row>
+      <Col><h1>Dare Devil Deals</h1></Col>
+      <Col><nav>
         {showNavigation()}
-      </nav>
+      </nav></Col>
+      </Row>
+      </Container>
     </header>
   );
 }

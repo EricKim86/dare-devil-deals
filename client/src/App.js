@@ -19,11 +19,6 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import Profile from './pages/Profile';
 
-// import Review from './components/ReviewCard';
-import Experience from './components/ExperienceCard';
-// import User from './components/UserCard';
-// import Meal from './components/MealCard';
-
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -79,10 +74,6 @@ function App() {
                             <Route
                                 path="/shop/"
                                 element={<Shop />}
-                            />
-                               <Route
-                                path="/Experience/"
-                                element={<Experience />}
                             />
                         </Routes>
                     </StoreProvider>

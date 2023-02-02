@@ -1,5 +1,10 @@
 import React from "react";
+
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import Logo from "../images/logos/logo2.png"
 import Surfing from "../images/logos/surfing.avif"
 import Social from "../images/logos/social-media.avif"
@@ -21,7 +26,8 @@ const styles = {
     textAlign: 'center'
   },
   width: {
-    width: '24rem'
+    textAlign: 'center',
+    width: '20rem'
   },
   buffer: {
     margin: '30px 50px 50px 10px',
@@ -53,80 +59,67 @@ export default function Home() {
       <br />
       <h1>Enjoy unique experiences</h1>
       <p>We take all the guess work out and provide a streamlined easy experience for you.</p>
-      <div style={styles.center} className="d-flex row mb-3">
-        <Card style={styles.buffer} >
-          <Card.Img style={styles.image} variant="top" src={Save} alt='logo' />
-          <Card.Body>
-            <Card.Title><h2>DEALS</h2></Card.Title>
-            <Card.Text style={styles.width}>
-              We partnered with numerous vendors and locations to provide the best deals imaginable.
-            </Card.Text>
-          </Card.Body>
-        </Card>
+      <br />
 
-        <Card style={styles.buffer}>
-          <Card.Img style={styles.image} variant="top" src={Surfing} alt='logo' />
-          <Card.Body>
-            <Card.Title><h2>EXPERIENCE</h2></Card.Title>
-            <Card.Text style={styles.width}>
-              Enjoy a selection of wonderful experiences catered by our team of professionals
-            </Card.Text>
-          </Card.Body>
-        </Card>
+      <Container>
+        <Row>
+          <Col><img style={styles.image} className="img-fluid" src={Save} alt='logo' />
+            <h2>DEALS</h2>
+            <p style={styles.width}></p>
+            We partnered with numerous vendors and locations to provide the best deals imaginable.
+          </Col>
+          <Col><img style={styles.image} className="img-fluid" src={Surfing} alt='logo' />
+            <h2>EXPERIENCE</h2>
+            <p style={styles.width}></p>
+            Enjoy a selection of wonderful experiences catered by our team of professionals
+          </Col>
+          <Col><img style={styles.image} className="img-fluid" src={Social} alt='logo' />
+            <h2>SHARE</h2>
+            <p style={styles.width}></p>
+            Share your experiences with others with our integrated social media platform
+          </Col>
+        </Row>
+      </Container>
 
-        <Card style={styles.buffer}>
-          <Card.Img style={styles.image} variant="top" src={Social} alt='logo' />
-          <Card.Body>
-            <Card.Title><h2>SHARE</h2></Card.Title>
-            <Card.Text style={styles.width}>
-              Share your experiences with others with our integrated social media platform
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
+      <br />
+      <br />
 
-      <div style={styles.center} className='row'>
-        <Card>
-          <Card.Img style={styles.largeImage} variant="top" src={Raft} alt='logo' />
-          <Card.Img style={styles.largeImage} variant="top" src={Cart} alt='logo' />
-        </Card>
-      </div>
+      <Container>
+        <Row>
+          <Col><img style={styles.image} className="img-fluid" src={Raft} alt='logo' /></Col>
+          <Col><img style={styles.image} className="img-fluid" src={Cart} alt='logo' /></Col>
+        </Row>
+      </Container>
+      <br />
 
-      <div style={styles.center} className="d-flex row mb-3">
-        <Card>
-          <Card.Body>
-            <Card.Title><h2>Diversity in Experiences</h2></Card.Title>
-            <Card.Text style={styles.width}>
-              We offer a diverse range of experiences perfect for all individuals.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
+      <h2>Diversity in Experiences</h2>
+      <p>We offer a diverse range of experiences perfect for all individuals.</p>
+      <br />
 
-      <div style={styles.center} className="d-flex row mb-3">
-        <Card style={styles.buffer}>
-          <Card.Body>
-            <Card.Title><h2>Family Friendly</h2></Card.Title>
-            <Card.Text style={styles.width}>
-              In addition to thrilling new experiences, we offer numerous family friendly experiences fun for the entire family.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card.Img style={styles.image} variant="left" src={Art} alt='logo' />
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <br />
+            <br />
+            <h2>Family Friendly</h2>
+            <p> In addition to thrilling new experiences, we offer numerous family friendly experiences fun for the entire family.</p>
+          </Col>
+          <Col><img style={styles.image} className="img-fluid" src={Art} alt='logo' /></Col>
+        </Row>
+      </Container>
+<br />
 
-      <div style={styles.center} className="d-flex row mb-3">
-        <Card.Img style={styles.image} variant="left" src={Concert} alt='logo' />
-        <Card style={styles.buffer}>
-          <Card.Body>
-            <Card.Title><h2>Join Today</h2></Card.Title>
-            <Card.Text style={styles.width}>
-              Join today to start enjoying our amazing new experiences and start earning points!  One of the many benefits of becoming a member.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
-      <br/>
+      <Container>
+        <Row>
+        <Col><img style={styles.image} className="img-fluid" src={Concert} alt='logo' /></Col>
+          <Col>
+            <br />
+            <br />
+            <h2>Join Today</h2>
+            <p>Join today to start enjoying our amazing new experiences and start earning points!  One of the many benefits of becoming a member.</p>
+          </Col>
+        </Row>
+      </Container>
 
       <div style={styles.icon}>
         <h2>Follow Us</h2>
@@ -134,7 +127,6 @@ export default function Home() {
         <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-instagram'></i></a>
         <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-twitter'></i></a>
       </div>
-
     </div>
   );
 }

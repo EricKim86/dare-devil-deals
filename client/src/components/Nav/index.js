@@ -34,6 +34,7 @@ function Navigation() {
               <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
               <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
               <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
+              <Col><Nav.Link href="/Experience">Experience</Nav.Link></Col>
             </Row>
           </Nav>
 

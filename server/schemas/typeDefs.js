@@ -35,6 +35,7 @@ type Experiences {
     price: Float
     points: Int
     quantity: Int
+    activityLevel: String
 }
 
 type Review {

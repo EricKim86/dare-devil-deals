@@ -31,6 +31,7 @@ export const QUERY_ALL_EXPERIENCES = gql`
       image
       price
       points
+      quantity
       activityLevel
     }
   }

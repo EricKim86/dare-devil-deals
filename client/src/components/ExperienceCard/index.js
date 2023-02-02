@@ -1,6 +1,9 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL_EXPERIENCES } from '../../utils/queries';
+
 
 const styles = {
   product: {
@@ -22,27 +25,36 @@ const styles = {
 }
 
 export default function ExperienceCard() {
+  const { data } = useQuery(QUERY_ALL_EXPERIENCES);
+  let experiences;
+
+  if (data) {
+    experiences = data.experiences;
+  }
 
   return (
     <div className='container row text-primary'>
-      <Card style={styles.product}>
-        <Card.Img style={styles.image} variant="top" src="https://picsum.photos/id/5/400/300" alt='logo' />
-        <Card.Body>
-          <div className='d-flex flex-row mb-3 row' style={styles.indent} >
-            <i style={styles.space} class="fa-solid fa-thumbs-up"></i><h6 style={styles.space}>8</h6>
-            <i style={styles.space} class="fas fa-thumbs-down"></i><h6 style={styles.space}>1</h6>
-          </div>
-          <Card.Title><h3>Programing with Leif</h3></Card.Title>
-          <Card.Text>
-            A fun filled afternoon programing javascript with Leif.  Added benefit of having no Ben.
-          </Card.Text>
-          <Card.Text>
-          <del>$20.99</del><p>$13.99</p>
-          </Card.Text>
-          <Button variant="primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button> <Button variant="primary"><i class="fas fa-comments"></i> Read Reviews</Button>
-        </Card.Body >
-      </Card >
-
+      {experiences ? (
+      
+        <Card style={styles.product}>
+          <h2>test: {experiences[5].name}</h2>
+          {/* <Card.Img style={styles.image} variant="top" src="https://picsum.photos/id/5/400/300" alt='logo' />
+          <Card.Body>
+            <div className='d-flex flex-row mb-3 row' style={styles.indent} >
+              <i style={styles.space} class="fa-solid fa-thumbs-up"></i><h6 style={styles.space}>8</h6>
+              <i style={styles.space} class="fas fa-thumbs-down"></i><h6 style={styles.space}>1</h6>
+            </div>
+            <Card.Title><h3>{experiences.name}Programing with Leif</h3></Card.Title>
+            <Card.Text>
+              {experiences.description}A fun filled afternoon programing javascript with Leif.  Added benefit of having no Ben.
+            </Card.Text>
+            <Card.Text>
+              <del>$20.99</del><p>$13.99</p>
+            </Card.Text>
+            <Button variant="primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button> <Button variant="primary"><i class="fas fa-comments"></i> Read Reviews</Button>
+          </Card.Body > */}
+        </Card >
+      ) : null}
     </div >
   );
 }

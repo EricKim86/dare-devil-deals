@@ -1,99 +1,99 @@
 const db = require('./connection');
-const { Experiences, Reviews, User, Order } = require('../models');
+const { Experiences, User, Order, Reviews } = require('../models');
 
 db.once('open', async () => {
-    await User.deleteMany();
+    // await User.deleteMany();
 
-    const users = await User.insertMany([
+    // const users = await User.insertMany([
 
-        {
-            firstName: 'Harold',
-            lastName: 'Kumar',
-            id: 1,
-            email: 'hmkumar@gmail.com',
-            bio: 'Just a guy who likes concerts and dining out.',
-            password: 'asdfghjk1029348',
-            image: '',
-            reviews: review[0]._id,
-            experiences: experiences[10]._id,
-            points: 7000,
-            orders: '',
+    //     {
+    //         firstName: 'Harold',
+    //         lastName: 'Kumar',
+    //         id: 1,
+    //         email: 'hmkumar@gmail.com',
+    //         bio: 'Just a guy who likes concerts and dining out.',
+    //         password: 'asdfghjk1029348',
+    //         image: '',
+    //         // reviews: review[0]._id,
+    //         // experiences: experiences[10]._id,
+    //         points: 7000,
+    //         orders: '',
 
-        },
-        {
-            firstName: 'Miles',
-            lastName: 'Davis',
-            id: 2,
-            email: 'livelove@gmail.com',
-            bio: 'Live, laugh, love',
-            password: 'ho86ks6gd0wh',
-            image: '',
-            reviews: review[2]._id,
-            experiences: experiences[8]._id,
-            points: 1000,
-            orders: '',
+    //     },
+    //     {
+    //         firstName: 'Miles',
+    //         lastName: 'Davis',
+    //         id: 2,
+    //         email: 'livelove@gmail.com',
+    //         bio: 'Live, laugh, love',
+    //         password: 'ho86ks6gd0wh',
+    //         image: '',
+    //         // reviews: review[2]._id,
+    //         // experiences: experiences[8]._id,
+    //         points: 1000,
+    //         orders: '',
 
-        },
-        {
-            firstName: 'Marvin',
-            lastName: 'Gaye',
-            id: 3,
-            email: 'whatsgoinon@gmail.com',
-            bio: 'Just another guy who likes concerts and dining out.',
-            password: '018dj6djs66rf',
-            image: '',
-            reviews: review[1]._id,
-            experiences: experiences[1]._id,
-            points: 500,
-            orders: '',
+    //     },
+    //     {
+    //         firstName: 'Marvin',
+    //         lastName: 'Gaye',
+    //         id: 3,
+    //         email: 'whatsgoinon@gmail.com',
+    //         bio: 'Just another guy who likes concerts and dining out.',
+    //         password: '018dj6djs66rf',
+    //         image: '',
+    //         // reviews: review[1]._id,
+    //         // experiences: experiences[1]._id,
+    //         points: 500,
+    //         orders: '',
 
-        },
-        {
-            firstName: 'Quincy',
-            lastName: 'Jones',
-            id: 4,
-            email: 'qqjjonez@gmail.com',
-            bio: 'Jazz and drinks!',
-            password: 'ttph7sms6kdm',
-            image: '',
-            reviews: review[4]._id,
-            experiences: experiences[21]._id,
-            points: 1500,
-            orders: '',
+    //     },
+    //     {
+    //         firstName: 'Quincy',
+    //         lastName: 'Jones',
+    //         id: 4,
+    //         email: 'qqjjonez@gmail.com',
+    //         bio: 'Jazz and drinks!',
+    //         password: 'ttph7sms6kdm',
+    //         image: '',
+    //         // reviews: review[4]._id,
+    //         // experiences: experiences[21]._id,
+    //         points: 1500,
+    //         orders: '',
 
-        },
-        {
-            firstName: 'Bob',
-            lastName: 'Dylan',
-            id: 5,
-            email: 'bobddylan@gmail.com',
-            bio: 'Lax when I need to be, active when I want to be',
-            password: '10fjk7ddduw7',
-            image: '',
-            reviews: review[5]._id,
-            experiences: experiences[10]._id,
-            points: 2000,
-            orders: '',
+    //     },
+    //     {
+    //         firstName: 'Bob',
+    //         lastName: 'Dylan',
+    //         id: 5,
+    //         email: 'bobddylan@gmail.com',
+    //         bio: 'Lax when I need to be, active when I want to be',
+    //         password: '10fjk7ddduw7',
+    //         image: '',
+    //         // reviews: review[5]._id,
+    //         // experiences: experiences[10]._id,
+    //         points: 2000,
+    //         orders: '',
 
-        },
-        {
-            firstName: 'Kate',
-            lastName: 'Bush',
-            id: 6,
-            email: 'kbbush@gmail.com',
-            bio: 'CONCERT EXPERT AND DINING BUFF!',
-            password: '87efmfe6rfij8',
-            image: '',
-            reviews: review[6]._id,
-            experiences: experiences[17]._id,
-            points: 4000,
-            orders: '',
+    //     },
+    //     {
+    //         firstName: 'Kate',
+    //         lastName: 'Bush',
+    //         id: 6,
+    //         email: 'kbbush@gmail.com',
+    //         bio: 'CONCERT EXPERT AND DINING BUFF!',
+    //         password: '87efmfe6rfij8',
+    //         // image: '',
+    //         // reviews: review[6]._id,
+    //         // experiences: experiences[17]._id,
+    //         points: 4000,
+    //         // orders: '',
 
-        },
+    //     },
 
-    ]);
+    // ]);
 
-    console.log('Users seeded!!!');
+    // console.log('Users seeded!!!');
 
     await Experiences.deleteMany();
 
@@ -347,95 +347,97 @@ db.once('open', async () => {
 
     console.log('Experiences seeded!!!')
 
-    await Reviews.deleteMany();
 
-    const review = Reviews.insertMany([
-        {
-            experience: experiences[5]._id,
-            id: 1,
-            description: 'HAD A BLAST!!! Would recommend to literally any person.'
-        },
-        {
-            experience: experiences[2]._id,
-            id: 2,
-            description: ':))))))'
-        },
-        {
-            experience: experiences[3]._id,
-            id: 3,
-            description: 'Trash, boring, and not very based.'
-        },
-        {
-            experience: experiences[10]._id,
-            id: 4,
-            description: 'I lived, I laughed, I loved'
-        },
-        {
-            experience: experiences[1]._id,
-            id: 5,
-            description: 'OH YEAHHHHHH'
-        },
-        {
-            experience: experiences[11]._id,
-            id: 6,
-            description: 'Loved it. Took my grandma and we had a great time.'
-        },
-        {
-            experience: experiences[7]._id,
-            id: 7,
-            description: 'Overrated and pretentious'
-        },
-        {
-            experience: experiences[1]._id,
-            id: 8,
-            description: 'IT SUCKED DONT EVER DO IT (maybe)'
-        },
-    ]);
+    // await Order.deleteMany();
 
-    console.log('Reviews seeded!!!');
+    // const orders = Order.insertMany([
+    //     {
+    //         id: 1,
+    //         purchaseDate: '',
+    //         experience: experiences[17]._id
+    //     },
+    //     {
+    //         id: 2,
+    //         purchaseDate: '',
+    //         experience: experiences[16]._id
+    //     },
+    //     {
+    //         id: 3,
+    //         purchaseDate: '',
+    //         experience: experiences[10]._id
+    //     },
+    //     {
+    //         id: 4,
+    //         purchaseDate: '',
+    //         experience: experiences[22]._id
+    //     },
+    //     {
+    //         id: 5,
+    //         purchaseDate: '',
+    //         experience: experiences[5]._id
+    //     },
+    //     {
+    //         id: 6,
+    //         purchaseDate: '',
+    //         experience: experiences[8]._id
+    //     },
+    //     {
+    //         id: 7,
+    //         purchaseDate: '',
+    //         experience: experiences[5]._id
+    //     },
+    //     {
+    //         id: 8,
+    //         purchaseDate: '',
+    //         experience: experiences[1]._id
+    //     },
+    // ]);
 
-    await Order.deleteMany();
+    // await Reviews.deleteMany();
 
-    const orders = Order.insertMany([
-        {
-            id: 1,
-            purchaseDate: '',
-            experience: experiences[17]._id
-        },
-        {
-            id: 2,
-            purchaseDate: '',
-            experience: experiences[16]._id
-        },
-        {
-            id: 3,
-            purchaseDate: '',
-            experience: experiences[10]._id
-        },
-        {
-            id: 4,
-            purchaseDate: '',
-            experience: experiences[22]._id
-        },
-        {
-            id: 5,
-            purchaseDate: '',
-            experience: experiences[5]._id
-        },
-        {
-            id: 6,
-            purchaseDate: '',
-            experience: experiences[8]._id
-        },
-        {
-            id: 7,
-            purchaseDate: '',
-            experience: experiences[5]._id
-        },
-        {
-            id: 8,
-            purchaseDate: '',
-            experience: experiences[1]._id
-        },
-    ]);
+    // const review = Reviews.insertMany([
+    //     {
+    //         experience: experiences[5]._id,
+    //         id: 1,
+    //         description: 'HAD A BLAST!!! Would recommend to literally any person.'
+    //     },
+    //     {
+    //         experience: experiences[2]._id,
+    //         id: 2,
+    //         description: ':))))))'
+    //     },
+    //     {
+    //         experience: experiences[3]._id,
+    //         id: 3,
+    //         description: 'Trash, boring, and not very based.'
+    //     },
+    //     {
+    //         experience: experiences[10]._id,
+    //         id: 4,
+    //         description: 'I lived, I laughed, I loved'
+    //     },
+    //     {
+    //         experience: experiences[1]._id,
+    //         id: 5,
+    //         description: 'OH YEAHHHHHH'
+    //     },
+    //     {
+    //         experience: experiences[11]._id,
+    //         id: 6,
+    //         description: 'Loved it. Took my grandma and we had a great time.'
+    //     },
+    //     {
+    //         experience: experiences[7]._id,
+    //         id: 7,
+    //         description: 'Overrated and pretentious'
+    //     },
+    //     {
+    //         experience: experiences[1]._id,
+    //         id: 8,
+    //         description: 'IT SUCKED DONT EVER DO IT (maybe)'
+    //     },
+    // ]);
+
+    // console.log('Reviews seeded!!!');
+
   });

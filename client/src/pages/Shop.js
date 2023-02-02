@@ -100,8 +100,6 @@ function Shop() {
       <Container>
         <Row>
           <Col><ExperienceCard /></Col>
-          <Col><ExperienceCard /></Col>
-          <Col><ExperienceCard /></Col>
         </Row>
         <br />
         <h3>STEP 2 <span style={styles.gray}>Select your desired meal</span></h3>
@@ -111,14 +109,10 @@ function Shop() {
         <Button style={styles.space} variant="primary"><i class="fas fa-seedling"></i> Chinese</Button>
         <Row>
           <Col><MealCard /></Col>
-          <Col><MealCard /></Col>
-          <Col><MealCard /></Col>
         </Row>
         <br />
         <h3>STEP 3 <span style={styles.gray}>Select your must have accessories</span></h3>
         <Row>
-          <Col><AccessoryCard /></Col>
-          <Col><AccessoryCard /></Col>
           <Col><AccessoryCard /></Col>
         </Row>
       </Container>

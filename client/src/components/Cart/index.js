@@ -7,7 +7,15 @@ import AddCartItem from '../AddCartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
-import './style.css';
+
+const styles = {
+    cart: {
+
+    },
+    close: {
+
+    }
+}
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -71,8 +79,8 @@ const Cart = () => {
     }
   
     return (
-      <div className="cart">
-        <div className="close" onClick={toggleCart}>
+      <div className="cart" style={styles.cart}>
+        <div className="close" style={styles.close} onClick={toggleCart}>
           [close]
         </div>
         <h2>Shopping Cart</h2>

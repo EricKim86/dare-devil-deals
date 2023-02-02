@@ -47,24 +47,41 @@ point: async (parent, { pointId }) => {
 
 // Retrieve data for logged-in user 
 
+// user: async (parent, args, context) => {
+//    if (context.User) {
+//      return Profile.findOne({ _id: context.User._id });
+//    }
+//    throw new AuthenticationError("You need to be logged in!");
+//  },
+// },
+
 user: async (parent, args, context) => {
-   if (context.User) {
-     return Profile.findOne({ _id: context.User._id });
-   }
-   throw new AuthenticationError("You need to be logged in!");
- },
+    if (context.user) {
+      const user = await User.findById(context.user._id).populate({
+        path: 'orders.experiences',
+        populate: 'experiences'
+      });
+
+      user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+      return user;
+    }
+
+  throw new AuthenticationError('Not logged in');
 },
 
-// user: async (parent, args, context) => {
-//     if (context.user) {
-//       const user = await User.findById(context.user._id).populate({
-//         path: 'orders.experiences',
-//         populate: 'experiences'
-//       });
 
-//       user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+order: async (parent, { _id }, context) => {
+  if (context.user) {
+    const user = await User.findById(context.user._id).populate({
+      path: 'orders.experiences',
+      populate: 'experiences'
+    });
 
-//       return user;
-//     },
-// },
+    return user.orders.id(_id);
+  }
+
+  throw new AuthenticationError('Not logged in');
+},
+
 

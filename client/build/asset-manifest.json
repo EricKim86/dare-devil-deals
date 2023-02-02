@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0bb919e1.chunk.css",
+    "main.js": "/static/js/main.79513980.chunk.js",
+    "main.js.map": "/static/js/main.79513980.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c257e282.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c257e282.js.map",
+    "static/js/2.7700a6ae.chunk.js": "/static/js/2.7700a6ae.chunk.js",
+    "static/js/2.7700a6ae.chunk.js.map": "/static/js/2.7700a6ae.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0bb919e1.chunk.css.map": "/static/css/main.0bb919e1.chunk.css.map",
+    "static/js/2.7700a6ae.chunk.js.LICENSE.txt": "/static/js/2.7700a6ae.chunk.js.LICENSE.txt",
+    "static/media/art.d72280eb.avif": "/static/media/art.d72280eb.avif",
+    "static/media/camping.9a2735ba.avif": "/static/media/camping.9a2735ba.avif",
+    "static/media/concert.ca5c5e9f.avif": "/static/media/concert.ca5c5e9f.avif",
+    "static/media/delivery.14b532b7.avif": "/static/media/delivery.14b532b7.avif",
+    "static/media/fun.732dd44f.avif": "/static/media/fun.732dd44f.avif",
+    "static/media/go-cart.95193d98.avif": "/static/media/go-cart.95193d98.avif",
+    "static/media/italian.cba5a983.avif": "/static/media/italian.cba5a983.avif",
+    "static/media/logo2.f3301b33.png": "/static/media/logo2.f3301b33.png",
+    "static/media/payment.13d0bfa8.avif": "/static/media/payment.13d0bfa8.avif",
+    "static/media/raft.9c4e2cc3.avif": "/static/media/raft.9c4e2cc3.avif",
+    "static/media/save.3b063231.avif": "/static/media/save.3b063231.avif",
+    "static/media/smores.5d8d6bc7.avif": "/static/media/smores.5d8d6bc7.avif",
+    "static/media/social-media.a26db933.avif": "/static/media/social-media.a26db933.avif",
+    "static/media/supplies.a0147a59.avif": "/static/media/supplies.a0147a59.avif",
+    "static/media/surfing.2a3a4009.avif": "/static/media/surfing.2a3a4009.avif",
+    "static/media/toilet-paper.0aa052cf.avif": "/static/media/toilet-paper.0aa052cf.avif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c257e282.js",
+    "static/js/2.7700a6ae.chunk.js",
+    "static/css/main.0bb919e1.chunk.css",
+    "static/js/main.79513980.chunk.js"
+  ]
+}

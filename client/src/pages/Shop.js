@@ -1,6 +1,5 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
-import Carousel from 'react-bootstrap/Carousel';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -32,7 +31,6 @@ const styles = {
   },
   buffer: {
     margin: '40px 10px 20px 10px',
-    border: 'none',
   },
   image: {
     width: '350px',
@@ -46,6 +44,7 @@ const styles = {
 function Shop() {
   return (
     <div style={styles.container}>
+
       <h3>EXPERIENCE <span style={styles.gray}>what you want to experience</span></h3>
       <h3><span style={styles.gray}>When you are a member of</span> DARE DEVIL DEALS</h3>
       <br />
@@ -77,31 +76,34 @@ function Shop() {
       <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 2</Button>
       <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 3</Button>
 
-      <div className='d-flex justify-content-center'>
-        {/* <Carousel> */}
-          <ExperienceCard />
-        {/* </Carousel> */}
+      <div style={styles.container} className='d-flex justify-content-center'>
+        <ExperienceCard />
       </div>
-
       <br />
-      <Container>
-        <h3>STEP 2 <span style={styles.gray}>Select your desired meal</span></h3>
-        <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> American</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-pepper-hot"></i> Mexican</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-pizza-slice"></i> Italian</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-seedling"></i> Chinese</Button>
-        <Row>
-          <Col></Col>
-        </Row>
-        <br />
-        <h3>STEP 3 <span style={styles.gray}>Select your must have accessories</span></h3>
-        <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i>Clothing</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-pepper-hot"></i>Grocery</Button>
-        <Button style={styles.space} variant="primary"><i class="fas fa-pizza-slice"></i>Misc</Button>
-        <Row>
-          <Col></Col>
-        </Row>
-      </Container>
+
+      <h3>STEP 2 <span style={styles.gray}>Select your desired meal</span></h3>
+      <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> American</Button>
+      <Button style={styles.space} variant="primary"><i class="fas fa-pepper-hot"></i> Mexican</Button>
+      <Button style={styles.space} variant="primary"><i class="fas fa-pizza-slice"></i> Italian</Button>
+      <Button style={styles.space} variant="primary"><i class="fas fa-seedling"></i> Chinese</Button>
+      <Button style={styles.space} variant="primary"><i class="fa-solid fa-cheese"></i> French</Button>
+
+      <div style={styles.container} className='d-flex justify-content-center'>
+        <MealCard />
+      </div>
+      <br />
+
+      <h3>STEP 3 <span style={styles.gray}>Select your must have accessories</span></h3>
+      <Button style={styles.space} variant="primary"><i class="fas fa-shopping-bag"></i> Food and Grocery</Button>
+      <Button style={styles.space} variant="primary"><i class="fa-solid fa-shirt"></i> Clothing</Button>
+      <Button style={styles.space} variant="primary"><i class="fa-solid fa-basketball"></i> Sports and Outdoors</Button>
+      <Button style={styles.space} variant="primary"><i class="fa fa-question-circle"></i> Misc</Button>
+
+      <div style={styles.container} className='d-flex justify-content-center'>
+        <AccessoryCard />
+      </div>
+      <br />
+
       <br />
       <h3>SHOP <span style={styles.gray}>with 100% confidence with Dare Devil Deals</span></h3>
       <br />

@@ -19,7 +19,6 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import Profile from './pages/Profile';
 
-
 const httpLink = createHttpLink({
     uri: '/graphql',
 });

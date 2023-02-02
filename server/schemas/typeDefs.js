@@ -34,15 +34,14 @@ type Experiences {
     image: String
     originalprice: Float
     price: Float
-    percentage: Number
+    percentage: Int
     points: Int
     quantity: Int
-    activityLevel: String
-    activityLevel: Number
+    activityLevel: Int
 }
 
 type Points {
-  points: Number
+  points: Int
 }
 
 type Review {

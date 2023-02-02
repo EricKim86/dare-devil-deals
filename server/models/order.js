@@ -9,7 +9,6 @@ const orderSchema = new Schema({
     },
       purchaseDate: {
         type: String,
-        required: true
     },
     experience: [
     {

@@ -60,3 +60,12 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_ACTIVITY_LEVEL = gql`
+  {
+    activityLevel {
+      _id
+      name
+    }
+  }
+`

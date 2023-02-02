@@ -11,10 +11,6 @@ const reviewSchema = new Schema({
         type: String,
         required: true
     },
-    rating: {
-        type: String,
-        required: true
-    },
     experiences: [
         {
             type: Schema.Types.ObjectId,

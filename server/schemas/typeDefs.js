@@ -39,7 +39,6 @@ type Experiences {
     quantity: Int
     activityLevel: Int
 }
-
 type Points {
   points: Int
 }
@@ -47,7 +46,7 @@ type Points {
 type Review {
   _id: ID
   description: String
-  rating: String
+
   experiences: [Experiences]
 }
 

@@ -19,13 +19,18 @@ const experienceSchema = new Schema({
         type: String,
         required: true,
     },
+    originalprice: {
+        type: Number
+    },
     price: {
-        type: String,
-        required: true,
+        type: Number
+    },
+    percentage: {
+        type: Number
     },
     points: {
         type: Number,
-        required: true,
+        required: true
     },
     quantity: {
         type: Number

@@ -35,12 +35,13 @@ type Experiences {
     price: Float
     points: Int
     quantity: Int
+    activityLevel: Int
 }
 
 type Review {
   _id: ID
   description: String
-  rating: String
+
   experiences: [Experiences]
 }
 
@@ -55,7 +56,7 @@ type Auth {
 }
 
 type Query {
-    experiences: [Experiences]
+    experiences(activityLevel: Int): [Experiences]
     experience(_id: ID!): Experiences
     users: User
     order(_id: ID!): Order

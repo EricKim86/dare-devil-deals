@@ -565,42 +565,42 @@ db.once('open', async () => {
 
     const review = Reviews.insertMany([
         {
-            experience: experiences[5]._id,
+            experience: experiences[5].id,
             id: 1,
             description: 'HAD A BLAST!!! Would recommend to literally any person.'
         },
         {
-            experience: experiences[2]._id,
+            experience: experiences[2].id,
             id: 2,
             description: ':))))))'
         },
         {
-            experience: experiences[3]._id,
+            experience: experiences[3].id,
             id: 3,
             description: 'Trash, boring, and not very based.'
         },
         {
-            experience: experiences[10]._id,
+            experience: experiences[10].id,
             id: 4,
             description: 'I lived, I laughed, I loved'
         },
         {
-            experience: experiences[1]._id,
+            experience: experiences[1].id,
             id: 5,
             description: 'OH YEAHHHHHH'
         },
         {
-            experience: experiences[11]._id,
+            experience: experiences[11].id,
             id: 6,
             description: 'Loved it. Took my grandma and we had a great time.'
         },
         {
-            experience: experiences[7]._id,
+            experience: experiences[7].id,
             id: 7,
             description: 'Overrated and pretentious'
         },
         {
-            experience: experiences[1]._id,
+            experience: experiences[1].id,
             id: 8,
             description: 'IT SUCKED DONT EVER DO IT (maybe)'
         },
@@ -613,43 +613,43 @@ db.once('open', async () => {
     const orders = Order.insertMany([
         {
             id: 1,
-            purchaseDate: '',
-            experience: experiences[17]._id
+            purchaseDate: '1',
+            experience: experiences[17].id
         },
         {
             id: 2,
-            purchaseDate: '',
-            experience: experiences[16]._id
+            purchaseDate: '2',
+            experience: experiences[16].id
         },
         {
             id: 3,
-            purchaseDate: '',
-            experience: experiences[10]._id
+            purchaseDate: '3',
+            experience: experiences[10].id
         },
         {
             id: 4,
-            purchaseDate: '',
-            experience: experiences[21]._id
+            purchaseDate: '4',
+            experience: experiences[21].id
         },
         {
             id: 5,
-            purchaseDate: '',
-            experience: experiences[5]._id
+            purchaseDate: '5',
+            experience: experiences[5].id
         },
         {
             id: 6,
-            purchaseDate: '',
-            experience: experiences[8]._id
+            purchaseDate: '6',
+            experience: experiences[8].id
         },
         {
             id: 7,
-            purchaseDate: '',
-            experience: experiences[5]._id
+            purchaseDate: '7',
+            experience: experiences[5].id
         },
         {
             id: 8,
-            purchaseDate: '',
-            experience: experiences[1]._id
+            purchaseDate: '8',
+            experience: experiences[1].id
         },
     ]);
 
@@ -665,10 +665,10 @@ db.once('open', async () => {
             bio: 'Just a guy who likes concerts and dining out.',
             password: 'asdfghjk1029348',
             image: '',
-            reviews: review[0]._id,
-            experiences: experiences[5]._id,
+            reviews: review[0].id,
+            experiences: experiences[5].id,
             points: 1500,
-            orders: orders[4]._id,
+            orders: orders[4].id,
 
         },
         {
@@ -679,10 +679,10 @@ db.once('open', async () => {
             bio: 'Live, laugh, love',
             password: 'ho86ks6gd0wh',
             image: '',
-            reviews: review[2]._id,
-            experiences: experiences[8]._id,
+            reviews: review[2].id,
+            experiences: experiences[8].id,
             points: 1500,
-            orders: orders[5]._id,
+            orders: orders[5].id,
 
         },
         {
@@ -693,10 +693,10 @@ db.once('open', async () => {
             bio: 'Just another guy who likes concerts and dining out.',
             password: '018dj6djs66rf',
             image: '',
-            reviews: review[1]._id,
-            experiences: experiences[1]._id,
+            reviews: review[1].id,
+            experiences: experiences[1].id,
             points: 1000,
-            orders: orders[7]._id,
+            orders: orders[7].id,
 
         },
         {
@@ -707,10 +707,10 @@ db.once('open', async () => {
             bio: 'Jazz and drinks!',
             password: 'ttph7sms6kdm',
             image: '',
-            reviews: review[4]._id,
-            experiences: experiences[21]._id,
+            reviews: review[4].id,
+            experiences: experiences[21].id,
             points: 500,
-            orders: orders[3]._id,
+            orders: orders[3].id,
 
         },
         {
@@ -721,10 +721,10 @@ db.once('open', async () => {
             bio: 'Lax when I need to be, active when I want to be',
             password: '10fjk7ddduw7',
             image: '',
-            reviews: review[5]._id,
-            experiences: experiences[10]._id,
+            reviews: review[5].id,
+            experiences: experiences[10].id,
             points: 500,
-            orders: orders[2]._id,
+            orders: orders[2].id,
 
         },
         {
@@ -735,10 +735,10 @@ db.once('open', async () => {
             bio: 'CONCERT EXPERT AND DINING BUFF!',
             password: '87efmfe6rfij8',
             image: '',
-            reviews: review[6]._id,
-            experiences: experiences[17]._id,
+            reviews: review[6].id,
+            experiences: experiences[17].id,
             points: 1000,
-            orders: orders[0]._id,
+            orders: orders[0].id,
 
         },
 

@@ -93,7 +93,7 @@ function Shop() {
       </Container>
 
 
-      <h3>SELECT <span style={styles.gray}>your level of intensity</span></h3>
+      <h3>STEP 1 <span style={styles.gray}>Select your level of intensity</span></h3>
       <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 1</Button>
       <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 2</Button>
       <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 3</Button>
@@ -104,7 +104,7 @@ function Shop() {
           <Col><ExperienceCard /></Col>
         </Row>
         <br />
-        <h3>SELECT <span style={styles.gray}>your desired meal</span></h3>
+        <h3>STEP 2 <span style={styles.gray}>Select your desired meal</span></h3>
         <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> American</Button>
         <Button style={styles.space} variant="primary"><i class="fas fa-pepper-hot"></i> Mexican</Button>
         <Button style={styles.space} variant="primary"><i class="fas fa-pizza-slice"></i> Italian</Button>
@@ -115,7 +115,7 @@ function Shop() {
           <Col><MealCard /></Col>
         </Row>
         <br />
-        <h3>SELECT <span style={styles.gray}>your must have accessories</span></h3>
+        <h3>STEP 3 <span style={styles.gray}>Select your must have accessories</span></h3>
         <Row>
           <Col><AccessoryCard /></Col>
           <Col><AccessoryCard /></Col>

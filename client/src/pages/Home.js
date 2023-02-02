@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <div style={styles.container}>
-      <img class="img-fluid" src={Logo} alt='logo' />
+      <img className="img-fluid" src={Logo} alt='logo' />
       <br />
       <br />
       <h1>Enjoy unique experiences</h1>

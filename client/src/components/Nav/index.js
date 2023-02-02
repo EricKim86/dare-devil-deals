@@ -2,6 +2,8 @@ import React from "react";
 import Auth from "../../utils/auth";
 
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -15,7 +17,7 @@ const styles = {
     margin: '5px 0 0 0',
   },
   space: {
-    margin: '0, 5px, 0 5px'
+    margin: '0, 10px, 0 10px',
   }
 }
 
@@ -27,25 +29,23 @@ function Navigation() {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Nav style={styles.width} className="me-auto">
-            <Nav.Link href="/">Home </Nav.Link>
-            <Nav.Link href="/Profile">Profile </Nav.Link>
-            <Nav.Link href="/Feed">Feed </Nav.Link>
-            <Nav.Link href="/Shop">Shop </Nav.Link>
-            <Nav.Link href="/Review">RCT </Nav.Link>
-            <Nav.Link href="/Experience">ECT </Nav.Link>
-            <Nav.Link href="/User">UCT </Nav.Link>
-            <Nav.Link href="/Meal">MCT </Nav.Link>
+            <Row>
+              <Col><Nav.Link href="/">Home </Nav.Link></Col>
+              <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
+              <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
+              <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
+            </Row>
           </Nav>
-    
+
         </Container>
       </Navbar>
     );
-  //   <Nav className="mx-1">
-  //   {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-  //   <a href="/" onClick={() => Auth.logout()}>
-  //     Logout
-  //   </a>
-  // </Nav>
+    //   <Nav className="mx-1">
+    //   {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+    //   <a href="/" onClick={() => Auth.logout()}>
+    //     Logout
+    //   </a>
+    // </Nav>
     //   } else {
     //     return (
     //       <ul className="flex-row">

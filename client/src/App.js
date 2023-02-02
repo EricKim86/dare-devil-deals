@@ -80,22 +80,6 @@ function App() {
                                 path="/shop/"
                                 element={<Shop />}
                             />
-                            <Route
-                                path="/review/"
-                                element={<Review />}
-                            />
-                            <Route
-                                path="/experience/"
-                                element={<Experience />}
-                            />
-                            <Route
-                                path="/user/"
-                                element={<User />}
-                            />
-                             <Route
-                                path="/meal/"
-                                element={<Meal />}
-                            />
                         </Routes>
                     </StoreProvider>
                 </div>

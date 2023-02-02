@@ -147,4 +147,9 @@ Mutation: {
   
         throw new AuthenticationError('Not logged in');
       },
+      updateExperiences: async (parent, { _id, quantity }) => {
+        const decrement = Math.abs(quantity) * -1;
+  
+        return await Experiences.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+      },
 

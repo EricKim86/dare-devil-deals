@@ -45,12 +45,10 @@ const userSchema = new Schema({
       ref: 'Experiences'
     }
   ],
-  points: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Points'
-    }
-  ],
+  points:
+  {
+    type: Number,
+  },
   orders: [
     {
       type: Schema.Types.ObjectId,

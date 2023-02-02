@@ -1,7 +1,3 @@
-const typeDefs = require('./typedefs');
-const resolvers = require('./resolvers');
-module.exports = { typeDefs, resolvers };
-
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -19,10 +15,10 @@ type User {
     password: String
     image: String
     bio: String 
-    orders: [Orders]
+    points: Int
+    orders: [Order]
     experiences: [Experiences]
-    reviews: [Reviews]
-    userLevel: [userLevel]
+    reviews: [Review]
 }
 
 type Order {
@@ -37,8 +33,8 @@ type Experiences {
     description: String
     image: String
     price: Float
-    points: Points
-    activityLevel: activityLevel
+    points: Int
+    quantity: Int
 }
 
 type Review {
@@ -59,10 +55,9 @@ type Auth {
 }
 
 type Query {
-    Experiences: [Experiences]
-    Experiences(_id: ID!): Experiences
-    user: User
-    user(_id: ID!): User
+    experiences: [Experiences]
+    experience(_id: ID!): Experiences
+    users: User
     order(_id: ID!): Order
     checkout(experiences: [ID]!): Checkout
   }
@@ -71,10 +66,9 @@ type Query {
     addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String!, bio: String!): Auth
     addOrder(experiences: [ID]!): Order
     updateUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String!, bio: String!): User
-    addReview(experiences: [ID]! description: String!, rating: String!)
+    addReview(experiences: [ID]! description: String!, rating: String!): Review
     login(email: String!, password: String!): Auth
   }
 `;
 
 module.exports = typeDefs;
-

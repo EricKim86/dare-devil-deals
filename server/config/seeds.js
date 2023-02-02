@@ -705,6 +705,7 @@ db.once('open', async () => {
         {
             firstName: 'Harold',
             lastName: 'Kumar',
+            userName: 'castleguy',
             id: 1,
             email: 'hmkumar@gmail.com',
             bio: 'Just a guy who likes concerts and dining out.',
@@ -719,6 +720,7 @@ db.once('open', async () => {
         {
             firstName: 'Miles',
             lastName: 'Davis',
+            userName: 'miled',
             id: 2,
             email: 'livelove@gmail.com',
             bio: 'Live, laugh, love',
@@ -733,6 +735,7 @@ db.once('open', async () => {
         {
             firstName: 'Marvin',
             lastName: 'Gaye',
+            userName: 'watsgoinon',
             id: 3,
             email: 'whatsgoinon@gmail.com',
             bio: 'Just another guy who likes concerts and dining out.',
@@ -747,6 +750,7 @@ db.once('open', async () => {
         {
             firstName: 'Quincy',
             lastName: 'Jones',
+            userName: 'thedude',
             id: 4,
             email: 'qqjjonez@gmail.com',
             bio: 'Jazz and drinks!',
@@ -761,6 +765,7 @@ db.once('open', async () => {
         {
             firstName: 'Bob',
             lastName: 'Dylan',
+            userName: 'slowtrain',
             id: 5,
             email: 'bobddylan@gmail.com',
             bio: 'Lax when I need to be, active when I want to be',
@@ -775,6 +780,7 @@ db.once('open', async () => {
         {
             firstName: 'Kate',
             lastName: 'Bush',
+            userName: 'katyb',
             id: 6,
             email: 'kbbush@gmail.com',
             bio: 'CONCERT EXPERT AND DINING BUFF!',

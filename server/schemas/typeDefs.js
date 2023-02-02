@@ -32,9 +32,16 @@ type Experiences {
     name: String
     description: String
     image: String
+    originalprice: Float
     price: Float
+    percentage: Number
     points: Int
     quantity: Int
+    activityLevel: Number
+}
+
+type Points {
+  points: Number
 }
 
 type Review {

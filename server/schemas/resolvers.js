@@ -5,8 +5,14 @@ const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
-    experiences: async () => {
-      return await Experiences.find();
+    experiences: async (parent, { activityLevel }) => {
+      const params = {};
+
+      if (activityLevel) {
+        params.activityLevel = activityLevel;
+      }
+
+      return await Experiences.find(params).populate('activityLevel');
     },
     experience: async (parent, { _id }) => {
       return await Experiences.findById(_id);

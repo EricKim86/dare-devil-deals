@@ -13,6 +13,10 @@ const userSchema = new Schema({
     required: true,
     trim: true
   },
+  userName: {
+    type: String,
+    required: true
+  },
   id: {
     type: Number,
     required: true

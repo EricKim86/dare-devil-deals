@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { Experiences } = require('../models');
+const { Experiences, User, Order, Reviews } = require('../models');
 
 db.once('open', async () => {
     await Experiences.deleteMany();
@@ -604,5 +604,10 @@ db.once('open', async () => {
     ]);
 
     console.log('Experiences seeded!!!')
+
+    await User.deleteMany();
+    await Order.deleteMany();
+    await Reviews.deleteMany();
+
 
   });

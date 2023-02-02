@@ -16,6 +16,7 @@ function Signup(props) {
                 password: formState.password,
                 firstName: formState.firstName,
                 lastName: formState.lastName,
+                userName: formState.userName,
                 location: formState.location,
                 bio: formState.bio,
             },
@@ -55,6 +56,16 @@ function Signup(props) {
                         name="lastName"
                         type="lastName"
                         id="lastName"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="flex-row space-between my-2">
+                    <label htmlFor="userName">User Name:</label>
+                    <input
+                        placeholder="User"
+                        name="userName"
+                        type="userName"
+                        id="userName"
                         onChange={handleChange}
                     />
                 </div>

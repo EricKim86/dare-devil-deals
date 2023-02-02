@@ -15,7 +15,7 @@ db.once('open', async () => {
             password: 'asdfghjk1029348',
             image: '',
             reviews: review[0]._id,
-            experiences: experiences[10, 7, 4, 26, 15, 12, 5, 18]._id,
+            experiences: experiences[10]._id,
             points: 7000,
             orders: '',
 
@@ -29,7 +29,7 @@ db.once('open', async () => {
             password: 'ho86ks6gd0wh',
             image: '',
             reviews: review[2]._id,
-            experiences: experiences[10]._id,
+            experiences: experiences[8]._id,
             points: 1000,
             orders: '',
 
@@ -44,7 +44,7 @@ db.once('open', async () => {
             image: '',
             reviews: review[1]._id,
             experiences: experiences[1]._id,
-            points: 2000,
+            points: 500,
             orders: '',
 
         },
@@ -57,8 +57,8 @@ db.once('open', async () => {
             password: 'ttph7sms6kdm',
             image: '',
             reviews: review[4]._id,
-            experiences: experiences[11, 3, 4, 21]._id,
-            points: 5000,
+            experiences: experiences[21]._id,
+            points: 1500,
             orders: '',
 
         },
@@ -85,7 +85,7 @@ db.once('open', async () => {
             password: '87efmfe6rfij8',
             image: '',
             reviews: review[6]._id,
-            experiences: experiences[1, 3, 20]._id,
+            experiences: experiences[17]._id,
             points: 4000,
             orders: '',
 

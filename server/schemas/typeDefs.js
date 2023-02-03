@@ -40,6 +40,7 @@ type Experiences {
     quantity: Int
     activityLevel: Int
 }
+
 type Points {
   points: Int
 }

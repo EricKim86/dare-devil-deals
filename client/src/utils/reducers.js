@@ -7,6 +7,8 @@ import {
     ADD_MULTIPLE_TO_CART,
     CLEAR_CART,
     TOGGLE_CART,
+    UPDATE_ACTIVITY_LEVEL,
+    UPDATE_CURRENT_ACTIVITY_LEVEL,
     // UPDATE_CART_POINTS,
     // UPDATE_USER_POINTS,
 } from './actions';
@@ -68,22 +70,18 @@ export const reducer = (state, action) => {
                 cartOpen: !state.cartOpen,
             };
 
-        
-    
-        // case UPDATE_CART_POINTS:
-        //     return {
-        //         ...state,
-        //         cartOpen: true,
-        //         cart: state.cart.map((activity) => {
-        //             if (action.points === activity.points) {
-        //                 activity.points = action.points;
-        //             }
-        //             return activity.points;
-        //         })
-        //     }
-            
-        // case UPDATE_USER_POINTS:
-        //     return {count: state.count + activity.points}
+        case UPDATE_ACTIVITY_LEVEL:
+            return {
+                ...state,
+                activityLevels: [...action.activityLevels],
+            };
+
+        case UPDATE_CURRENT_ACTIVITY_LEVEL:
+            return {
+                ...state,
+                currentActivityLevel: action.currentActivityLevel
+            }
+
 
         default:
             return state;

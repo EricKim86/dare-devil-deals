@@ -8,6 +8,8 @@ import Col from 'react-bootstrap/Col';
 import ExperienceCard from '../components/ExperienceCard/';
 import MealCard from '../components/MealCard/';
 import AccessoryCard from '../components/AccessoryCard/';
+import ActivityLevelMenu from "../components/AcitivityLevelMenu";
+import ExperienceList from "../components/ExperiencesList";
 
 import Delivery from "../images/logos/delivery.avif"
 import Fun from "../images/logos/fun.avif"
@@ -83,10 +85,13 @@ function Shop() {
       <Button style={styles.space} variant="primary"><i className="fas fa-hiking"></i> Activity 2</Button>
       <Button style={styles.space} variant="primary"><i className="fas fa-hiking"></i> Activity 3</Button>
 
-      <div style={styles.container} className='d-flex justify-content-center'>
+      {/* <ActivityLevelMenu /> */}
+      <ExperienceList />
+
+      {/* <div style={styles.container} className='d-flex justify-content-center'>
         <ExperienceCard />
       </div>
-      <br />
+      <br /> */}
 
       <h3>STEP 2 <span style={styles.gray}>Select your desired meal</span></h3>
       <Button style={styles.space} variant="primary"><i className="fas fa-hamburger"></i> American</Button>
@@ -95,10 +100,10 @@ function Shop() {
       <Button style={styles.space} variant="primary"><i className="fas fa-seedling"></i> Chinese</Button>
       <Button style={styles.space} variant="primary"><i className="fa-solid fa-cheese"></i> French</Button>
 
-      <div style={styles.container} className='d-flex justify-content-center'>
+      {/* <div style={styles.container} className='d-flex justify-content-center'>
         <MealCard />
       </div>
-      <br />
+      <br /> */}
 
       <h3>STEP 3 <span style={styles.gray}>Select your must have accessories</span></h3>
       <Button style={styles.space} variant="primary"><i className="fas fa-shopping-bag"></i> Food and Grocery</Button>
@@ -106,10 +111,10 @@ function Shop() {
       <Button style={styles.space} variant="primary"><i className="fa-solid fa-basketball"></i> Sports and Outdoors</Button>
       <Button style={styles.space} variant="primary"><i className="fa fa-question-circle"></i> Misc</Button>
 
-      <div style={styles.container} className='d-flex justify-content-center'>
+      {/* <div style={styles.container} className='d-flex justify-content-center'>
         <AccessoryCard />
       </div>
-      <br />
+      <br /> */}
 
       <br />
       <h3 style={styles.darkGreen}>SHOP <span style={styles.gray}>with 100% confidence with Dare Devil Deals</span></h3>

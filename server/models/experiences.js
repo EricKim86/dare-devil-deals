@@ -38,8 +38,8 @@ const experienceSchema = new Schema({
     },
     activityLevel: {
         type: Number,
-        required: true,
-    },
+        required: true
+      }
 });
 
 const Experiences = mongoose.model('Experiences', experienceSchema);

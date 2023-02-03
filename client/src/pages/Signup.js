@@ -16,7 +16,7 @@ const styles = {
 
 
 function Signup(props) {
-    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: '', userName:'', location: '', bio: '' });
     const [addUser] = useMutation(ADD_USER);
 
     const handleFormSubmit = async (event) => {

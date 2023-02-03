@@ -72,7 +72,7 @@ function Login(props) {
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </div>
       </Form>
     </div>

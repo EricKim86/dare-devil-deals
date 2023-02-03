@@ -22,6 +22,7 @@ const experienceSchema = new Schema({
     originalprice: {
         type: Number
     },
+
     price: {
         type: Number
     },

@@ -1,104 +1,97 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const styles = {
-  profile: {
-    width: '30%',
-  },
-  container: {
-    color: 'white',
-    padding: '20px',
-    margin: '0 50px 0 50px',
-  },
-  experience: {
-    width: '60%',
-  },
-  space: {
-    margin: '0 25px 0 25px'
-  },
-  left: {
-    alignItems: 'start',
-  },
-  profileImage: {
-    margin: '10px 0 20px 0px',
-    width: '50%',
+  image: {
+    margin: '10px 0 20px 40px',
+    width: '70%',
     borderRadius: '50%',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   },
-  experienceImage: {
-    borderRadius: '5px 0 0 5px'
-  },
-  experienceCard: {
-    margin: '30px 10px 30px 40px',
-    border: '1px solid white',
-    borderRadius: '5px',
-  },
-  icon: {
-    margin: '5px'
-  },
-  width: {
-    width: '24rem'
-  },
+  experienceImg: {
+    objectFit: 'cover',
+    maxHeight: '25rem'
+  }
 }
 
-export default function StudentList() {
+export default function Profile() {
   return (
-    <div style={styles.container} className='d-flex flex-row mb-12'>
-
-      <Card style={styles.profile} className='col mb-4'>
-        <div style={styles.left} className='d-flex flex-column'>
-          <img style={styles.profileImage} src='https://picsum.photos/id/65/200/200' alt='profile' />
-          <h4>CorgiFan123</h4>
-          <p>Ashley Palmer</p>
-          <p>Dallas, TX</p>
-          <p>Email@email.com</p>
-          <div className='d-flex flex-row'>
-            <p>Rank: </p>
-            <div style={styles.icon}><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-      </Card>
-
-      <div style={styles.experience} className='d-flex justify-content-center col mb-8'>
-
-
-        <Card style={styles.experienceCard} className='d-flex row mb-12'>
-          <img style={styles.experienceImage} src="https://picsum.photos/id/52/300/200" alt="experience" />
-          <Card.Body>
-            <Card.Title><h2>Fishing</h2></Card.Title>
-            <Card.Text style={styles.width}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-
-        <Card style={styles.experienceCard} className='d-flex row mb-12'>
-          <img style={styles.experienceImage} src="https://picsum.photos/id/24/300/200" alt="experience" />
-          <Card.Body>
-            <Card.Title><h2>Reading</h2></Card.Title>
-            <Card.Text style={styles.width}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-
-        <Card style={styles.experienceCard} className='d-flex row mb-12'>
-          <img style={styles.experienceImage} src="https://picsum.photos/id/39/300/200" alt="experience" />
-          <Card.Body>
-            <Card.Title><h2>Music</h2></Card.Title>
-            <Card.Text style={styles.width}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-
-      </div>
-    </div>
+    <div>
+      <Container>
+        <Row>
+          <Col>
+            <Card style={{ width: '25rem' }}>
+              <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/65/200/200' />
+              <Card.Body>
+                <Card.Title>CorgiFan21</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Ashley Johnson</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">Dallas, TX</Card.Subtitle>
+                <Card.Text>
+                  My name is Ashley and I love Corgis. They are the best dogs in the world because they are so cute.  They have small legs.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{ width: '40rem' }}>
+              <Row>
+                <Col>
+                  <Card.Img style={styles.experienceImg} className="img-fluid" variant="top" src='https://picsum.photos/id/37/200/200' />
+                </Col>
+                <Col>
+                  <Card.Body>
+                    <Card.Title>CorgiFan21</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Hiking in the Mountains</Card.Subtitle>
+                    <Card.Text>
+                    This was such a fun experience!  My entire family enjoyed the lovely hike across the beautiful mountains.
+                    </Card.Text>
+                    <Button variant="primary">See All User Reviews</Button>
+                    </Card.Body>
+                </Col>
+              </Row>
+            </Card>
+            <Card style={{ width: '40rem' }}>
+              <Row>
+                <Col>
+                  <Card.Img style={styles.experienceImg} className="img-fluid" variant="top" src='https://picsum.photos/id/37/200/200' />
+                </Col>
+                <Col>
+                  <Card.Body>
+                    <Card.Title>CorgiFan21</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Hiking in the Mountains</Card.Subtitle>
+                    <Card.Text>
+                    This was such a fun experience!  My entire family enjoyed the lovely hike across the beautiful mountains.
+                    </Card.Text>
+                    <Button variant="primary">See All User Reviews</Button>
+                    </Card.Body>
+                </Col>
+              </Row>
+            </Card>
+            <Card style={{ width: '40rem' }}>
+              <Row>
+                <Col>
+                  <Card.Img style={styles.experienceImg} className="img-fluid" variant="top" src='https://picsum.photos/id/37/200/200' />
+                </Col>
+                <Col>
+                  <Card.Body>
+                    <Card.Title>CorgiFan21</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Hiking in the Mountains</Card.Subtitle>
+                    <Card.Text>
+                    This was such a fun experience!  My entire family enjoyed the lovely hike across the beautiful mountains.
+                    </Card.Text>
+                    <Button variant="primary">See All User Reviews</Button>
+                    </Card.Body>
+                </Col>
+              </Row>
+            </Card>
+          </Col>
+        </Row>
+      </Container >
+    </div >
   );
 }

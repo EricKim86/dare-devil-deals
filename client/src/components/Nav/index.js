@@ -1,5 +1,6 @@
 import React from "react";
 import Auth from "../../utils/auth";
+import { Link } from "react-router-dom";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,66 +11,56 @@ import Navbar from 'react-bootstrap/Navbar';
 const styles = {
   container: {
     color: 'white',
-    fontSize: '28px'
+    fontSize: '28px',
   },
-  width: {
-    width: '70%',
-    margin: '5px 0 0 0',
-  },
-  space: {
-    margin: '0, 10px, 0 10px',
-  }
 }
 
 function Navigation() {
 
   function showNavigation() {
-    // if (Auth.loggedIn()) {
-    return (
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Nav style={styles.width} className="me-auto">
-            <Row>
-              <Col><Nav.Link href="/">Home </Nav.Link></Col>
-              <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
-              <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
-              <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
-            </Row>
-          </Nav>
-
-        </Container>
-      </Navbar>
-    );
-    //   <Nav className="mx-1">
-    //   {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-    //   <a href="/" onClick={() => Auth.logout()}>
-    //     Logout
-    //   </a>
-    // </Nav>
-    //   } else {
-    //     return (
-    //       <ul className="flex-row">
-    //         <li className="mx-1">
-    //           <Link to="/signup">
-    //             Signup
-    //           </Link>
-    //         </li>
-    //         <li className="mx-1">
-    //           <Link to="/login">
-    //             Login
-    //           </Link>
-    //         </li>
-    //       </ul>
-    //     );
-    // }
+    if (Auth.loggedIn()) {
+      return (
+        <Navbar bg="dark" variant="dark">
+          <Container>
+              <Row>
+                <Col><Nav.Link href="/">Home </Nav.Link></Col>
+                <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
+                <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
+                <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
+                <Col className="mx-1">    <a href="/" onClick={() => Auth.logout()}>Logout</a>
+                </Col>
+              </Row>
+          </Container>
+        </Navbar>
+      );
+    } else {
+      return (
+        <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/signup">
+              Signup
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/login">
+              Login
+            </Link>
+          </li>
+        </ul>
+      );
+    }
   }
 
   return (
-    <header style={styles.container} className="flex-row px-1">
-      <h1>Dare Devil Deals</h1>
-      <nav style={styles.width}>
-        {showNavigation()}
-      </nav>
+    <header style={styles.container}>
+      <Container>
+        <Row>
+          <Col><h1>Dare Devil Deals</h1></Col>
+          <Col><nav>
+            {showNavigation()}
+          </nav></Col>
+        </Row>
+      </Container>
     </header>
   );
 }

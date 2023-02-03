@@ -34,9 +34,9 @@ export const ADD_USER = gql`
     $lastName: String!
     $email: String!
     $password: String!
-    $image: String!
-    $location: String!
-    $username: String!
+    $image: String
+    $location: String
+    $userName: String!
     $bio: String!
   ) {
     addUser(
@@ -46,7 +46,7 @@ export const ADD_USER = gql`
       password: $password
       image: $image
       location: $location
-      username: $username
+      userName: $userName
       bio: $bio
     ) {
       token

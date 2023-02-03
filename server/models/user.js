@@ -5,7 +5,6 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   firstName: {
     type: String,
-    required: true,
     trim: true
   },
   lastName: {
@@ -17,10 +16,6 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  id: {
-    type: Number,
-    required: true
-  },
   email: {
     type: String,
     required: true
@@ -29,13 +24,16 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  location: {
+    type: String,
+  },
   password: {
     type: String,
-    required: true
+    required: true,
+    minlength: 5
   },
   image: {
     type: String,
-    required: true
   },
   reviews: [
     {
@@ -61,6 +59,19 @@ const userSchema = new Schema({
   ],
 
 });
+
+// userSchema.pre('save', async function(next) {
+//   if (this.isNew || this.isModified('password')) {
+//     const saltRounds = 10;
+//     this.password = await bcrypt.hash(this.password, saltRounds);
+//   }
+
+//   next();
+// });
+
+// userSchema.methods.isCorrectPassword = async function(password) {
+//   return await bcrypt.compare(password, this.password);
+// };
 
 const User = mongoose.model('User', userSchema);
 

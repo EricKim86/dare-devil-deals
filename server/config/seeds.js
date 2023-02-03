@@ -1,8 +1,7 @@
 const db = require('./connection');
-const { Experiences, Reviews, User, Order } = require('../models');
+const { Experiences, User, Order, Reviews } = require('../models');
 
 db.once('open', async () => {
-
     await Experiences.deleteMany();
 
     const experiences = await Experiences.insertMany([
@@ -536,7 +535,7 @@ db.once('open', async () => {
             id: 55,
             points: 100,
             activityLevel: 11,
-            originalprice: 1,
+            originalprice: 20,
             price: 15,
             description: 'Find deals on ways to keep active today!',
             image: 'soccerball.avif'
@@ -546,7 +545,7 @@ db.once('open', async () => {
             id: 56,
             points: 100,
             activityLevel: 11,
-            originalprice: 1,
+            originalprice: 80,
             price: 60,
             description: 'Find deals on ways to keep active today!',
             image: 'tent.avif'
@@ -607,194 +606,7 @@ db.once('open', async () => {
     console.log('Experiences seeded!!!')
 
     await Reviews.deleteMany();
-
-    const review = Reviews.insertMany([
-        {
-            experience: experiences[5].id,
-            id: 1,
-            description: 'HAD A BLAST!!! Would recommend to literally any person.'
-        },
-        {
-            experience: experiences[2].id,
-            id: 2,
-            description: ':))))))'
-        },
-        {
-            experience: experiences[3].id,
-            id: 3,
-            description: 'Trash, boring, and not very based.'
-        },
-        {
-            experience: experiences[10].id,
-            id: 4,
-            description: 'I lived, I laughed, I loved'
-        },
-        {
-            experience: experiences[1].id,
-            id: 5,
-            description: 'OH YEAHHHHHH'
-        },
-        {
-            experience: experiences[11].id,
-            id: 6,
-            description: 'Loved it. Took my grandma and we had a great time.'
-        },
-        {
-            experience: experiences[7].id,
-            id: 7,
-            description: 'Overrated and pretentious'
-        },
-        {
-            experience: experiences[1].id,
-            id: 8,
-            description: 'IT SUCKED DONT EVER DO IT (maybe)'
-        },
-    ]);
-
-    console.log('Reviews seeded!!!');
-
     await Order.deleteMany();
-
-    const orders = Order.insertMany([
-        {
-            id: 1,
-            purchaseDate: '1',
-            experience: experiences[17].id
-        },
-        {
-            id: 2,
-            purchaseDate: '2',
-            experience: experiences[16].id
-        },
-        {
-            id: 3,
-            purchaseDate: '3',
-            experience: experiences[10].id
-        },
-        {
-            id: 4,
-            purchaseDate: '4',
-            experience: experiences[21].id
-        },
-        {
-            id: 5,
-            purchaseDate: '5',
-            experience: experiences[5].id
-        },
-        {
-            id: 6,
-            purchaseDate: '6',
-            experience: experiences[8].id
-        },
-        {
-            id: 7,
-            purchaseDate: '7',
-            experience: experiences[5].id
-        },
-        {
-            id: 8,
-            purchaseDate: '8',
-            experience: experiences[1].id
-        },
-    ]);
-
     await User.deleteMany();
-
-    const users = await User.insertMany([
-
-        {
-            firstName: 'Harold',
-            lastName: 'Kumar',
-            userName: 'castleguy',
-            id: 1,
-            email: 'hmkumar@gmail.com',
-            bio: 'Just a guy who likes concerts and dining out.',
-            password: 'asdfghjk1029348',
-            image: '',
-            reviews: review[0].id,
-            experiences: experiences[5].id,
-            points: 1500,
-            orders: orders[4].id,
-
-        },
-        {
-            firstName: 'Miles',
-            lastName: 'Davis',
-            userName: 'miled',
-            id: 2,
-            email: 'livelove@gmail.com',
-            bio: 'Live, laugh, love',
-            password: 'ho86ks6gd0wh',
-            image: '',
-            reviews: review[2].id,
-            experiences: experiences[8].id,
-            points: 1500,
-            orders: orders[5].id,
-
-        },
-        {
-            firstName: 'Marvin',
-            lastName: 'Gaye',
-            userName: 'watsgoinon',
-            id: 3,
-            email: 'whatsgoinon@gmail.com',
-            bio: 'Just another guy who likes concerts and dining out.',
-            password: '018dj6djs66rf',
-            image: '',
-            reviews: review[1].id,
-            experiences: experiences[1].id,
-            points: 1000,
-            orders: orders[7].id,
-
-        },
-        {
-            firstName: 'Quincy',
-            lastName: 'Jones',
-            userName: 'thedude',
-            id: 4,
-            email: 'qqjjonez@gmail.com',
-            bio: 'Jazz and drinks!',
-            password: 'ttph7sms6kdm',
-            image: '',
-            reviews: review[4].id,
-            experiences: experiences[21].id,
-            points: 500,
-            orders: orders[3].id,
-
-        },
-        {
-            firstName: 'Bob',
-            lastName: 'Dylan',
-            userName: 'slowtrain',
-            id: 5,
-            email: 'bobddylan@gmail.com',
-            bio: 'Lax when I need to be, active when I want to be',
-            password: '10fjk7ddduw7',
-            image: '',
-            reviews: review[5].id,
-            experiences: experiences[10].id,
-            points: 500,
-            orders: orders[2].id,
-
-        },
-        {
-            firstName: 'Kate',
-            lastName: 'Bush',
-            userName: 'katyb',
-            id: 6,
-            email: 'kbbush@gmail.com',
-            bio: 'CONCERT EXPERT AND DINING BUFF!',
-            password: '87efmfe6rfij8',
-            image: '',
-            reviews: review[6].id,
-            experiences: experiences[17].id,
-            points: 1000,
-            orders: orders[0].id,
-
-        },
-
-    ]);
-
-    console.log('Users seeded!!!');
 
   });

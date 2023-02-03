@@ -15,6 +15,7 @@ type User {
     password: String
     image: String
     bio: String 
+    location: String
     points: Int
     orders: [Order]
     experiences: [Experiences]
@@ -69,7 +70,7 @@ type Query {
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String!, bio: String!): Auth
+    addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String, bio: String! location: String): Auth
     addOrder(experiences: [ID]!): Order
     updateUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String!, bio: String!): User
     addReview(experiences: [ID]! description: String!, rating: String!): Review

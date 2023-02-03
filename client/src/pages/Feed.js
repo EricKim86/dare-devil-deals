@@ -41,12 +41,6 @@ function Feed() {
                     <Col>
                         <UserCard />
                     </Col>
-                    <Col>
-                        <UserCard />
-                    </Col>
-                    <Col>
-                        <UserCard />
-                    </Col>
                 </Row>
             </Container>
         </div>

@@ -58,10 +58,10 @@ function App() {
                                 path="/signup"
                                 element={<Signup />}
                             />
-                            <Route
+                            {/* <Route
                                 path="/success"
                                 element={<Success />}
-                            />
+                            /> */}
                             <Route
                                 path="/profile"
                                 element={<Profile />}

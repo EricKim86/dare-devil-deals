@@ -54,7 +54,7 @@ export default function ExperienceCard() {
           grabCursor={true}
           modules={[FreeMode]}
           className='mySwiper'
-          Scrollbar={true}
+          scrollbar={true}
           slidesPerView={3}
           spaceBetween={10}
           breakpoints={{

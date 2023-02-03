@@ -35,7 +35,7 @@ export default function ReviewCard() {
                 grabCursor={true}
                 modules={[FreeMode]}
                 className='mySwiper'
-                Scrollbar={true}
+                scrollbar={true}
                 slidesPerView={3}
                 spaceBetween={10}
                 breakpoints={{
@@ -60,7 +60,7 @@ export default function ReviewCard() {
                             <Card.Title><h3>Corgiz4Life27</h3></Card.Title>
                             <Card.Title><h6>Brittany Rodgers</h6></Card.Title>
                             <Card.Title><h6>250 Points</h6></Card.Title>
-                            <Button variant="primary"><i class="fa fa-user" aria-hidden="true"></i> View Profile</Button>
+                            <Button variant="primary"><i className="fa fa-user" aria-hidden="true"></i> View Profile</Button>
                         </Card.Body>
                     </Card>
                 </SwiperSlide>

@@ -60,7 +60,7 @@ function Signup(props) {
                         onChange={handleChange}
                     />
                 </Form.Group>
-                <Form className="flex-row space-between my-2">
+                {/* <Form className="flex-row space-between my-2"> */}
                     <Form.Group htmlFor="lastName">Last Name:</Form.Group>
                     <Form.Control
                         placeholder="Last"
@@ -69,8 +69,8 @@ function Signup(props) {
                         id="lastName"
                         onChange={handleChange}
                     />
-                </Form>
-                <Form className="flex-row space-between my-2">
+                {/* </Form> */}
+                {/* <Form className="flex-row space-between my-2"> */}
                     <Form.Group htmlFor="userName">User Name:</Form.Group>
                     <Form.Control
                         placeholder="User"
@@ -79,8 +79,8 @@ function Signup(props) {
                         id="userName"
                         onChange={handleChange}
                     />
-                </Form>
-                <Form className="flex-row space-between my-2">
+                {/* </Form> */}
+                {/* <Form className="flex-row space-between my-2"> */}
                     <Form.Group htmlFor="lastName">Location:</Form.Group>
                     <Form.Control
                         placeholder="Location"
@@ -89,8 +89,8 @@ function Signup(props) {
                         id="location"
                         onChange={handleChange}
                     />
-                </Form>
-                <Form className="flex-row space-between my-2">
+                {/* </Form> */}
+                {/* <Form className="flex-row space-between my-2"> */}
                     <Form.Group htmlFor="email">Email:</Form.Group>
                     <Form.Control
                         placeholder="youremail@test.com"
@@ -99,8 +99,8 @@ function Signup(props) {
                         id="email"
                         onChange={handleChange}
                     />
-                </Form>
-                <Form className="flex-row space-between my-2">
+                {/* </Form> */}
+                {/* <Form className="flex-row space-between my-2"> */}
                     <Form.Group htmlFor="pwd">Password:</Form.Group>
                     <Form.Control
                         placeholder="******"
@@ -109,8 +109,8 @@ function Signup(props) {
                         id="pwd"
                         onChange={handleChange}
                     />
-                </Form>
-                <Form className="flex-row space-between my-2">
+                {/* </Form> */}
+                {/* <Form className="flex-row space-between my-2"> */}
                     <Form.Group htmlFor="bio">Bio:</Form.Group>
                     <Form.Control
                         placeholder="Tell us about yourself"
@@ -121,11 +121,11 @@ function Signup(props) {
                         onChange={handleChange}
                         rows={8}
                     />
-                </Form>
+                {/* </Form> */}
                 <br />
-                <Form className="flex-row flex-end">
+                {/* <Form className="flex-row flex-end"> */}
                     <Button type="submit">Submit</Button>
-                </Form>
+                {/* </Form> */}
             </Form>
             <br />
         </div>

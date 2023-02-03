@@ -64,7 +64,9 @@ type Auth {
 type Query {
     experiences(activityLevel: Int): [Experiences]
     experience(_id: ID!): Experiences
-    users: User
+    users: [User]
+    userFeed(_id: ID!): User
+    user: User
     order(_id: ID!): Order
     checkout(experiences: [ID]!): Checkout
   }

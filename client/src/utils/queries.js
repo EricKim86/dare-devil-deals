@@ -39,11 +39,50 @@ export const QUERY_ALL_EXPERIENCES = gql`
   }
 `;
 
+export const QUERY_ALL_USERS = gql`
+  {
+    users {
+      firstName
+      lastName
+      location
+      userName
+    }
+  }
+`;
+
+export const QUERY_FEED_USERS = gql`
+  {
+    userFeed {
+      firstName
+      lastName
+      location
+      bio
+      userName
+      orders {
+        _id
+        purchaseDate
+        experiences {
+          _id
+          name
+          description
+          image
+          price
+          points
+          activityLevel
+        }
+      }
+    }
+  }
+`;
+
 export const QUERY_USER = gql`
   {
     user {
       firstName
       lastName
+      location
+      bio
+      userName
       orders {
         _id
         purchaseDate

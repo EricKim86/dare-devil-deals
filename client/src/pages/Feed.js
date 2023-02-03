@@ -12,6 +12,7 @@ const styles = {
         color: 'white',
         justifyContent: 'center',
         textAlign: 'center',
+        height: '100vh'
     },
     space: {
         margin: '10px',

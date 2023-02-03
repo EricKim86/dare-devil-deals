@@ -10,7 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const styles = {
   container: {
-    color: 'white',
+    color: '#9ec378',
     fontSize: '28px',
   },
 }
@@ -22,14 +22,14 @@ function Navigation() {
       return (
         <Navbar bg="dark" variant="dark">
           <Container>
-              <Row>
-                <Col><Nav.Link href="/">Home </Nav.Link></Col>
-                <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
-                <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
-                <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
-                <Col className="mx-1">    <a href="/" onClick={() => Auth.logout()}>Logout</a>
-                </Col>
-              </Row>
+            <Row>
+              <Col><Nav.Link href="/">Home </Nav.Link></Col>
+              <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
+              <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
+              <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
+              <Col className="mx-1"><a href="/" onClick={() => Auth.logout()}>Logout</a>
+              </Col>
+            </Row>
           </Container>
         </Navbar>
       );
@@ -55,10 +55,14 @@ function Navigation() {
     <header style={styles.container}>
       <Container>
         <Row>
-          <Col><h1>Dare Devil Deals</h1></Col>
-          <Col><nav>
-            {showNavigation()}
-          </nav></Col>
+          <Col>
+            <h1>Dare Devil Deals</h1>
+          </Col>
+          <Col>
+            <nav>
+              {showNavigation()}
+            </nav>
+          </Col>
         </Row>
       </Container>
     </header>

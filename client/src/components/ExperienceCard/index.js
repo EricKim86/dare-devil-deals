@@ -36,6 +36,14 @@ const styles = {
   },
   green: {
     color: 'green',
+  },
+  white: {
+    color: 'white',
+  },
+  topCard: {
+    background: '#204c39',
+    width: '100%',
+    borderRadius: '10px'
   }
 }
 
@@ -77,9 +85,9 @@ export default function ExperienceCard() {
               <Card style={styles.product}>
                 <Card.Img style={styles.image} className='img-fluid' variant="top" src={`/images/experiences/${image}`} alt='experience' />
                 <Card.Body>
-                  <Container>
-                    <Col><h3>{name}</h3></Col>
-                      <Col><p>Points: {points}</p></Col>
+                  <Container style={styles.topCard}>
+                    <Col><h3 style={styles.white}>{name}</h3></Col>
+                      <Col><p style={styles.white}>Points: {points}</p></Col>
                   </Container>
                   <Container>
                     <Row>
@@ -93,7 +101,7 @@ export default function ExperienceCard() {
                     </Row>
                   </Container>
                   <br />
-                  <Card.Text>
+                  <Card.Text style={styles.font}>
                     {description}
                   </Card.Text>      
                 </Card.Body >

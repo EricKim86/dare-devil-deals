@@ -17,7 +17,13 @@ const resolvers = {
     experience: async (parent, { _id }) => {
       return await Experiences.findById(_id);
     },
-    users: async (parent, args, context) => {
+    users: async () => {
+      return await User.find();
+    },
+    userFeed: async (parent, { _id }) => {
+      return await User.findById(_id);
+    },
+    user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
           path: 'orders.experiences',

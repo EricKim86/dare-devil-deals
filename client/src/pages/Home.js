@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Logo from "../images/logos/logo2.png"
+import Logo from "../images/logos/logo1.png"
 import Surfing from "../images/logos/surfing.avif"
 import Social from "../images/logos/social-media.avif"
 import Save from "../images/logos/save.avif"
@@ -123,10 +123,11 @@ export default function Home() {
 
       <div style={styles.icon}>
         <h2>Follow Us</h2>
-        <a href='https://www.google.com' target="blank"><i style={styles.space} class='fa-brands fa-facebook'></i></a>
-        <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-instagram'></i></a>
-        <a href='https://www.google.com' target='blank'><i style={styles.space} class='fa-brands fa-twitter'></i></a>
+        <a href='https://www.google.com' target="blank"><i style={styles.space} className='fa-brands fa-facebook'></i></a>
+        <a href='https://www.google.com' target='blank'><i style={styles.space} className='fa-brands fa-instagram'></i></a>
+        <a href='https://www.google.com' target='blank'><i style={styles.space} className='fa-brands fa-twitter'></i></a>
       </div>
+      <br />
     </div>
   );
 }

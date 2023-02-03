@@ -72,9 +72,9 @@ function Shop() {
 
 
       <h3>STEP 1 <span style={styles.gray}>Select your level of intensity</span></h3>
-      <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 1</Button>
-      <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 2</Button>
-      <Button style={styles.space} variant="primary"><i class="fas fa-hiking"></i> Activity 3</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-hiking"></i> Activity 1</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-hiking"></i> Activity 2</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-hiking"></i> Activity 3</Button>
 
       <div style={styles.container} className='d-flex justify-content-center'>
         <ExperienceCard />
@@ -82,11 +82,11 @@ function Shop() {
       <br />
 
       <h3>STEP 2 <span style={styles.gray}>Select your desired meal</span></h3>
-      <Button style={styles.space} variant="primary"><i class="fas fa-hamburger"></i> American</Button>
-      <Button style={styles.space} variant="primary"><i class="fas fa-pepper-hot"></i> Mexican</Button>
-      <Button style={styles.space} variant="primary"><i class="fas fa-pizza-slice"></i> Italian</Button>
-      <Button style={styles.space} variant="primary"><i class="fas fa-seedling"></i> Chinese</Button>
-      <Button style={styles.space} variant="primary"><i class="fa-solid fa-cheese"></i> French</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-hamburger"></i> American</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-pepper-hot"></i> Mexican</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-pizza-slice"></i> Italian</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-seedling"></i> Chinese</Button>
+      <Button style={styles.space} variant="primary"><i className="fa-solid fa-cheese"></i> French</Button>
 
       <div style={styles.container} className='d-flex justify-content-center'>
         <MealCard />
@@ -94,10 +94,10 @@ function Shop() {
       <br />
 
       <h3>STEP 3 <span style={styles.gray}>Select your must have accessories</span></h3>
-      <Button style={styles.space} variant="primary"><i class="fas fa-shopping-bag"></i> Food and Grocery</Button>
-      <Button style={styles.space} variant="primary"><i class="fa-solid fa-shirt"></i> Clothing</Button>
-      <Button style={styles.space} variant="primary"><i class="fa-solid fa-basketball"></i> Sports and Outdoors</Button>
-      <Button style={styles.space} variant="primary"><i class="fa fa-question-circle"></i> Misc</Button>
+      <Button style={styles.space} variant="primary"><i className="fas fa-shopping-bag"></i> Food and Grocery</Button>
+      <Button style={styles.space} variant="primary"><i className="fa-solid fa-shirt"></i> Clothing</Button>
+      <Button style={styles.space} variant="primary"><i className="fa-solid fa-basketball"></i> Sports and Outdoors</Button>
+      <Button style={styles.space} variant="primary"><i className="fa fa-question-circle"></i> Misc</Button>
 
       <div style={styles.container} className='d-flex justify-content-center'>
         <AccessoryCard />

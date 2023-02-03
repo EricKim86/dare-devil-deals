@@ -84,12 +84,12 @@ export default function ExperienceCard() {
                   <Container>
                     <Row>
                       <Col><del>${originalprice}</del><p style={styles.green}>${price}</p></Col>
-                      <Col><i class="fa-solid fa-thumbs-up"></i><h6>8</h6></Col>
-                      <Col><i class="fas fa-thumbs-down"></i><h6>1</h6></Col>
+                      <Col><i className="fa-solid fa-thumbs-up"></i><h6>8</h6></Col>
+                      <Col><i className="fas fa-thumbs-down"></i><h6>1</h6></Col>
                     </Row>
                     <Row>
-                      <Col><Button variant="primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
-                      <Col><Button variant="primary"><i class="fas fa-comments"></i> Reviews</Button></Col>
+                      <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
+                      <Col><Button variant="primary"><i className="fas fa-comments"></i> Reviews</Button></Col>
                     </Row>
                   </Container>
                   <br />

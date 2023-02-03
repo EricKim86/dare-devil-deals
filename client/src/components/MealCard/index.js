@@ -86,7 +86,7 @@ export default function ExperienceCard() {
                       <Col><p style={styles.green}>{percentage}% off your entire meal</p></Col>
                     </Row>
                     <Row>
-                      <Col><Button variant="primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
+                      <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
                     </Row>
                   </Container>
                   <br />

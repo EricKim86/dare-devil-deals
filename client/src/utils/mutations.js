@@ -35,7 +35,7 @@ export const ADD_USER = gql`
     $email: String!
     $password: String!
     $image: String
-    $location: String!
+    $location: String
     $username: String!
     $bio: String!
   ) {

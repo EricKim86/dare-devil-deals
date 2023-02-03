@@ -86,7 +86,7 @@ export default function ExperienceCard() {
                     <Col><del>${originalprice}</del><p style={styles.green}>${price}</p></Col>
                     </Row>
                     <Row>
-                      <Col><Button variant="primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
+                      <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
                     </Row>
                   </Container>
                   <br />

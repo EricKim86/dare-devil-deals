@@ -30,7 +30,7 @@ const styles = {
         backgroundSize: 'cover',
     },
     topCard: {
-        backgroundColor: '#9ec378',
+        backgroundColor: '#204c39',
         borderRadius: '10px 10px 0 0'
     },
 }

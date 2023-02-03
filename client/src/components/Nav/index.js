@@ -13,6 +13,10 @@ const styles = {
     color: '#9ec378',
     fontSize: '28px',
   },
+  fontStyle: {
+    fontFamily: `rock salt`,
+    fontSize: '26px',
+  }
 }
 
 function Navigation() {
@@ -56,7 +60,7 @@ function Navigation() {
       <Container>
         <Row>
           <Col>
-            <h1>Dare Devil Deals</h1>
+            <h1><span style={styles.fontStyle}>Dare Devil</span> Deals</h1>
           </Col>
           <Col>
             <nav>

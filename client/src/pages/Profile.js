@@ -16,6 +16,7 @@ const styles = {
     borderRadius: '50%',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
+    border: 'solid gray'
   },
   experienceImg: {
     objectFit: 'cover',
@@ -36,7 +37,7 @@ const styles = {
     textAlign: 'center',
   },
   topCard: {
-    backgroundColor: '#9ec378',
+    backgroundColor: '#204c39',
     textAlign: 'center',
     borderRadius: '10px 10px 0 0'
   },
@@ -67,7 +68,7 @@ export default function Profile() {
                 <Col>
                   <Card style={styles.body}>
                     <div style={styles.topCard}>
-                      <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/29/200/200' />
+                      <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/18/200/200' />
                     </div>
                     <Card.Body style={styles.space}>
                       <Card.Title>{user.userName}</Card.Title>

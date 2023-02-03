@@ -29,6 +29,9 @@ const styles = {
   gray: {
     color: 'gray',
   },
+  darkGreen: {
+    color: '#9ec378',
+  },
   buffer: {
     margin: '40px 10px 20px 10px',
   },
@@ -39,6 +42,10 @@ const styles = {
   width: {
     width: '20rem'
   },
+  fontStyle: {
+    fontFamily: `rock salt`,
+    fontSize: '26px',
+  }
 }
 
 function Shop() {
@@ -46,7 +53,7 @@ function Shop() {
     <div style={styles.container}>
 
       <h3>EXPERIENCE <span style={styles.gray}>what you want to experience</span></h3>
-      <h3><span style={styles.gray}>When you are a member of</span> DARE DEVIL DEALS</h3>
+      <h3><span style={styles.gray}>When you are a member of</span><span style={styles.darkGreen}><span style={styles.fontStyle}> Dare Devil</span> DEALS</span></h3>
       <br />
 
       <Container>
@@ -105,23 +112,23 @@ function Shop() {
       <br />
 
       <br />
-      <h3>SHOP <span style={styles.gray}>with 100% confidence with Dare Devil Deals</span></h3>
+      <h3 style={styles.darkGreen}>SHOP <span style={styles.gray}>with 100% confidence with Dare Devil Deals</span></h3>
       <br />
 
       <Container>
         <Row>
           <Col><img style={styles.image} className="img-fluid" src={Fun} alt='logo' />
-            <h2>CANCELATION</h2>
+            <h2 style={styles.darkGreen}>CANCELATION</h2>
             <p style={styles.width}></p>
             Cancel your experience within 24 hours with no additional fees.
           </Col>
           <Col><img style={styles.image} className="img-fluid" src={Delivery} alt='logo' />
-            <h2>FREE SHIPPING</h2>
+            <h2 style={styles.darkGreen}>FREE SHIPPING</h2>
             <p style={styles.width}></p>
             Free shipping on all your necessary accessories with purchase of any experience.
           </Col>
           <Col><img style={styles.image} className="img-fluid" src={Payment} alt='logo' />
-            <h2>SECURE</h2>
+            <h2 style={styles.darkGreen}>SECURE</h2>
             <p style={styles.width}></p>
             Take comfort in knowing your transactions and information are 100% secure.
           </Col>

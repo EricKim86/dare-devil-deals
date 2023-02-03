@@ -1,11 +1,10 @@
 import React from "react";
 
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Logo from "../images/logos/logo5.png"
+import Logo from "../images/logos/logo-final.png"
 import Surfing from "../images/logos/surfing.avif"
 import Social from "../images/logos/social-media.avif"
 import Save from "../images/logos/save.avif"
@@ -47,6 +46,9 @@ const styles = {
   largeImage: {
     width: '500px',
     height: '350px',
+  },
+  fontColor: {
+    color: '#9ec378',
   }
 }
 
@@ -57,24 +59,24 @@ export default function Home() {
       <img className="img-fluid" src={Logo} alt='logo' />
       <br />
       <br />
-      <h1>Enjoy unique experiences</h1>
+      <h1>Enjoy unique <span style={styles.fontColor}>experiences</span></h1>
       <p>We take all the guess work out and provide a streamlined easy experience for you.</p>
       <br />
 
       <Container>
         <Row>
           <Col><img style={styles.image} className="img-fluid" src={Save} alt='logo' />
-            <h2>DEALS</h2>
+            <h2 style={styles.fontColor}>DEALS</h2>
             <p style={styles.width}></p>
             We partnered with numerous vendors and locations to provide the best deals imaginable.
           </Col>
           <Col><img style={styles.image} className="img-fluid" src={Surfing} alt='logo' />
-            <h2>EXPERIENCE</h2>
+            <h2 style={styles.fontColor}>EXPERIENCE</h2>
             <p style={styles.width}></p>
             Enjoy a selection of wonderful experiences catered by our team of professionals
           </Col>
-          <Col><img style={styles.image} className="img-fluid" src={Social} alt='logo' />
-            <h2>SHARE</h2>
+          <Col ><img style={styles.image} className="img-fluid" src={Social} alt='logo' />
+            <h2 style={styles.fontColor}>SHARE</h2>
             <p style={styles.width}></p>
             Share your experiences with others with our integrated social media platform
           </Col>
@@ -92,7 +94,7 @@ export default function Home() {
       </Container>
       <br />
 
-      <h2>Diversity in Experiences</h2>
+      <h2><span style={styles.fontColor}>Diversity</span> in Experiences</h2>
       <p>We offer a diverse range of experiences perfect for all individuals.</p>
       <br />
 
@@ -101,7 +103,7 @@ export default function Home() {
           <Col>
             <br />
             <br />
-            <h2>Family Friendly</h2>
+            <h2 style={styles.fontColor}>Family Friendly</h2>
             <p> In addition to thrilling new experiences, we offer numerous family friendly experiences fun for the entire family.</p>
           </Col>
           <Col><img style={styles.image} className="img-fluid" src={Art} alt='logo' /></Col>
@@ -115,7 +117,7 @@ export default function Home() {
           <Col>
             <br />
             <br />
-            <h2>Join Today</h2>
+            <h2 style={styles.fontColor}>Join Today</h2>
             <p>Join today to start enjoying our amazing new experiences and start earning points!  One of the many benefits of becoming a member.</p>
           </Col>
         </Row>

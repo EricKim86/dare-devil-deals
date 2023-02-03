@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_EXPERIENCES = gql`
-  query getExperiences($experiences: ID) {
-    experiences(experiences: $experiences) {
+  query getExperiences($activityLevel: Int) {
+    experiences(activityLevel: $activityLevel) {
       _id
       name
       description
@@ -66,6 +66,7 @@ export const QUERY_ACTIVITY_LEVEL = gql`
     activityLevel {
       _id
       name
+      activityLevel
     }
   }
 `

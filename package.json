@@ -17,6 +17,6 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "swiper": "^9.0.1"
+    "swiper": "^9.0.2"
   }
 }

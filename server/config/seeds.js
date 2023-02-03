@@ -535,7 +535,7 @@ db.once('open', async () => {
             id: 55,
             points: 100,
             activityLevel: 11,
-            originalprice: 1,
+            originalprice: 20,
             price: 15,
             description: 'Find deals on ways to keep active today!',
             image: 'soccerball.avif'
@@ -545,7 +545,7 @@ db.once('open', async () => {
             id: 56,
             points: 100,
             activityLevel: 11,
-            originalprice: 1,
+            originalprice: 80,
             price: 60,
             description: 'Find deals on ways to keep active today!',
             image: 'tent.avif'

@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Logo from "../images/logos/logo1.png"
+import Logo from "../images/logos/logo5.png"
 import Surfing from "../images/logos/surfing.avif"
 import Social from "../images/logos/social-media.avif"
 import Save from "../images/logos/save.avif"

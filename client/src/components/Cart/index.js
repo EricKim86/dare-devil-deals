@@ -54,3 +54,8 @@ const Cart = () => {
         productIds.push(item._id);
       }
     });
+
+    getCheckout({
+      variables: { products: productIds },
+    });
+  }

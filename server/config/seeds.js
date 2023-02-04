@@ -14,7 +14,7 @@ db.once('open', async () => {
             originalprice: 30,
             price: 20,
             description: 'Purchase passes to go bowling and strike out today!',
-            image: 'bowling.avif'
+            image: 'bowling.avif',
         },
         {
             name: 'Concerts',
@@ -260,7 +260,7 @@ db.once('open', async () => {
             name: 'Winery',
             id: 26,
             points: 500,
-            activityLevel: 1,
+            activityLevel: 4,
             percentage: 15,
             description: 'Find a fancy dine-in winery to enjoy your night!',
             image: 'winery.avif'
@@ -605,7 +605,6 @@ db.once('open', async () => {
 
     console.log('Experiences seeded!!!')
 
-    await Reviews.deleteMany();
     await Order.deleteMany();
     await User.deleteMany();
 

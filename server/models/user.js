@@ -35,12 +35,6 @@ const userSchema = new Schema({
   image: {
     type: String,
   },
-  reviews: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Reviews'
-    }
-  ],
   experiences: [
     {
       type: Schema.Types.ObjectId,

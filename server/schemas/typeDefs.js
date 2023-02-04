@@ -19,7 +19,6 @@ type User {
     points: Int
     orders: [Order]
     experiences: [Experiences]
-    reviews: [Review]
 }
 
 type Order {
@@ -39,19 +38,15 @@ type Experiences {
     points: Int
     quantity: Int
     activityLevel: Int
+    reviews: [Reviews]
 }
 
-type Points {
-  points: Int
-}
-
-type Review {
+type Reviews {
   _id: ID
+  title: String
   description: String
-
-  experiences: [Experiences]
+  createdAt: String
 }
-
 
 type Checkout {
   session: ID
@@ -65,8 +60,9 @@ type Auth {
 type Query {
     experiences(activityLevel: Int): [Experiences]
     experience(_id: ID!): Experiences
-
-    users: User
+    users: [User]
+    userFeed(_id: ID!): User
+    user: User
     order(_id: ID!): Order
     checkout(experiences: [ID]!): Checkout
   }
@@ -74,8 +70,8 @@ type Query {
   type Mutation {
     addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String, bio: String! location: String): Auth
     addOrder(experiences: [ID]!): Order
-    updateUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String!, bio: String!): User
-    addReview(experiences: [ID]! description: String!, rating: String!): Review
+    updateUser(firstName: String, lastName: String, userName: String, email: String, location: String, password: String, image: String, bio: String): User
+    addReview(experienceId: ID!, title: String, description: String!): Experiences
     login(email: String!, password: String!): Auth
   }
 `;

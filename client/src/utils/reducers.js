@@ -18,7 +18,7 @@ export const reducer = (state, action) => {
         case UPDATE_EXPERIENCES:
             return {
                 ...state,
-                activities: [...action.experiences],
+                experiences: [...action.experiences],
             };
 
         case ADD_TO_CART:

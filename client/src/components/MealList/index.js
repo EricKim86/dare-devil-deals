@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ExperienceCard from '../ExperienceCard';
+import MealCard from '../MealCard';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_EXPERIENCES } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -17,10 +17,10 @@ const styles = {
   },
 }
 
-function ExperienceList() {
+function MealList() {
   const [state, dispatch] = useStoreContext();
 
-  const [currentActivityLevel, setCurrentActivityLevel] = useState(2);
+  const [currentActivityLevel, setCurrentActivityLevel] = useState(4);
 
   const { loading, data, error } = useQuery(QUERY_EXPERIENCES);
   if (error) {
@@ -29,6 +29,7 @@ function ExperienceList() {
 
   useEffect(() => {
     if (data) {
+      console.log(data);
       dispatch({
         type: UPDATE_EXPERIENCES,
         experiences: data.experiences,
@@ -54,9 +55,11 @@ function ExperienceList() {
 
   return (
     <div className="my-2">
-      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(1)}><i className="fas fa-hiking"></i> Activity 1</Button>
-      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(2)}><i className="fas fa-hiking"></i> Activity 2</Button>
-      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(3)}><i className="fas fa-hiking"></i> Activity 3</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(7)}><i className="fas fa-pepper-hot"></i> Mexican</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(4)}><i className="fas fa-hamburger"></i> American</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(5)}><i className="fas fa-pizza-slice"></i> Italian</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(6)}><i className="fas fa-seedling"></i> Chinese</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(8)}><i className="fa-solid fa-cheese"></i> French</Button>
       {state.experiences.length ? (
         <div className="flex-row">
           <Swiper
@@ -65,7 +68,7 @@ function ExperienceList() {
             modules={[FreeMode]}
             className='mySwiper'
             scrollbar={true}
-            slidesPerView={4}
+            slidesPerView={3}
             spaceBetween={5}
             breakpoints={{
               0: {
@@ -73,27 +76,21 @@ function ExperienceList() {
                 spaceBetween: 5,
               },
               1100: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 5,
               },
-              1500: {
-                slidesPerView: 4,
-                spaceBetween: 5,
-              }
             }}
           >
             {filterProducts().map((Experiences) => (
               <SwiperSlide>
-                <ExperienceCard
+                <MealCard 
                   key={Experiences._id}
                   _id={Experiences._id}
                   image={Experiences.image}
                   name={Experiences.name}
-                  price={Experiences.price}
+                  percentage={Experiences.percentage}
                   points={Experiences.points}
                   description={Experiences.description}
-                  originalprice={Experiences.originalprice}
-                  quantity={Experiences.quantity}
                 />
               </SwiperSlide>
             ))}
@@ -106,4 +103,4 @@ function ExperienceList() {
   );
 }
 
-export default ExperienceList;
+export default MealList;

@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import UserCard from '../components/UserCard/';
+import { Link } from 'react-router-dom';
 
 const styles = {
     container: {
@@ -12,6 +13,7 @@ const styles = {
         color: 'white',
         justifyContent: 'center',
         textAlign: 'center',
+        height: '100vh'
     },
     space: {
         margin: '10px',

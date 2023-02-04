@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Experiences, Order } = require('../models');
+const { User, Experiences, Order} = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -15,9 +15,15 @@ const resolvers = {
       return await Experiences.find(params).populate('activityLevel');
     },
     experience: async (parent, { _id }) => {
-      return await Experiences.findById(_id).populate('activityLevel');
+      return await Experiences.findById(_id)
     },
-    users: async (parent, args, context) => {
+    users: async () => {
+      return await User.find();
+    },
+    userFeed: async (parent, { _id }) => {
+      return await User.findById(_id);
+    },
+    user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
           path: 'orders.experiences',
@@ -85,6 +91,18 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addReview: async (parent, { experienceId, title, description  }) => {
+      return Experiences.findOneAndUpdate(
+        { _id: experienceId },
+        {
+          $addToSet: { reviews: { title, description} },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
     },
     addOrder: async (parent, { experiences }, context) => {
       console.log(context);

@@ -4,12 +4,11 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper'
-
-import { useQuery } from '@apollo/client';
-import { QUERY_ALL_EXPERIENCES } from '../../utils/queries';
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
 
 const styles = {
   center: {
@@ -18,10 +17,9 @@ const styles = {
   },
   product: {
     width: '20rem',
-    height: '100%',
     backgroundColor: 'white',
     margin: '10px 20px 10px 20px',
-    borderRadius: '3%',
+    borderRadius: '10px'
   },
   indent: {
     margin: '0px 0px 10px 0px',
@@ -29,79 +27,88 @@ const styles = {
   },
   image: {
     objectFit: 'cover',
-    maxHeight: '10rem'
+    maxHeight: '10rem',
+    borderRadius: '10px 10px 0 0'
   },
   bottom: {
     alignItems: ''
   },
   green: {
     color: 'green',
+  },
+  white: {
+    color: 'white',
+  },
+  topCard: {
+    background: '#204c39',
+    width: '100%',
+    borderRadius: '10px'
   }
 }
 
-export default function ExperienceCard() {
-  const { data } = useQuery(QUERY_ALL_EXPERIENCES);
-  let experiences;
+export default function ExperienceCard(item) {
+  const [state, dispatch] = useStoreContext();
 
-  if (data) {
-    experiences = data.experiences;
+  const {
+    _id,
+    image,
+    name,
+    price,
+    points,
+    originalprice,
+    description,
+  } = item;
+
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...item, purchaseQuantity: 1 }
+      });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+    }
   }
+
+  const { cart } = state
+
   return (
     <div style={styles.center} className='container row text-primary'>
-      {experiences ? (
-        <Swiper
-          freeMode={true}
-          grabCursor={true}
-          modules={[FreeMode]}
-          className='mySwiper'
-          scrollbar={true}
-          slidesPerView={3}
-          spaceBetween={10}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            1100: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            1500: {
-              slidesPerView: 3,
-              spaceBetween: 10,
-            }
-          }}
-        >
-          {experiences.map(({ name, description, originalprice, price, points, image }, index) => (
-            <SwiperSlide key={index}>
-              <Card style={styles.product}>
-                <Card.Img style={styles.image} className='img-fluid' variant="top" src={`/images/experiences/${image}`} alt='experience' />
-                <Card.Body>
-                  <Container>
-                    <Col><h3>{name}</h3></Col>
-                      <Col><p>Points: {points}</p></Col>
-                  </Container>
-                  <Container>
-                    <Row>
-                      <Col><del>${originalprice}</del><p style={styles.green}>${price}</p></Col>
-                      <Col><i className="fa-solid fa-thumbs-up"></i><h6>8</h6></Col>
-                      <Col><i className="fas fa-thumbs-down"></i><h6>1</h6></Col>
-                    </Row>
-                    <Row>
-                      <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
-                      <Col><Button variant="primary"><i className="fas fa-comments"></i> Reviews</Button></Col>
-                    </Row>
-                  </Container>
-                  <br />
-                  <Card.Text>
-                    {description}
-                  </Card.Text>      
-                </Card.Body >
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      ) : null}
+      <div key={_id}>
+        <Card style={styles.product} className='border border-tertiary'>
+          <Card.Img style={styles.image} className='img-fluid' variant="top" src={`/images/experiences/${image}`} alt='experience' />
+          <Card.Body>
+            <Container style={styles.topCard}>
+              <Col><h3 style={styles.white}>{name}</h3></Col>
+              <Col><p style={styles.white}>Points: {points}</p></Col>
+            </Container>
+            <Container>
+              <Row>
+                <Col><h6>Non-member Price: <del>${originalprice}</del></h6></Col>
+                <Col><h6 style={styles.green}>Member Price: ${price}</h6></Col>
+              </Row>
+              <Row>
+                <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true" onClick={addToCart}></i>  Add to Cart</Button></Col>
+                <Col><Link to={`/experience/${_id}`}><Button variant="primary"><i className="fas fa-comments"></i> Reviews</Button></Link></Col>
+              </Row>
+            </Container>
+            <br />
+            <Card.Text style={styles.font}>
+              {description}
+            </Card.Text>
+          </Card.Body >
+        </Card>
+      </div>
     </div >
   );
 }

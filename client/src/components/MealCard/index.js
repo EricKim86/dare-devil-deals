@@ -5,12 +5,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper'
-
-import { useQuery } from '@apollo/client';
-import { QUERY_ALL_EXPERIENCES } from '../../utils/queries';
-
 const styles = {
   center: {
     justifyContent: 'center',
@@ -21,7 +15,7 @@ const styles = {
     height: '100%',
     backgroundColor: 'white',
     margin: '10px 20px 10px 20px',
-    borderRadius: '3%',
+    borderRadius: '10px'
   },
   indent: {
     margin: '0px 0px 10px 0px',
@@ -29,76 +23,54 @@ const styles = {
   },
   image: {
     objectFit: 'cover',
-    maxHeight: '10rem'
+    maxHeight: '10rem',
+    borderRadius: '10px 10px 0 0'
   },
   bottom: {
     alignItems: ''
   },
   green: {
     color: 'green',
+  },
+  white: {
+    color: 'white',
+  },
+  topCard: {
+    background: '#204c39',
+    width: '100%',
+    borderRadius: '10px'
   }
 }
 
-export default function ExperienceCard() {
-  const { data } = useQuery(QUERY_ALL_EXPERIENCES);
-  let experiences;
+export default function MealCard({ _id, image, name, points, percentage, description }) {
 
-  if (data) {
-    experiences = data.experiences;
-  }
   return (
     <div style={styles.center} className='container row text-primary'>
-      {experiences ? (
-        <Swiper
-          freeMode={true}
-          grabCursor={true}
-          modules={[FreeMode]}
-          className='mySwiper'
-          scrollbar={true}
-          slidesPerView={3}
-          spaceBetween={10}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            1100: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            1500: {
-              slidesPerView: 3,
-              spaceBetween: 10,
-            }
-          }}
-        >
-          {experiences.map(({ name, description, percentage, points, image }, index) => (
-            <SwiperSlide key={index}>
-              <Card style={styles.product}>
-                <Card.Img style={styles.image} className='img-fluid' variant="top" src={`/images/meals/${image}`} alt='experience' />
-                <Card.Body>
-                  <Container>
-                    <Col><h3>{name}</h3></Col>
-                      <Col><p>Points: {points}</p></Col>
-                  </Container>
-                  <Container>
-                    <Row>
-                      <Col><p style={styles.green}>{percentage}% off your entire meal</p></Col>
-                    </Row>
-                    <Row>
-                      <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
-                    </Row>
-                  </Container>
-                  <br />
-                  <Card.Text>
-                    {description}
-                  </Card.Text>      
-                </Card.Body >
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      ) : null}
+      <div key={_id}>
+        <Card style={styles.product} className='border border-tertiary'>
+          <Card.Img style={styles.image} className='img-fluid' variant="top" src={`/images/meals/${image}`} alt='experience' />
+          <Card.Body>
+            <Container style={styles.topCard}>
+              <Col><h3 style={styles.white}>{name}</h3></Col>
+              <Col><p style={styles.white}>Points: {points}</p></Col>
+            </Container>
+            <Container>
+              <Row>
+                <Col>Enjoy {percentage}% off your entire meal.</Col>
+                <br />
+                <br />
+              </Row>
+              <Row>
+                <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
+              </Row>
+            </Container>
+            <br />
+            <Card.Text style={styles.font}>
+              {description}
+            </Card.Text>
+          </Card.Body >
+        </Card>
+      </div>
     </div >
   );
 }

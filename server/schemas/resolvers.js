@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Experiences, Order } = require('../models');
+const { User, Experiences, Order} = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -91,6 +91,18 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addReview: async (parent, { experienceId, description  }) => {
+      return Experiences.findOneAndUpdate(
+        { _id: experienceId },
+        {
+          $addToSet: { reviews: {description} },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
     },
     addOrder: async (parent, { experiences }, context) => {
       console.log(context);

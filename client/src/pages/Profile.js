@@ -37,6 +37,7 @@ const styles = {
     color: 'white',
     backgroundColor: '#204c39',
     textAlign: 'center',
+    borderRadius: '10px'
   },
   topCard: {
     backgroundColor: '#204c39',
@@ -94,6 +95,7 @@ export default function Profile() {
                   </Card>
                 </Col>
                 <Col>
+                <h3 style={styles.contact}>My Experiences</h3>
                   <Card style={{ width: '40rem' }}>
                     <Row>
                       <Col>

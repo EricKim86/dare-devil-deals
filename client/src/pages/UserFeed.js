@@ -1,0 +1,109 @@
+import React from "react";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_FEED_USERS } from '../utils/queries';
+
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
+const styles = {
+    height: {
+        minHeight: '100vh'
+    },
+    image: {
+        margin: '10px 20px 20px 30px',
+        width: '70%',
+        borderRadius: '50%',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        border: 'solid gray'
+    },
+    experienceImg: {
+        objectFit: 'cover',
+        maxHeight: '25rem'
+    },
+    body: {
+        color: '#204c39',
+        backgroundColor: 'white',
+        width: '25rem',
+        borderRadius: '10px'
+    },
+    space: {
+        margin: '5px 10px 5px 10px'
+    },
+    contact: {
+        color: 'white',
+        backgroundColor: '#204c39',
+        textAlign: 'center',
+        borderRadius: '10px',
+        padding: '5px 0 5px 0'
+    },
+    topCard: {
+        backgroundColor: '#204c39',
+        textAlign: 'center',
+        borderRadius: '10px 10px 0 0'
+    },
+    expCard: {
+        backgroundColor: '#204c39',
+        color: 'white',
+        borderRadius: '10px',
+        padding: '5px'
+    },
+    font: {
+        fontSize: '24px',
+        margin: '5px 15px 5px 15px',
+    }
+}
+export default function ReviewCard() {
+
+    const { id } = useParams();
+
+    const { data } = useQuery(QUERY_FEED_USERS, {
+        variables: { _id: id }
+    });
+
+    const user = data?.userFeed || {};
+
+    return (
+        <div style={styles.height} className="y-1 ">
+            <Container>
+            <Link to="/">← Back to Home</Link>
+            <br />
+            <br />
+                <Row>
+                    <Col>
+                        <Card style={styles.body} className='border border-tertiary'>
+                            <div style={styles.topCard}>
+                                <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/18/200/200' />
+                            </div>
+                            <Card.Body style={styles.space}>
+                                <Card.Title>{user.userName}</Card.Title>
+                                <Card.Subtitle className="mb-2">{user.firstName} {user.lastName}</Card.Subtitle>
+                                <Card.Subtitle className="mb-2">{user.location}</Card.Subtitle>
+                                <Card.Text>
+                                    {user.bio}
+                                </Card.Text>
+                                <div style={styles.contact}>
+                                    <i style={styles.font} class="fa-solid fa-envelope"></i>
+                                    <i style={styles.font} class="fa-brands fa-facebook-f"></i>
+                                    <i style={styles.font} class="fa-brands fa-instagram"></i>
+                                    <i style={styles.font} class="fa-brands fa-twitter"></i>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                    <h3 style={styles.contact}>My Experiences</h3>
+
+                    </Col>
+                </Row>
+            </Container >
+        </div>
+    );
+}

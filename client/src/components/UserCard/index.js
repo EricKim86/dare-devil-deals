@@ -46,7 +46,6 @@ export default function ReviewCard() {
     return (
         <>
             <div className="container my-1">
-                <Link to="/">← Back to Home</Link>
                 <br />
                 <br />
                 {user ? (
@@ -73,7 +72,7 @@ export default function ReviewCard() {
                             }
                         }}
                     >
-                        {user.map(({ firstName, lastName, userName, location }, index) => (
+                        {user.map(({ _id, firstName, lastName, userName, location }, index) => (
                             <SwiperSlide key={index}>
                                 <Card style={styles.body} className='border border-tertiary'>
                                     <div style={styles.topCard}>
@@ -85,7 +84,7 @@ export default function ReviewCard() {
                                         <Card.Title><h6>{location}</h6></Card.Title>
                                         <br />
                                         <br />
-                                        <Button variant="primary"><i className="fa fa-user" aria-hidden="true"></i> View Profile</Button>
+                                        <Link to={`/user/${_id}`}><Button variant="primary"><i className="fa fa-user" aria-hidden="true"></i> View Profile</Button></Link>
                                         <br />
                                         <br />
                                     </Card.Body>

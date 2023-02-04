@@ -56,3 +56,14 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_REVIEW = gql`
+  mutation addReview($experiencesId: ID!, $description: String!) {
+    addReview(experiencesId: $experiences, description: $description) {
+      experiences {
+        _id
+        description
+      }
+    }
+  }
+`;

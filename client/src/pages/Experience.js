@@ -18,7 +18,10 @@ const styles = {
         margin: '50px',
         color: 'white',
         textAlign: 'center',
-        height: '100vh'
+        height: '200vh'
+    },
+    center: {
+        textAlign: 'center',
     },
     body: {
         color: 'black',
@@ -27,12 +30,19 @@ const styles = {
         width: '40rem'
     },
     reviewForm: {
-        color: 'black',
+        color: 'white',
         borderRadius: '10px',
+        backgroundColor: '#204c39',
+    },
+    reviewPost: {
+        color: 'white',
+        borderRadius: '10px',
+        backgroundColor: '#204c39',
+        padding: '10px'
     },
     profileImage: {
         objectFit: 'cover',
-        maxHeight: '30rem',
+        maxHeight: '29rem',
         borderRadius: '10px 10px 0 0'
     },
 }
@@ -46,7 +56,7 @@ export default function ReviewCard() {
     });
 
     const experience = data?.experience || {};
-
+    
     return (
         <div style={styles.container}>
             <h2>Check out what other users think</h2>
@@ -56,7 +66,7 @@ export default function ReviewCard() {
 
             <Container>
                 <Row>
-                    <Col><Card style={styles.body}>
+                    <Col><Card style={styles.body} className='border border-tertiary'>
                         <Card.Img style={styles.profileImage} variant="top" src={`/images/experiences/${experience.image}`} />
                         <Card.Body>
                             <Card.Title><h3>{experience.name}</h3></Card.Title>
@@ -66,28 +76,36 @@ export default function ReviewCard() {
                         </Card.Body>
                     </Card></Col>
                     <Col>
-                        <Card style={styles.reviewForm} className='container'>
+                        <Card style={styles.reviewForm} className='container border border-tertiary'>
+                        <h2>Write a Review</h2>
                             <Form>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                    <Form.Label>Review Title</Form.Label>
+                                    <Form.Label>Title</Form.Label>
                                     <Form.Control type="text" placeholder="Enter a Title" />
                                 </Form.Group>
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Review</Form.Label>
-                                    <Form.Control type="text" placeholder="Write a Review" />
+                                    <Form.Control as="textarea" placeholder="Write a Review" rows={11}/>
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Submit
                                 </Button>
+                                <br />
+                                <br />
                             </Form>
                         </Card>
                     </Col>
                 </Row>
-                <Col>
-                    <h2>Reviews will populate here</h2>
+                <Col className='container' style={styles.center}>
+                    <h2>User Reviews:</h2>
+                    <Card style={styles.reviewPost}>
+                    <h6>Posted At: {experience.reviews[0].createdAt}</h6>
+                    <h5>Description: {experience.reviews[0].description}</h5>
+                    </Card>
                 </Col>
             </Container>
+            
         </div>
     );
 }

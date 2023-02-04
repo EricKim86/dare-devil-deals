@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const { Schema } = mongoose;
 
@@ -22,7 +23,6 @@ const experienceSchema = new Schema({
     originalprice: {
         type: Number
     },
-
     price: {
         type: Number
     },
@@ -39,7 +39,22 @@ const experienceSchema = new Schema({
     activityLevel: {
         type: Number,
         required: true
-      }
+    },
+    reviews: [
+        {
+            description: {
+              type: String,
+              required: true,
+              minlength: 1,
+              maxlength: 280,
+            },
+            createdAt: {
+              type: Date,
+              default: Date.now,
+              get: (timestamp) => dateFormat(timestamp),
+            },
+          },
+    ]
 });
 
 const Experiences = mongoose.model('Experiences', experienceSchema);

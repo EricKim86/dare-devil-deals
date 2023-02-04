@@ -47,7 +47,7 @@ export default function AccessoryCard({ _id, image, name, price, points, origina
   return (
     <div style={styles.center} className='container row text-primary'>
       <div key={_id}>
-        <Card style={styles.product} className='border border-tertiary'> 
+        <Card style={styles.product} className='border border-tertiary'>
           <Card.Img style={styles.image} className='img-fluid' variant="top" src={`/images/products/${image}`} alt='experience' />
           <Card.Body>
             <Container style={styles.topCard}>
@@ -56,9 +56,8 @@ export default function AccessoryCard({ _id, image, name, price, points, origina
             </Container>
             <Container>
               <Row>
-                <Col><del>${originalprice}</del><p style={styles.green}>${price}</p></Col>
-                <Col><i className="fa-solid fa-thumbs-up"></i><h6>8</h6></Col>
-                <Col><i className="fas fa-thumbs-down"></i><h6>1</h6></Col>
+                <Col><h6>Non-member Price: <del>${originalprice}</del></h6></Col>
+                <Col><h6 style={styles.green}>Member Price: ${price}</h6></Col>
               </Row>
               <Row>
                 <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>

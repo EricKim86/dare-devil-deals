@@ -94,9 +94,8 @@ export default function ExperienceCard(item) {
             </Container>
             <Container>
               <Row>
-                <Col><del>${originalprice}</del><p style={styles.green}>${price}</p></Col>
-                <Col><i className="fa-solid fa-thumbs-up"></i></Col>
-                <Col><i className="fas fa-thumbs-down"></i></Col>
+                <Col><h6>Non-member Price: <del>${originalprice}</del></h6></Col>
+                <Col><h6 style={styles.green}>Member Price: ${price}</h6></Col>
               </Row>
               <Row>
                 <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true" onClick={addToCart}></i>  Add to Cart</Button></Col>

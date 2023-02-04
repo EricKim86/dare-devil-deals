@@ -50,42 +50,42 @@ function Detail() {
     }
   }, [experiences, data, loading, dispatch, id]);
 
-  // const addToCart = () => {
-  //   const itemInCart = cart.find((cartItem) => cartItem._id === id);
-  //   if (itemInCart) {
-  //     dispatch({
-  //       type: UPDATE_CART_QUANTITY,
-  //       _id: id,
-  //       purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
-  //     });
-  //     idbPromise('cart', 'put', {
-  //       ...itemInCart,
-  //       purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
-  //     });
-  //   } else {
-  //     dispatch({
-  //       type: ADD_TO_CART,
-  //       product: { ...currentExperience, purchaseQuantity: 1 },
-  //     });
-  //     idbPromise('cart', 'put', { ...currentExperience, purchaseQuantity: 1 });
-  //   }
-  // };
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === id);
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...currentExperience, purchaseQuantity: 1 },
+      });
+      idbPromise('cart', 'put', { ...currentExperience, purchaseQuantity: 1 });
+    }
+  };
 
-  // const removeFromCart = () => {
-  //   dispatch({
-  //     type: REMOVE_FROM_CART,
-  //     _id: currentExperience._id,
-  //   });
+  const removeFromCart = () => {
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: currentExperience._id,
+    });
 
-  //   idbPromise('cart', 'delete', { ...currentExperience });
-  // };
+    idbPromise('cart', 'delete', { ...currentExperience });
+  };
 
   return (
     <>
       {currentExperience && cart ? (
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
-{/* 
+
           <h2>{currentExperience.name}</h2>
 
           <p>{currentExperience.description}</p>
@@ -104,7 +104,7 @@ function Detail() {
           <img
             src={`/images/${currentExperience.image}`}
             alt={currentExperience.name}
-          /> */}
+          />
         </div>
       ) : null}
       <Cart />

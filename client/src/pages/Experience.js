@@ -57,8 +57,10 @@ export default function Experience() {
     });
 
     const experience = data?.experience || {};
- 
+
+
     return (
+
 
         <div style={styles.container}>
             <h2>Check out what other users think</h2>
@@ -102,6 +104,7 @@ export default function Experience() {
                 <Col className='container' style={styles.center}>
                     <h2>User Reviews:</h2>
                     <Card className='container border border-tertiary' style={styles.reviewPost}>
+        
                         {/* {reviews} */}
                     </Card>
                 </Col>

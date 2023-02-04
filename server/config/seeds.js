@@ -260,7 +260,7 @@ db.once('open', async () => {
             name: 'Winery',
             id: 26,
             points: 500,
-            activityLevel: 1,
+            activityLevel: 4,
             percentage: 15,
             description: 'Find a fancy dine-in winery to enjoy your night!',
             image: 'winery.avif'

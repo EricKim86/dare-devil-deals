@@ -5,11 +5,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 
 const styles = {
+  height: {
+    minHeight: '100vh'
+  },
   image: {
     margin: '10px 20px 20px 30px',
     width: '70%',
@@ -41,6 +43,12 @@ const styles = {
     textAlign: 'center',
     borderRadius: '10px 10px 0 0'
   },
+  expCard: {
+    backgroundColor: '#204c39',
+    color: 'white',
+    borderRadius: '10px',
+    padding: '5px'
+  },
   font: {
     fontSize: '24px',
     margin: '5px 15px 5px 15px',
@@ -57,8 +65,7 @@ export default function Profile() {
 
   return (
     <>
-      <div className="container my-1">
-        <Link to="/">← Back to Home</Link>
+      <div style={styles.height} className="y-1">
         <br />
         <br />
         {user ? (
@@ -66,7 +73,7 @@ export default function Profile() {
             <Container>
               <Row>
                 <Col>
-                  <Card style={styles.body}>
+                  <Card style={styles.body} className='border border-tertiary'>
                     <div style={styles.topCard}>
                       <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/18/200/200' />
                     </div>
@@ -89,53 +96,21 @@ export default function Profile() {
                 <Col>
                   <Card style={{ width: '40rem' }}>
                     <Row>
-                      {/* <Col>
-                  <Card.Img style={styles.experienceImg} className="img-fluid" variant="top" src='https://picsum.photos/id/37/200/200' />
-                </Col>
-                <Col>
-                  <Card.Body>
-                    <Card.Title>CorgiFan21</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Hiking in the Mountains</Card.Subtitle>
-                    <Card.Text>
-                    This was such a fun experience!  My entire family enjoyed the lovely hike across the beautiful mountains.
-                    </Card.Text>
-                    <Button variant="primary">See All User Reviews</Button>
-                    </Card.Body>
-                </Col>
-              </Row>
-            </Card>
-            <Card style={{ width: '40rem' }}>
-              <Row>
-                <Col>
-                  <Card.Img style={styles.experienceImg} className="img-fluid" variant="top" src='https://picsum.photos/id/37/200/200' />
-                </Col>
-                <Col>
-                  <Card.Body>
-                    <Card.Title>CorgiFan21</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Hiking in the Mountains</Card.Subtitle>
-                    <Card.Text>
-                    This was such a fun experience!  My entire family enjoyed the lovely hike across the beautiful mountains.
-                    </Card.Text>
-                    <Button variant="primary">See All User Reviews</Button>
-                    </Card.Body>
-                </Col>
-              </Row>
-            </Card>
-            <Card style={{ width: '40rem' }}>
-              <Row>
-                <Col>
-                  <Card.Img style={styles.experienceImg} className="img-fluid" variant="top" src='https://picsum.photos/id/37/200/200' />
-                </Col>
-                <Col>
-                  <Card.Body>
-                    <Card.Title>CorgiFan21</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Hiking in the Mountains</Card.Subtitle>
-                    <Card.Text>
-                    This was such a fun experience!  My entire family enjoyed the lovely hike across the beautiful mountains.
-                    </Card.Text>
-                    <Button variant="primary">See All User Reviews</Button>
-                    </Card.Body>
-                </Col> */}
+                      <Col>
+                        <Card.Img style={styles.experienceImg} className="img-fluid" variant="top" src='https://picsum.photos/id/37/200/200' />
+                      </Col>
+                      <Col>
+                        <Card.Body>
+                          <div style={styles.expCard}>
+                          <Card.Title>CorgiFan21</Card.Title>
+                          <Card.Subtitle className="mb-2 text-muted">Hiking in the Mountains</Card.Subtitle>
+                          </div>
+                          <Card.Text>
+                            This was such a fun experience!  My entire family enjoyed the lovely hike across the beautiful mountains.
+                          </Card.Text>
+                          <Button variant="primary">See All User Reviews</Button>
+                        </Card.Body>
+                      </Col>
                     </Row>
                   </Card>
                 </Col>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ExperienceCard from '../ExperienceCard';
+import AccessoryCard from '../AccessoryCard';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_EXPERIENCES } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -17,10 +17,10 @@ const styles = {
   },
 }
 
-function ExperienceList() {
+function AccessoryList() {
   const [state, dispatch] = useStoreContext();
 
-  const [currentActivityLevel, setCurrentActivityLevel] = useState(2);
+  const [currentActivityLevel, setCurrentActivityLevel] = useState(9);
 
   const { loading, data, error } = useQuery(QUERY_EXPERIENCES);
   if (error) {
@@ -55,9 +55,11 @@ function ExperienceList() {
 
   return (
     <div className="my-2">
-      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(1)}><i className="fas fa-hiking"></i> Activity 1</Button>
-      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(2)}><i className="fas fa-hiking"></i> Activity 2</Button>
-      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(3)}><i className="fas fa-hiking"></i> Activity 3</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(9)}><i className="fas fa-shopping-bag"></i> Food and Grocery</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(10)}><i className="fa-solid fa-shirt"></i> Clothing</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(11)}><i className="fa-solid fa-basketball"></i> Sports and Outdoors</Button>
+      <Button style={styles.space} variant="primary" onClick={() => setCurrentActivityLevel(12)}><i className="fa fa-question-circle"></i> Misc</Button>
+
       {state.experiences.length ? (
         <div className="flex-row">
           <Swiper
@@ -71,11 +73,11 @@ function ExperienceList() {
             breakpoints={{
               0: {
                 slidesPerView: 1,
-                spaceBetween: 5,
+                spaceBetween: 10,
               },
               1100: {
                 slidesPerView: 2,
-                spaceBetween: 5,
+                spaceBetween: 10,
               },
               1500: {
                 slidesPerView: 4,
@@ -85,16 +87,16 @@ function ExperienceList() {
           >
             {filterProducts().map((Experiences) => (
               <SwiperSlide>
-                <ExperienceCard
-                  key={Experiences._id}
-                  _id={Experiences._id}
-                  image={Experiences.image}
-                  name={Experiences.name}
-                  price={Experiences.price}
-                  points={Experiences.points}
-                  description={Experiences.description}
-                  originalprice={Experiences.originalprice}
-                  quantity={Experiences.quantity}
+                <AccessoryCard
+                   key={Experiences._id}
+                   _id={Experiences._id}
+                   image={Experiences.image}
+                   name={Experiences.name}
+                   price={Experiences.price}
+                   points={Experiences.points}
+                   description={Experiences.description}
+                   originalprice={Experiences.originalprice}
+                   quantity={Experiences.quantity}
                 />
               </SwiperSlide>
             ))}
@@ -107,4 +109,4 @@ function ExperienceList() {
   );
 }
 
-export default ExperienceList;
+export default AccessoryList;

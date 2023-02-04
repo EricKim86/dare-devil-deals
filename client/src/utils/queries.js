@@ -9,6 +9,24 @@ export const QUERY_EXPERIENCES = gql`
       image
       price
       points
+      originalprice
+      percentage
+      activityLevel
+    }
+  }
+`;
+
+export const QUERY_EXPERIENCE = gql`
+  query getExperience($_id: ID!) {
+    experience(_id: $_id) {
+      _id
+      name
+      description
+      image
+      price
+      points
+      originalprice
+      percentage
       activityLevel
     }
   }

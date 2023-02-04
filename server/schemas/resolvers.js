@@ -15,7 +15,7 @@ const resolvers = {
       return await Experiences.find(params).populate('activityLevel');
     },
     experience: async (parent, { _id }) => {
-      return await Experiences.findById(_id).populate('activityLevel');
+      return await Experiences.findById(_id)
     },
     users: async () => {
       return await User.find();

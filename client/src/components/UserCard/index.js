@@ -75,15 +75,19 @@ export default function ReviewCard() {
                     >
                         {user.map(({ firstName, lastName, userName, location }, index) => (
                             <SwiperSlide key={index}>
-                                <Card style={styles.body}>
+                                <Card style={styles.body} className='border border-tertiary'>
                                     <div style={styles.topCard}>
                                         <Card.Img style={styles.profileImage} variant="top" src='https://picsum.photos/id/65/200/200' />
                                     </div>
                                     <Card.Body>
                                         <Card.Title><h3>{userName}</h3></Card.Title>
                                         <Card.Title><h6>{firstName} {lastName}</h6></Card.Title>
-                                        <Card.Title><h6>250 Points</h6></Card.Title>
+                                        <Card.Title><h6>{location}</h6></Card.Title>
+                                        <br />
+                                        <br />
                                         <Button variant="primary"><i className="fa fa-user" aria-hidden="true"></i> View Profile</Button>
+                                        <br />
+                                        <br />
                                     </Card.Body>
                                 </Card>
                             </SwiperSlide>

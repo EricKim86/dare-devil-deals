@@ -42,12 +42,17 @@ const experienceSchema = new Schema({
     },
     reviews: [
         {
-            description: {
+            title: {
               type: String,
-              required: true,
               minlength: 1,
-              maxlength: 280,
+              maxlength: 100,
             },
+            description: {
+                type: String,
+                required: true,
+                minlength: 1,
+                maxlength: 280,
+              },
             createdAt: {
               type: Date,
               default: Date.now,

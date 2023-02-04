@@ -76,7 +76,7 @@ export default function ReviewCard() {
                             <SwiperSlide key={index}>
                                 <Card style={styles.body} className='border border-tertiary'>
                                     <div style={styles.topCard}>
-                                        <Card.Img style={styles.profileImage} variant="top" src='https://picsum.photos/id/65/200/200' />
+                                        <Card.Img style={styles.profileImage} variant="top" src='https://picsum.photos/id/56/200/200' />
                                     </div>
                                     <Card.Body>
                                         <Card.Title><h3>{userName}</h3></Card.Title>

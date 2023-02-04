@@ -43,7 +43,7 @@ export default function Profile() {
               <Row>
                 <Col>
                   <Card style={{ width: '25rem' }}>
-                    <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/65/200/200' />
+                    <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/56/200/200' />
                     <Card.Body>
                       <Card.Title>{user.userName}</Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">{user.firstName} {user.lastName}</Card.Subtitle>

@@ -92,11 +92,11 @@ const resolvers = {
 
       return { token, user };
     },
-    addReview: async (parent, { experienceId, description  }) => {
+    addReview: async (parent, { experienceId, title, description  }) => {
       return Experiences.findOneAndUpdate(
         { _id: experienceId },
         {
-          $addToSet: { reviews: {description} },
+          $addToSet: { reviews: { title, description} },
         },
         {
           new: true,

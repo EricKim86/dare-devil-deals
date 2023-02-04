@@ -32,10 +32,6 @@ const styles = {
     margin: '30px 50px 50px 10px',
     border: 'none',
   },
-  icon: {
-    padding: '40px 30px 0px 30px',
-    fontSize: '50px'
-  },
   space: {
     margin: '0 10px 40px 10px'
   },
@@ -122,13 +118,6 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-
-      <div style={styles.icon}>
-        <h2>Follow Us</h2>
-        <a href='https://www.google.com' target="blank"><i style={styles.space} className='fa-brands fa-facebook'></i></a>
-        <a href='https://www.google.com' target='blank'><i style={styles.space} className='fa-brands fa-instagram'></i></a>
-        <a href='https://www.google.com' target='blank'><i style={styles.space} className='fa-brands fa-twitter'></i></a>
-      </div>
       <br />
     </div>
   );

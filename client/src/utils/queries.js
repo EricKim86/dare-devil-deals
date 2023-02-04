@@ -30,6 +30,7 @@ export const QUERY_EXPERIENCE = gql`
       activityLevel
       reviews {
         _id
+        title
         description
         createdAt
         }

@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+import ReviewCard from '../components/ReviewCard'
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
@@ -47,7 +48,7 @@ const styles = {
     },
 }
 
-export default function ReviewCard() {
+export default function Experience() {
 
     const { id } = useParams();
 
@@ -56,8 +57,9 @@ export default function ReviewCard() {
     });
 
     const experience = data?.experience || {};
-    
+ 
     return (
+
         <div style={styles.container}>
             <h2>Check out what other users think</h2>
             <Link to="/Shop">← Back to Shop</Link>
@@ -77,7 +79,7 @@ export default function ReviewCard() {
                     </Card></Col>
                     <Col>
                         <Card style={styles.reviewForm} className='container border border-tertiary'>
-                        <h2>Write a Review</h2>
+                            <h2>Write a Review</h2>
                             <Form>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Title</Form.Label>
@@ -86,7 +88,7 @@ export default function ReviewCard() {
 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Review</Form.Label>
-                                    <Form.Control as="textarea" placeholder="Write a Review" rows={11}/>
+                                    <Form.Control as="textarea" placeholder="Write a Review" rows={11} />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Submit
@@ -99,13 +101,11 @@ export default function ReviewCard() {
                 </Row>
                 <Col className='container' style={styles.center}>
                     <h2>User Reviews:</h2>
-                    <Card style={styles.reviewPost}>
-                    <h6>Posted At: {experience.reviews[0].createdAt}</h6>
-                    <h5>Description: {experience.reviews[0].description}</h5>
+                    <Card className='container border border-tertiary' style={styles.reviewPost}>
+                        {/* {reviews} */}
                     </Card>
                 </Col>
             </Container>
-            
         </div>
     );
 }

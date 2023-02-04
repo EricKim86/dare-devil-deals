@@ -6,6 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
 
 const styles = {
   center: {
@@ -43,7 +46,41 @@ const styles = {
   }
 }
 
-export default function ExperienceCard({ _id, image, name, price, points, originalprice, description }) {
+export default function ExperienceCard(item) {
+  const [state, dispatch] = useStoreContext();
+
+  const {
+    _id,
+    image,
+    name,
+    price,
+    points,
+    originalprice,
+    description,
+  } = item;
+
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...item, purchaseQuantity: 1 }
+      });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+    }
+  }
+
+  const { cart } = state
 
   return (
     <div style={styles.center} className='container row text-primary'>
@@ -58,12 +95,12 @@ export default function ExperienceCard({ _id, image, name, price, points, origin
             <Container>
               <Row>
                 <Col><del>${originalprice}</del><p style={styles.green}>${price}</p></Col>
-                <Col><i className="fa-solid fa-thumbs-up"></i><h6>8</h6></Col>
-                <Col><i className="fas fa-thumbs-down"></i><h6>1</h6></Col>
+                <Col><i className="fa-solid fa-thumbs-up"></i></Col>
+                <Col><i className="fas fa-thumbs-down"></i></Col>
               </Row>
               <Row>
-                <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
-                <Col><Link to={`/Experience/${_id}`}><Button variant="primary"><i className="fas fa-comments"></i> Reviews</Button></Link></Col>
+                <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true" onClick={addToCart}></i>  Add to Cart</Button></Col>
+                <Col><Link to={`/experience/${_id}`}><Button variant="primary"><i className="fas fa-comments"></i> Reviews</Button></Link></Col>
               </Row>
             </Container>
             <br />

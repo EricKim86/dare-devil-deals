@@ -29,7 +29,6 @@ function ExperienceList() {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       dispatch({
         type: UPDATE_EXPERIENCES,
         experiences: data.experiences,

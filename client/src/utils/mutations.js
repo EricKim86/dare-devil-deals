@@ -58,10 +58,11 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_REVIEW = gql`
-  mutation addReview($experiencesId: ID!, $description: String!) {
-    addReview(experiencesId: $experiences, description: $description) {
+  mutation addReview($experiencesId: ID!, $title: String, $description: String!) {
+    addReview(experiencesId: $experiences, title: $title, description: $description) {
       experiences {
         _id
+        title
         description
       }
     }

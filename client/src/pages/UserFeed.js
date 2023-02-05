@@ -44,8 +44,9 @@ const styles = {
     body: {
         color: '#204c39',
         backgroundColor: 'white',
-        width: '25rem',
-        borderRadius: '10px'
+        width: '80%',
+        borderRadius: '10px',
+        margin: '0 0 20px 55px'
     },
     space: {
         margin: '5px 10px 5px 10px'
@@ -106,26 +107,27 @@ export default function ReviewCard() {
 
                 <Row>
                     <Col>
-                        <div className="container"></div>
-                        <Card style={styles.body} className='border border-tertiary'>
-                            <div style={styles.topCard}>
-                                <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/56/200/200' />
-                            </div>
-                            <Card.Body style={styles.space}>
-                                <Card.Title>{user.userName}</Card.Title>
-                                <Card.Subtitle className="mb-2">{user.firstName} {user.lastName}</Card.Subtitle>
-                                <Card.Subtitle className="mb-2">{user.location}</Card.Subtitle>
-                                <Card.Text>
-                                    {user.bio}
-                                </Card.Text>
-                                <div style={styles.contact}>
-                                    <i style={styles.font} className="fa-solid fa-envelope"></i>
-                                    <i style={styles.font} className="fa-brands fa-facebook-f"></i>
-                                    <i style={styles.font} className="fa-brands fa-instagram"></i>
-                                    <i style={styles.font} className="fa-brands fa-twitter"></i>
+                        <h3 style={styles.contact} className='border border-tertiary'>Profile</h3>
+                            <div className="container"></div>
+                            <Card style={styles.body} className='border border-tertiary'>
+                                <div style={styles.topCard}>
+                                    <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/56/200/200' />
                                 </div>
-                            </Card.Body>
-                        </Card>
+                                <Card.Body style={styles.space}>
+                                    <Card.Title>{user.userName}</Card.Title>
+                                    <Card.Subtitle className="mb-2">{user.firstName} {user.lastName}</Card.Subtitle>
+                                    <Card.Subtitle className="mb-2">{user.location}</Card.Subtitle>
+                                    <Card.Text>
+                                        {user.bio}
+                                    </Card.Text>
+                                    <div style={styles.contact}>
+                                        <i style={styles.font} className="fa-solid fa-envelope"></i>
+                                        <i style={styles.font} className="fa-brands fa-facebook-f"></i>
+                                        <i style={styles.font} className="fa-brands fa-instagram"></i>
+                                        <i style={styles.font} className="fa-brands fa-twitter"></i>
+                                    </div>
+                                </Card.Body>
+                            </Card>
                     </Col>
                     <Col style={styles.containerTwo}>
                         <h3 style={styles.contact} className='border border-tertiary'>Friends List</h3>
@@ -194,28 +196,28 @@ export default function ReviewCard() {
                             }}
                         >
                             <SwiperSlide>
-                               
-                            <Col>Laser Tag</Col>
+
+                                <Col>Laser Tag</Col>
                                 <img style={styles.experienceImg} className="img-fluid" src={Experience1} alt='Experience' />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                            <Col>Kayak</Col>
+                                <Col>Kayak</Col>
                                 <img style={styles.experienceImg} lassName="img-fluid" src={Experience2} alt='Experience' />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                            <Col>Arcade</Col>
+                                <Col>Arcade</Col>
                                 <img style={styles.experienceImg} lassName="img-fluid" src={Experience3} alt='Experience' />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                            <Col>Museum</Col>
+                                <Col>Museum</Col>
                                 <img style={styles.experienceImg} lassName="img-fluid" src={Experience4} alt='Experience' />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                            <Col>Theme Park</Col>
+                                <Col>Theme Park</Col>
                                 <img style={styles.experienceImg} lassName="img-fluid" src={Experience5} alt='Experience' />
                             </SwiperSlide>
 

@@ -48,7 +48,8 @@ const CartItem = ({ item }) => {
   return (
     <div>
       <div className='flex-row d-flex justify-content-between'>
-        <div><h6>{item.name} ${item.price}</h6></div>
+        <div><h4>{item.name}</h4></div>
+        <div><h4>${item.price}</h4></div>
         <div>
           <span> Qty:</span>
           <input style={styles.width}
@@ -62,7 +63,7 @@ const CartItem = ({ item }) => {
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            <i class="fa-solid fa-trash-can"></i>
           </span>
         </div>
       </div>

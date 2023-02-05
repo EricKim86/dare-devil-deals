@@ -20,7 +20,7 @@ const styles = {
         color: '#204c39',
         backgroundColor: 'white',
         borderRadius: '10px',
-        width: '20rem'
+
     },
     profileImage: {
         margin: '10px 20px 20px 20px',
@@ -60,7 +60,7 @@ export default function ReviewCard() {
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
-                                spaceBetween: 10,
+                                spaceBetween: 5,
                             },
                             1100: {
                                 slidesPerView: 2,

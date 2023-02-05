@@ -20,7 +20,7 @@ const styles = {
 function ExperienceList() {
   const [state, dispatch] = useStoreContext();
 
-  const [currentActivityLevel, setCurrentActivityLevel] = useState(2);
+  const [currentActivityLevel, setCurrentActivityLevel] = useState(1);
 
   const { loading, data, error } = useQuery(QUERY_EXPERIENCES);
   if (error) {

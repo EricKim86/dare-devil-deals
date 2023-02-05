@@ -28,6 +28,10 @@ export const QUERY_EXPERIENCE = gql`
       originalprice
       percentage
       activityLevel
+      reviewTitle
+      reviewDesc
+      reviewUser
+      reviewTime
       reviews {
         _id
         title

@@ -3,6 +3,16 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
+const styles = {
+  padding: {
+    padding: '10px'
+  },
+  width: {
+    width: '3rem'
+  },
+}
+
+
 const CartItem = ({ item }) => {
 
   const [, dispatch] = useStoreContext();
@@ -32,39 +42,31 @@ const CartItem = ({ item }) => {
         purchaseQuantity: parseInt(value)
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: parseInt(value) });
-
     }
   }
 
   return (
-    <><h2>hi</h2></>
-    // <div className="flex-row">
-    //   <div>
-    //     <img
-    //       src={`/images/${item.image}`}
-    //       alt=""
-    //     />
-    //   </div>
-    //   <div>
-    //     <div>{item.name}, ${item.price}</div>
-    //     <div>
-    //       <span>Qty:</span>
-    //       <input
-    //         type="number"
-    //         placeholder="1"
-    //         value={item.purchaseQuantity}
-    //         onChange={onChange}
-    //       />
-    //       <span
-    //         role="img"
-    //         aria-label="trash"
-    //         onClick={() => removeFromCart(item)}
-    //       >
-    //         🗑️
-    //       </span>
-    //     </div>
-    //   </div>
-    // </div>
+    <div>
+      <div className='flex-row d-flex justify-content-between'>
+        <div><h6>{item.name} ${item.price}</h6></div>
+        <div>
+          <span> Qty:</span>
+          <input style={styles.width}
+            type="number"
+            placeholder="1"
+            value={item.purchaseQuantity}
+            onChange={onChange}
+          />
+          <span
+            role="img"
+            aria-label="trash"
+            onClick={() => removeFromCart(item)}
+          >
+            🗑️
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
 

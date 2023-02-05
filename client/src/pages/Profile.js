@@ -97,6 +97,8 @@ export default function Profile() {
 
   const user = data?.user || {};
 
+console.log(user);
+
   return (
     <div style={styles.height} className="y-1 ">
       <Container>
@@ -107,6 +109,7 @@ export default function Profile() {
         <Row>
           <Col>
             <div className="container"></div>
+
             <Card style={styles.body} className='border border-tertiary'>
               <div style={styles.topCard}>
                 <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/56/200/200' />
@@ -128,7 +131,7 @@ export default function Profile() {
             </Card>
           </Col>
           <Col style={styles.containerTwo}>
-            <h3 style={styles.contact}>Friends List</h3>
+            <h3 style={styles.contact} className='border border-tertiary'>Friends List</h3>
             <h6 style={styles.white}><i className="fa-solid fas fa-hard-hat"></i> Coming Soon <i className="fa-solid fas fa-hard-hat"></i></h6>
             <Swiper
               style={styles.white}
@@ -163,64 +166,13 @@ export default function Profile() {
                 <SwiperSlide><img style={styles.experienceImg} className="img-fluid" src={Profile5} alt='Profile' />Henry Jordan</SwiperSlide>
               </Row>
               <br />
-              <h3 style={styles.contact}>Member Status</h3>
+              <h3 style={styles.contact} className='border border-tertiary'>Member Status</h3>
               <h6 style={styles.white}><i className="fa-solid fas fa-hard-hat"></i> Coming Soon <i className="fa-solid fas fa-hard-hat"></i></h6>
             </Swiper>
           </Col>
 
           <div className="container">
-            <h3 style={styles.contact}>My Experiences</h3>
-            <Swiper
-              style={styles.white}
-              freeMode={true}
-              grabCursor={true}
-              modules={[FreeMode]}
-              className='mySwiper'
-              scrollbar={true}
-              slidesPerView={3}
-              spaceBetween={10}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                1100: {
-                  slidesPerView: 2,
-                  spaceBetween: 10,
-                },
-                1500: {
-                  slidesPerView: 3,
-                  spaceBetween: 10,
-                }
-              }}
-            >
-              <SwiperSlide>
-
-                <Col>Laser Tag</Col>
-                <img style={styles.experienceImg} className="img-fluid" src={Experience1} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Kayak</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience2} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Laser Tag</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience3} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Museum</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience4} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Theme Park</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience5} alt='Experience' />
-              </SwiperSlide>
-
-            </Swiper>
+            <h3 style={styles.contact} className='border border-tertiary'>My Experiences</h3>
           </div>
         </Row>
       </Container >

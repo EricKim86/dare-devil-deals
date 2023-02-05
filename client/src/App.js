@@ -16,11 +16,17 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Navigation from './components/Nav';
 import Shop from './pages/Shop';
-import Cart from './pages/Cart';
+import Cart from './components/Cart';
 import Success from './pages/Success';
 import Profile from './pages/Profile';
 import Experience from './pages/Experience';
 import UserFeed from './pages/UserFeed';
+
+import Pitch from './pages/Pitch';
+import Motivation from './pages/Motivation';
+import Technology from './pages/Technology';
+import Future from './pages/Future';
+import Members from './pages/Members';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -61,10 +67,10 @@ function App() {
                                 path="/signup"
                                 element={<Signup />}
                             />
-                            {/* <Route
+                            <Route
                                 path="/success"
                                 element={<Success />}
-                            /> */}
+                            />
                             <Route
                                 path="/profile"
                                 element={<Profile />}
@@ -79,7 +85,7 @@ function App() {
                             />
                                <Route
                                 path="/cart/"
-                                element={<cart />}
+                                element={<Cart />}
                             />
                             <Route
                                 path="/experience/:id"
@@ -88,6 +94,26 @@ function App() {
                              <Route
                                 path="/user/:id"
                                 element={<UserFeed />}
+                            />
+                               <Route
+                                path="/motivation"
+                                element={<Motivation />}
+                            />
+                              <Route
+                                path="/pitch"
+                                element={<Pitch />}
+                            />
+                            <Route
+                                path="/technology"
+                                element={<Technology />}
+                            />
+                             <Route
+                                path="/future"
+                                element={<Future />}
+                            />
+                                <Route
+                                path="/members"
+                                element={<Members />}
                             />
                         </Routes>
                     </StoreProvider>

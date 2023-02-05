@@ -88,6 +88,7 @@ function MealList() {
                   _id={Experiences._id}
                   image={Experiences.image}
                   name={Experiences.name}
+                  price={Experiences.price}
                   percentage={Experiences.percentage}
                   points={Experiences.points}
                   description={Experiences.description}

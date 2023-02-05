@@ -1,5 +1,6 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -50,7 +51,13 @@ const styles = {
 
 function Shop() {
   return (
+    <div>
+      <Container>
+      <Link to="/Cart">← Go to MyCart</Link>
+      </Container>
+  
     <div style={styles.container}>
+      
 
       <h3>EXPERIENCE <span style={styles.gray}>what you want to experience</span></h3>
       <h3><span style={styles.gray}>When you are a member of</span><span style={styles.darkGreen}><span style={styles.fontStyle}> Dare Devil</span> DEALS</span></h3>
@@ -114,6 +121,7 @@ function Shop() {
         </Row>
       </Container>
       <br />
+    </div>
     </div>
   );
 }

@@ -31,7 +31,7 @@ function Navigation() {
               <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
               <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
               <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
-              <Col><Nav.Link href="/Cart">Cart</Nav.Link></Col>
+              <Col><Nav.Link href="/Cart">MyCart</Nav.Link></Col>
               <Col className="mx-1"><a href="/" onClick={() => Auth.logout()}>Logout</a>
               </Col>
             </Row>

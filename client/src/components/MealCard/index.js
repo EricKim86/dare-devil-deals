@@ -5,6 +5,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
+
 const styles = {
   center: {
     justifyContent: 'center',
@@ -42,7 +46,44 @@ const styles = {
   }
 }
 
-export default function MealCard({ _id, image, name, points, percentage, description }) {
+export default function MealCard(item) {
+  const [state, dispatch] = useStoreContext();
+
+  const {
+    _id,
+    image,
+    name,
+    points,
+    price,
+    percentage,
+    description
+  } = item
+
+  const { cart } = state
+
+
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    console.log(cart);
+    console.log(_id);
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        experiences: { ...item, purchaseQuantity: 1 }
+      });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+    }
+  }
 
   return (
     <div style={styles.center} className='container row text-primary'>
@@ -56,12 +97,14 @@ export default function MealCard({ _id, image, name, points, percentage, descrip
             </Container>
             <Container>
               <Row>
-                <Col>Enjoy {percentage}% off your entire meal.</Col>
+              <Col><h5 style={styles.green}>Member Price: ${price}</h5></Col>
+                <Col><h6>Enjoy {percentage}% off your entire meal.</h6></Col>
+                <br />
                 <br />
                 <br />
               </Row>
               <Row>
-                <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
+                <Col><Button variant="primary" onClick={addToCart}><i className="fa fa-shopping-cart" aria-hidden="true"></i>  Add to Cart</Button></Col>
               </Row>
             </Container>
             <br />

@@ -1,12 +1,20 @@
 # Dare Devil Deals
 
-![alt text](https://github.com/EricKim86/dare-devil-deals/dare-devil-deals/client/src/images/logos/logo2.png)
+*Devilishly Good Deals*
 
 ## Table Of Contents
+- [Background](#background)
 - [Creation](#creation)
-- [Usage](#usage)
-- [Credits](#credits)
+- [Screenshot](#screenshot)
 - [Link](#link)
+- [Usage](#usage)
+- [Creators](#creators)
+- [Credits](#credits)
+
+
+## Background
+
+**Dare Devil Deals** is an ecommerce site for experiences at a discounted rate when bundled together. On **Dare Devil Deals** you can pick an activity, a matching dinner, and accessories all in one place. Then you can share your experiences with other users. Additional development will gamify the process, allowing users to accumulate experience points for their purchases. 
 
 ## Creation
 
@@ -17,7 +25,19 @@
 5. Pushed repository up to Heroku and deployed application.
 6. Pushed local changes back to main branch on original GitHub repository (via GitHub.com).
 
-![alt text]()
+## Screenshot
+
+![screenshot](./client/public/images/screenshots/screenshot_1.png)
+
+![screenshot](./client/public/images/screenshots/screenshot_2.png)
+
+## Link
+
+Repo: 
+https://github.com/EricKim86/dare-devil-deals
+
+Heroku:
+https://.herokuapp.com/home
 
 ## Usage
 
@@ -28,21 +48,16 @@
 5. Use the "Home" link to see the website's information and what services it provides. Use the "Profile" link to view your own profile. Use the "Feed" link to see other user's profiles, experiences, and points. Use the "Shop" link to be directed to all the experiences you can purchase.
 6. Once the user goes into the "Shop" link, the user can view all items, experiences, and dining options that they can purchase. The user can click on the reviews button within the experience/dining options/item card to view other's opinion on the product. On the same card, users can click the "Add to Cart" button to add that experience/dining options/item to their own cart. Once the user checks out the product points will be added to their account, and the experiences will populate on their profile. 
 
-![alt text]()
+## Creators
+
+- [@Danny Bedrossian](https://github.com/dbedrossian)
+- [@Joshua Carter](https://github.com/JoshuaCarter99)
+- [@Rahel Hailu](https://github.com/ririhailu)
+- [@Eric Kim](https://github.com/EricKim86)
 
 ## Credits
 
-Credit for putting this project together goes to:
-UPenn Full Stack Coding Module 22: STATE
-
-![alt text]()
-
-## Link
-
-Repo: 
-https://github.com/EricKim86/dare-devil-deals
-
-Heroku:
-https://.herokuapp.com/home
-
-![alt text]()
+Assistance for putting this project in part comes from:
+*UPenn Full Stack Coding Module 22: STATE*
+& special thanks to
+ [@Justin Pauldo](https://github.com/KingdomSeeker328) & Leif Hetland.

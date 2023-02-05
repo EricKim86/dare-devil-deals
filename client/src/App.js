@@ -99,10 +99,10 @@ function App() {
                                 path="/motivation"
                                 element={<Motivation />}
                             />
-                              <Route
+                              {/* <Route
                                 path="/pitch"
                                 element={<Pitch />}
-                            />
+                            /> */}
                             <Route
                                 path="/technology"
                                 element={<Technology />}

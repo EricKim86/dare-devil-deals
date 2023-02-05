@@ -69,7 +69,7 @@ type Query {
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, userName: String!, email: String!, password: String!, image: String, bio: String! location: String): Auth
-    addOrder(experiences: [ID]!): Order
+    addOrder(experience: [ID]!): Order
     updateUser(firstName: String, lastName: String, userName: String, email: String, location: String, password: String, image: String, bio: String): User
     addReview(experienceId: ID!, title: String, description: String!): Experiences
     login(email: String!, password: String!): Auth

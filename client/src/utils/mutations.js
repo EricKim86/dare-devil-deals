@@ -12,8 +12,8 @@ export const LOGIN = gql`
 `;
 
 export const ADD_ORDER = gql`
-  mutation addOrder($experiences: [ID]!) {
-    addOrder(experiences: $experiences) {
+  mutation addOrder($experience: [ID]!) {
+    addOrder(experience: $experience) {
       purchaseDate
       experiences {
         _id

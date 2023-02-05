@@ -47,9 +47,7 @@ const styles = {
     color: '#9ec378',
   }
 }
-
 export default function Home() {
-
   return (
     <div style={styles.container}>
       <img className="img-fluid" src={Logo} alt='logo' />
@@ -105,11 +103,11 @@ export default function Home() {
           <Col><img style={styles.image} className="img-fluid" src={Art} alt='logo' /></Col>
         </Row>
       </Container>
-<br />
+      <br />
 
       <Container>
         <Row>
-        <Col><img style={styles.image} className="img-fluid" src={Concert} alt='logo' /></Col>
+          <Col><img style={styles.image} className="img-fluid" src={Concert} alt='logo' /></Col>
           <Col>
             <br />
             <br />

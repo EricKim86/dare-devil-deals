@@ -261,6 +261,7 @@ db.once('open', async () => {
             id: 26,
             points: 500,
             activityLevel: 4,
+            price: 20,
             percentage: 15,
             description: 'Find a fancy dine-in winery to enjoy your night!',
             image: 'winery.avif'
@@ -270,6 +271,7 @@ db.once('open', async () => {
             id: 27,
             points: 500,
             activityLevel: 4,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the United States today!',
             image: 'thediner.avif'
@@ -279,6 +281,7 @@ db.once('open', async () => {
             id: 28,
             points: 500,
             activityLevel: 4,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the United States today!',
             image: 'pearls.avif'
@@ -288,6 +291,7 @@ db.once('open', async () => {
             id: 29,
             points: 500,
             activityLevel: 4,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the United States today!',
             image: 'steakhouse.avif'
@@ -297,6 +301,7 @@ db.once('open', async () => {
             id: 30,
             points: 500,
             activityLevel: 5,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from Italy today!',
             image: 'maggiano.avif'
@@ -306,6 +311,7 @@ db.once('open', async () => {
             id: 31,
             points: 500,
             activityLevel: 5,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from Italy today!',
             image: 'littleitaly.avif'
@@ -315,6 +321,7 @@ db.once('open', async () => {
             id: 32,
             points: 500,
             activityLevel: 5,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the Italy today!',
             image: 'lacantina.avif'
@@ -324,6 +331,7 @@ db.once('open', async () => {
             id: 33,
             points: 500,
             activityLevel: 6,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from China today!',
             image: 'cherryblossom.avif'
@@ -333,6 +341,7 @@ db.once('open', async () => {
             id: 34,
             points: 500,
             activityLevel: 6,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from China today!',
             image: 'hanto.avif'
@@ -342,6 +351,7 @@ db.once('open', async () => {
             id: 35,
             points: 500,
             activityLevel: 6,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from China today!',
             image: 'starhouse.avif'
@@ -351,6 +361,7 @@ db.once('open', async () => {
             id: 36,
             points: 500,
             activityLevel: 7,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the country today!',
             image: 'loscabos.avif'
@@ -360,6 +371,7 @@ db.once('open', async () => {
             id: 37,
             points: 500,
             activityLevel: 7,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the country today!',
             image: 'mexicocity.avif'
@@ -369,6 +381,7 @@ db.once('open', async () => {
             id: 38,
             points: 500,
             activityLevel: 7,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the country today!',
             image: 'aztec.avif'
@@ -378,6 +391,7 @@ db.once('open', async () => {
             id: 39,
             points: 500,
             activityLevel: 8,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the country today!',
             image: '2mauro.avif'
@@ -387,6 +401,7 @@ db.once('open', async () => {
             id: 40,
             points: 500,
             activityLevel: 8,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the country today!',
             image: 'maison.avif'
@@ -396,6 +411,7 @@ db.once('open', async () => {
             id: 41,
             points: 500,
             activityLevel: 8,
+            price: 20,
             percentage: 15,
             description: 'Find the greatest representation of food from the country today!',
             image: 'aquitaine.avif'

@@ -97,6 +97,8 @@ export default function Profile() {
 
   const user = data?.user || {};
 
+console.log(user);
+
   return (
     <div style={styles.height} className="y-1 ">
       <Container>
@@ -107,6 +109,7 @@ export default function Profile() {
         <Row>
           <Col>
             <div className="container"></div>
+
             <Card style={styles.body} className='border border-tertiary'>
               <div style={styles.topCard}>
                 <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/56/200/200' />

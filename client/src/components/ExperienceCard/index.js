@@ -59,8 +59,12 @@ export default function ExperienceCard(item) {
     description,
   } = item;
 
+  const { cart } = state
+
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    console.log(cart);
+    console.log(_id);
     if (itemInCart) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
@@ -74,13 +78,11 @@ export default function ExperienceCard(item) {
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...item, purchaseQuantity: 1 }
+        experiences: { ...item, purchaseQuantity: 1 }
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
   }
-
-  const { cart } = state
 
   return (
     <div style={styles.center} className='container row text-primary'>
@@ -98,8 +100,8 @@ export default function ExperienceCard(item) {
                 <Col><h6 style={styles.green}>Member Price: ${price}</h6></Col>
               </Row>
               <Row>
-                <Col><Button variant="primary"><i className="fa fa-shopping-cart" aria-hidden="true" onClick={addToCart}></i>  Add to Cart</Button></Col>
-                <Col><Link to={`/experience/${_id}`}><Button variant="primary"><i className="fas fa-comments"></i> Reviews</Button></Link></Col>
+                <Col><Button onClick={addToCart}><i className="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</Button></Col>
+                <Col><Link to={`/experience/${_id}`}><Button><i className="fas fa-comments"></i> Reviews</Button></Link></Col>
               </Row>
             </Container>
             <br />

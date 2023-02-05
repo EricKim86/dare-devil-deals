@@ -20,7 +20,7 @@ const styles = {
 function AccessoryList() {
   const [state, dispatch] = useStoreContext();
 
-  const [currentActivityLevel, setCurrentActivityLevel] = useState(9);
+  const [currentActivityLevel, setCurrentActivityLevel] = useState(11);
 
   const { loading, data, error } = useQuery(QUERY_EXPERIENCES);
   if (error) {

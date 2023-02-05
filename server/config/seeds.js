@@ -15,6 +15,10 @@ db.once('open', async () => {
             price: 20,
             description: 'Purchase passes to go bowling and strike out today!',
             image: 'bowling.avif',
+            reviewTitle: 'Bowling with the family',
+            reviewDesc: 'What a fantastic time!  The entire family loved bowling together for the entire afternoon.',
+            reviewUser: 'FunnyBones23',
+            reviewTime: 'January 1, 2023',
         },
         {
             name: 'Concerts',
@@ -24,7 +28,11 @@ db.once('open', async () => {
             originalprice: 35,
             price: 20,
             description: 'Purchase tickets to see your favorite band live!',
-            image: 'concerts.avif'
+            image: 'concerts.avif',
+            reviewTitle: 'Metallica?  More Like MetallicNo',
+            reviewDesc: 'The music was too fast and too loud.  Parking was a nightmare and the food was too expensive.',
+            reviewUser: 'MetallicaSuperFan',
+            reviewTime: 'January 4, 2023',
         },
         {
             name: 'Skydiving',
@@ -34,7 +42,11 @@ db.once('open', async () => {
             originalprice: 150,
             price: 100,
             description: 'Purchase the ultimate thrill ride today!',
-            image: 'skydiving.avif'
+            image: 'skydiving.avif',
+            reviewTitle: 'I Forgot my Parachute',
+            reviewDesc: 'I would rather have my two feet on the ground, good thing I forgot my parachute and could not participate.',
+            reviewUser: 'FlyinLarry22',
+            reviewTime: 'January 5, 2023',
         },
         {
             name: 'Winter Activities',
@@ -44,7 +56,11 @@ db.once('open', async () => {
             originalprice: 100,
             price: 70,
             description: 'Purchase passes to go skiing, snowboarding, tubing, and more today!',
-            image: 'skiing.avif'
+            image: 'skiing.avif',
+            reviewTitle: 'Blazing down the slopes!',
+            reviewDesc: 'This was an incredible purchase!  I had so much fun falling every three seconds going down the slopes.',
+            reviewUser: 'SnowLover48',
+            reviewTime: 'January 8, 2023',
         },
         {
             name: 'Camping',
@@ -54,7 +70,11 @@ db.once('open', async () => {
             originalprice: 100,
             price: 80,
             description: 'Reserve a spot for an unforgettable trip to nature!',
-            image: 'camping.avif'
+            image: 'camping.avif',
+            reviewTitle: 'Camping Fun!',
+            reviewDesc: 'My entire family went on a weekend long camping trip!  I got attacked by bees.',
+            reviewUser: 'Waffles22',
+            reviewTime: 'January 17, 2023',
         },
         {
             name: 'Trampoline Park',
@@ -64,7 +84,11 @@ db.once('open', async () => {
             originalprice: 45,
             price: 30,
             description: 'Purchase passes to jump around!',
-            image: 'trampoline.avif'
+            image: 'trampoline.avif',
+            reviewTitle: 'Bouncing off the walls',
+            reviewDesc: 'I took my three kids for the afternoon and had an awesome time!',
+            reviewUser: 'HomerSimpson',
+            reviewTime: 'January 14, 2023',
         },
         {
             name: 'Hiking',
@@ -74,7 +98,11 @@ db.once('open', async () => {
             originalprice: 20,
             price: 10,
             description: 'Find amazing views and state park passes near you!',
-            image: 'hiking.avif'
+            image: 'hiking.avif',
+            reviewTitle: 'Not sure what I exactly paid for...',
+            reviewDesc: 'I spent $10 to hike on a free public trail for 2 hours.  What exactly did I pay for?',
+            reviewUser: 'NatureFan8',
+            reviewTime: 'January 22, 2023',
         },
         {
             name: 'Museum',
@@ -84,7 +112,11 @@ db.once('open', async () => {
             originalprice: 35,
             price: 20,
             description: 'Purchase passes to find galleries, showcases, history, and more!',
-            image: 'museum.avif'
+            image: 'museum.avif',
+            reviewTitle: 'Discovered new things!',
+            reviewDesc: 'I took my entire family to the Science Museum and we learned so much!  My kids enjoyed playing with all the interactive exhibits.',
+            reviewUser: 'FossilsAreCool',
+            reviewTime: 'January 1, 2023',
         },
         {
             name: 'Boating',
@@ -94,7 +126,11 @@ db.once('open', async () => {
             originalprice: 45,
             price: 30,
             description: 'Purchase passes to get out on the water!',
-            image: 'kayak.avif'
+            image: 'kayak.avif',
+            reviewTitle: 'Sea Sick',
+            reviewDesc: 'I purchased this experience and totally forgot that I get sea sick... my bad.',
+            reviewUser: 'LandLover5',
+            reviewTime: 'January 26, 2023',
         },
         {
             name: 'City Tours',
@@ -104,7 +140,11 @@ db.once('open', async () => {
             originalprice: 50,
             price: 40,
             description: 'Purchase passes to see a new city, or your own city with a fresh view!',
-            image: 'citytours.avif'
+            image: 'citytours.avif',
+            reviewTitle: 'Discover new things right in your backyard!',
+            reviewDesc: 'This was such a fun and easy afternoon, discovering all new attractions right in my own city.',
+            reviewUser: 'GrayHound5',
+            reviewTime: 'January 7, 2023',
         },
         {
             name: 'Spa',
@@ -124,7 +164,11 @@ db.once('open', async () => {
             originalprice: 20,
             price: 10,
             description: 'Deals on the ultimate vintage videogame experience!',
-            image: 'arcade.avif'
+            image: 'arcade.avif',
+            reviewTitle: 'I played Street Fighter for 6 hours',
+            reviewDesc: 'The title pretty much captures it all.  Street Fighter for 6 hours straight and I didnt win a single game.',
+            reviewUser: 'Ryu',
+            reviewTime: 'January 7, 2023',
         },
         {
             name: 'Live Theatre',
@@ -134,7 +178,11 @@ db.once('open', async () => {
             originalprice: 50,
             price: 30,
             description: 'Go to see your favorite comedian, play, musical, and more live!',
-            image: 'livetheatre.avif'
+            image: 'livetheatre.avif',
+            reviewTitle: 'I laughed, I cried...',
+            reviewDesc: 'All in the parking lot before I even got to the theatre.  The show was okay I guess.',
+            reviewUser: 'ClownsAreScary',
+            reviewTime: 'January 21, 2023',
         },
         {
             name: 'Sports Events',
@@ -144,7 +192,11 @@ db.once('open', async () => {
             originalprice: 60,
             price: 40,
             description: 'Purchase tickets to root for your favorite team play!',
-            image: 'baseball.avif'
+            image: 'baseball.avif',
+            reviewTitle: 'Best sport in the world',
+            reviewDesc: 'What can I say?  Baseball is such an amazing sport!  Too bad my team is terrible.',
+            reviewUser: 'CubsFan4Life',
+            reviewTime: 'January 19, 2023',
         },
         {
             name: 'Casino',
@@ -154,7 +206,11 @@ db.once('open', async () => {
             originalprice: 100,
             price: 50,
             description: 'Find ammenities to heighten your casino experience today!',
-            image: 'casino.avif'
+            image: 'casino.avif',
+            reviewTitle: 'You win some, you lose some.',
+            reviewDesc: 'Boy did I lose... ',
+            reviewUser: 'BlackJackStar58',
+            reviewTime: 'January 17, 2023',
         },
         {
             name: 'Amusement Park',
@@ -164,7 +220,11 @@ db.once('open', async () => {
             originalprice: 50,
             price: 30,
             description: 'Find and purchase tickets to the ultimate theme park of your dreams today!',
-            image: 'themepark.avif'
+            image: 'themepark.avif',
+            reviewTitle: 'Crazy day fun of crazy adventures',
+            reviewDesc: 'My family and I rode every single rollercoaster five times!',
+            reviewUser: 'DizzyFan87',
+            reviewTime: 'January 12, 2023',
         },
         {
             name: 'Fishing',
@@ -174,7 +234,11 @@ db.once('open', async () => {
             originalprice: 45,
             price: 30,
             description: 'Find the perfect spot to have your lazy day today!',
-            image: 'fishing.avif'
+            image: 'fishing.avif',
+            reviewTitle: 'Nothing beats fishing on a Sunday',
+            reviewDesc: 'I fished for the entire afternoon for only $30.  I didnt catch anything but still had a wonderful time.',
+            reviewUser: 'FishLife5',
+            reviewTime: 'January 8, 2023',
         },
         {
             name: 'Laser Tag',
@@ -184,7 +248,11 @@ db.once('open', async () => {
             originalprice: 30,
             price: 20,
             description: 'Purchase passes to have the ultimate group experience today!',
-            image: 'lasertag.avif'
+            image: 'lasertag.avif',
+            reviewTitle: 'What a BLAST!',
+            reviewDesc: 'Laser tag has come a long way since I was a kid.  I had such a blast with my family!',
+            reviewUser: 'lasersAreCool12',
+            reviewTime: 'January 18, 2023',
         },
         {
             name: 'Biking',
@@ -194,7 +262,11 @@ db.once('open', async () => {
             originalprice: 30,
             price: 20,
             description: 'Find easy going or extreme biking trails and rent a bike today!',
-            image: 'mountainbike.avif'
+            image: 'mountainbike.avif',
+            reviewTitle: 'Mountain Biking in the wonderful Mountains of Florida',
+            reviewDesc: 'I spent the afternoon mountain biking in Florida....',
+            reviewUser: 'ConfusedBiker58',
+            reviewTime: 'January 6, 2023',
         },
         {
             name: 'Movies',
@@ -204,7 +276,11 @@ db.once('open', async () => {
             originalprice: 15,
             price: 8,
             description: 'Purchase tickets to your most anticipated movies today!',
-            image: 'movietheater.avif'
+            image: 'movietheater.avif',
+            reviewTitle: 'I saw Avatar so you dont have to!',
+            reviewDesc: 'The tickets were super cheap but so was the movie... pass!',
+            reviewUser: 'BigMovieFan58',
+            reviewTime: 'January 28, 2023',
         },
         {
             name: 'Painting',
@@ -214,7 +290,11 @@ db.once('open', async () => {
             originalprice: 20,
             price: 10,
             description: 'Find a good painting spot or join in on a class today!',
-            image: 'painting.avif'
+            image: 'painting.avif',
+            reviewTitle: 'Im going to be the next Bob Ross',
+            reviewDesc: 'I learned so much in a single afternoon!  The teacher said I was going to be the next Bob Ross!.',
+            reviewUser: 'BobRoss4Life',
+            reviewTime: 'January 8, 2023',
         },
         {
             name: 'Zoo',
@@ -224,7 +304,11 @@ db.once('open', async () => {
             originalprice: 30,
             price: 20,
             description: 'Purchase passes and see the wildlife at your nearest zoo today!',
-            image: 'petzoo.avif'
+            image: 'petzoo.avif',
+            reviewTitle: 'Petting cute animals, what is not to love?',
+            reviewDesc: 'I spent the day petting cute animals for such a low price!  Definitely recommend this, especially if you have young kids that love animals.',
+            reviewUser: 'CowFanatic78',
+            reviewTime: 'January 27, 2023',
         },
         {
             name: 'Safari',
@@ -234,7 +318,11 @@ db.once('open', async () => {
             originalprice: 125,
             price: 100,
             description: 'Fill up your vacation with an unforgettable adventure today!',
-            image: 'safrai.avif'
+            image: 'safrai.avif',
+            reviewTitle: 'Fun filled afternoon with wild animals',
+            reviewDesc: 'It was amazing watching all the different types of animals from the safety of my car.',
+            reviewUser: 'LionsFan47',
+            reviewTime: 'January 20, 2023',
         },
         {
             name: 'Surfing',
@@ -244,7 +332,11 @@ db.once('open', async () => {
             originalprice: 60,
             price: 40,
             description: 'Surfs up! Find a cool spot and rent a board today!',
-            image: 'surfing.avif'
+            image: 'surfing.avif',
+            reviewTitle: 'Surfs Up, more like Thumbs up!',
+            reviewDesc: 'I had so much fun surfing for the first time.  What an incredible price!',
+            reviewUser: 'SurfHippie',
+            reviewTime: 'January 18, 2023',
         },
         {
             name: 'Swimming',
@@ -254,7 +346,11 @@ db.once('open', async () => {
             originalprice: 15,
             price: 10,
             description: 'Purchase passes to find a new and refreshing swimming spot today!',
-            image: 'swimming.avif'
+            image: 'swimming.avif',
+            reviewTitle: 'Just Keep Swimming',
+            reviewDesc: 'Nothing beats a relaxing day at the pool during the harsh heat of January.  I guess I should have purchased this later in the year...',
+            reviewUser: 'PoolBuddy58',
+            reviewTime: 'January 14, 2023',
         },
         {
             name: 'Winery',

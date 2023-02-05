@@ -131,7 +131,7 @@ console.log(user);
             </Card>
           </Col>
           <Col style={styles.containerTwo}>
-            <h3 style={styles.contact}>Friends List</h3>
+            <h3 style={styles.contact} className='border border-tertiary'>Friends List</h3>
             <h6 style={styles.white}><i className="fa-solid fas fa-hard-hat"></i> Coming Soon <i className="fa-solid fas fa-hard-hat"></i></h6>
             <Swiper
               style={styles.white}
@@ -166,13 +166,13 @@ console.log(user);
                 <SwiperSlide><img style={styles.experienceImg} className="img-fluid" src={Profile5} alt='Profile' />Henry Jordan</SwiperSlide>
               </Row>
               <br />
-              <h3 style={styles.contact}>Member Status</h3>
+              <h3 style={styles.contact} className='border border-tertiary'>Member Status</h3>
               <h6 style={styles.white}><i className="fa-solid fas fa-hard-hat"></i> Coming Soon <i className="fa-solid fas fa-hard-hat"></i></h6>
             </Swiper>
           </Col>
 
           <div className="container">
-            <h3 style={styles.contact}>My Experiences</h3>
+            <h3 style={styles.contact} className='border border-tertiary'>My Experiences</h3>
             <Swiper
               style={styles.white}
               freeMode={true}

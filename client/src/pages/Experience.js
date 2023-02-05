@@ -104,8 +104,10 @@ export default function Experience() {
                 <Col className='container' style={styles.center}>
                     <h2>User Reviews:</h2>
                     <Card className='container border border-tertiary' style={styles.reviewPost}>
-        
-                        {/* {reviews} */}
+                            <Card.Title className='fs-1'>{experience.reviewTitle}</Card.Title>
+                            <h6 className='fs-6 fw-light'>{experience.reviewUser} posted at {experience.reviewTime}</h6>
+                            {experience.reviewDesc}
+                       
                     </Card>
                 </Col>
             </Container>

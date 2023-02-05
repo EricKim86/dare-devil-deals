@@ -6,6 +6,7 @@ import { idbPromise } from '../../utils/helpers';
 import CartItem from '../CartItem';
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { Link } from 'react-router-dom';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -13,6 +14,9 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
 
 const styles = {
+  height: {
+    height: '55vh'
+  },
   main: {
     color: 'white',
     backgroundColor: '#204c39',
@@ -72,43 +76,53 @@ const Cart = () => {
 
 
   return (
-    <div style={styles.main} className="cart container">
+    <div style={styles.height}>
       <Container>
-        <br />
-        <h2>Shopping Cart</h2>
-        <br />
-        {state.cart.length ? (
-          <Container>
-            <div>
-              {state.cart.map((item) => (
-                <CartItem key={item._id} item={item} />
-              ))}
-
-              <div className="flex-row space-between">
-                <Container>
-                <br />
-                  <Row>
-                    <Col><strong>Total: ${calculateTotal()}</strong></Col>
-                  </Row>
-                  <br />
-                  <Row>
-                    <br />
-                    <br />
-                    <Col><Button onClick={submitCheckout}>Checkout</Button></Col>
-                    <br />
-                    <br />
-                    <br />
-                  </Row>
-                </Container>
-              </div>
-            </div>
-          </Container>
-        ) : (
-          <h3>
-            You have not added any experiences to your shopping cart.
-          </h3>
-        )}
+      <Link to="/Shop">← Back to Shop</Link>
       </Container>
+      <br />
+      <br />
+      <br />
+      <div style={styles.main} className="cart container">
+        <Container>
+          <br />
+          <h2>Shopping Cart</h2>
+          <br />
+          {state.cart.length ? (
+            <Container>
+              <div>
+                {state.cart.map((item) => (
+                  <CartItem key={item._id} item={item} />
+                ))}
+
+                <div className="flex-row space-between">
+                  <Container>
+                    <br />
+                    <Row>
+                      <Col><strong>Total: ${calculateTotal()}</strong></Col>
+                    </Row>
+                    <br />
+                    <Row>
+                      <br />
+                      <br />
+                      <Col><Button onClick={submitCheckout}>Checkout</Button></Col>
+                      <br />
+                      <br />
+                      <br />
+                    </Row>
+                  </Container>
+                </div>
+              </div>
+            </Container>
+          ) : (
+            <h5>
+              You have not added any experiences to your shopping cart.
+              <br />
+              <br />
+            </h5>
+          )}
+        </Container>
+      </div>
     </div>
   );
 };

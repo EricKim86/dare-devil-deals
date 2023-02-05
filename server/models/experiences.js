@@ -40,6 +40,18 @@ const experienceSchema = new Schema({
         type: Number,
         required: true
     },
+    reviewTitle:{
+        type: String,
+    },
+    reviewDesc: {
+        type: String,
+    },
+    reviewUser: {
+        type: String,
+    },
+    reviewTime: {
+        type: String,
+    },
     reviews: [
         {
             title: {

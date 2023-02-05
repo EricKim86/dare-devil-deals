@@ -1,4 +1,7 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const styles = {
     icon: {
@@ -13,13 +16,37 @@ export default function Home() {
 
     return (
         <div className='container'>
-            <div style={styles.icon}>
-                <h2>Follow Us</h2>
-                <a href='https://www.google.com' target="blank"><i style={styles.space} className='fa-brands fa-facebook'></i> </a>
-                <a href='https://www.google.com' target='blank'><i style={styles.space} className='fa-brands fa-instagram'></i> </a>
-                <a href='https://www.google.com' target='blank'><i style={styles.space} className='fa-brands fa-twitter'></i> </a>
-            </div>
+            <hr />
             <br />
+            <br />
+            <br />
+            <Container>
+                <Row>
+                <Col><div style={styles.icon}>
+                        <h2>Our Company</h2>
+                        <h5>
+                          We seek to provide an extensive collection of the most exciting experiences at an affordable price.
+                        </h5>
+                    </div></Col>
+                    <Col><div style={styles.icon}>
+                        <h2>Founders</h2>
+                        <h5>
+                        <Col><a href='https://www.google.com' target="blank">Danny Bedrossian</a></Col>
+                        <Col><a href='https://www.google.com' target='blank'>Rahel Hailu</a></Col>
+                        <Col><a href='https://www.google.com' target='blank'>Josh Carter</a></Col>
+                        <Col><a href='https://github.com/EricKim86' target='blank'>Eric Kim</a></Col>
+                        </h5>
+                    </div></Col>
+                    <Col><div style={styles.icon}>
+                        <h2>Follow Us</h2>
+                        <a href='https://www.facebook.com/' target="blank"><i style={styles.space} className='fa-brands fa-facebook'></i> </a>
+                        <a href='https://www.instagram.com/' target='blank'><i style={styles.space} className='fa-brands fa-instagram'></i> </a>
+                        <a href='https://www.twitter.com/' target='blank'><i style={styles.space} className='fa-brands fa-twitter'></i> </a>
+                    </div></Col>
+                    <br />
+                </Row>
+            </Container>
         </div >
+
     )
 }

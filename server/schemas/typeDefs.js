@@ -38,6 +38,10 @@ type Experiences {
     points: Int
     quantity: Int
     activityLevel: Int
+    reviewTitle: String
+    reviewDesc: String
+    reviewUser: String
+    reviewTime: String
     reviews: [Reviews]
 }
 

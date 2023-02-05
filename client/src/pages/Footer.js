@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom";
 
 const styles = {
     icon: {
@@ -19,27 +20,27 @@ export default function Home() {
             <br />
             <Container>
                 <Row>
-                <Col><div style={styles.icon}>
-                    <h2>Site Links</h2>
-                    <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/pitch'>Why Dare Devil Deals?</a></h6></Col>
-                    <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/motivation'>Motivation and Design</a></h6></Col>
-                    <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/technology'>Technology</a></h6></Col>
-                    <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/future'>Future Updates</a></h6></Col>
-                    <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/members'>Meet the Team</a></h6></Col>
+                    <Col><div style={styles.icon}>
+                        <h2>Site Links</h2>
+                        <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/'>Why Dare Devil Deals?</a></h6></Col>
+                        <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/'>Motivation and Design</a></h6></Col>
+                        <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/'>Technology</a></h6></Col>
+                        <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/'>Future Updates</a></h6></Col>
+                        <Col><h6><a href='https://lit-dusk-01074.herokuapp.com/'>Meet the Team</a></h6></Col>
                     </div></Col>
-                <Col><div style={styles.icon}>
+                    <Col><div style={styles.icon}>
                         <h2>Our Company</h2>
                         <h5>
-                          We seek to provide an extensive collection of the most exciting experiences at an affordable price.
+                            We seek to provide an extensive collection of the most exciting experiences at an affordable price.
                         </h5>
                     </div></Col>
                     <Col><div style={styles.icon}>
                         <h2>Founders</h2>
                         <h5>
-                        <Col><a href='https://github.com/dbedrossian' target="blank">Danny Bedrossian</a></Col>
-                        <Col><a href='https://github.com/ririhailu' target='blank'>Rahel Hailu</a></Col>
-                        <Col><a href='https://github.com/JoshuaCarter99' target='blank'>Josh Carter</a></Col>
-                        <Col><a href='https://github.com/EricKim86' target='blank'>Eric Kim</a></Col>
+                            <Col><a href='https://github.com/dbedrossian' target="blank">Danny Bedrossian</a></Col>
+                            <Col><a href='https://github.com/ririhailu' target='blank'>Rahel Hailu</a></Col>
+                            <Col><a href='https://github.com/JoshuaCarter99' target='blank'>Josh Carter</a></Col>
+                            <Col><a href='https://github.com/EricKim86' target='blank'>Eric Kim</a></Col>
                         </h5>
                     </div></Col>
                     <Col><div style={styles.icon}>
@@ -52,6 +53,5 @@ export default function Home() {
                 </Row>
             </Container>
         </div >
-
     )
 }

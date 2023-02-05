@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import ReviewCard from '../components/ReviewCard'
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';

@@ -36,9 +36,9 @@ export default function Home() {
                     <Col><div style={styles.icon}>
                         <h2>Founders</h2>
                         <h5>
-                        <Col><a href='https://www.google.com' target="blank">Danny Bedrossian</a></Col>
-                        <Col><a href='https://www.google.com' target='blank'>Rahel Hailu</a></Col>
-                        <Col><a href='https://www.google.com' target='blank'>Josh Carter</a></Col>
+                        <Col><a href='https://github.com/dbedrossian' target="blank">Danny Bedrossian</a></Col>
+                        <Col><a href='https://github.com/ririhailu' target='blank'>Rahel Hailu</a></Col>
+                        <Col><a href='https://github.com/JoshuaCarter99' target='blank'>Josh Carter</a></Col>
                         <Col><a href='https://github.com/EricKim86' target='blank'>Eric Kim</a></Col>
                         </h5>
                     </div></Col>

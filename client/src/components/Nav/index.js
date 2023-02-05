@@ -27,11 +27,11 @@ function Navigation() {
         <Navbar bg="dark" variant="dark">
           <Container>
             <Row>
-              <Col><Nav.Link href="/">Home </Nav.Link></Col>
-              <Col><Nav.Link href="/Profile">Profile</Nav.Link></Col>
-              <Col><Nav.Link href="/Feed">Feed</Nav.Link></Col>
-              <Col><Nav.Link href="/Shop">Shop</Nav.Link></Col>
-              <Col><Nav.Link href="/Cart">MyCart</Nav.Link></Col>
+              <Col><Nav.Link to="/">Home </Nav.Link></Col>
+              <Col><Nav.Link to="/profile">Profile</Nav.Link></Col>
+              <Col><Nav.Link to="/feed">Feed</Nav.Link></Col>
+              <Col><Nav.Link to="/shop">Shop</Nav.Link></Col>
+              <Col><Nav.Link to="/cart">MyCart</Nav.Link></Col>
               <Col className="mx-1"><a href="/" onClick={() => Auth.logout()}>Logout</a>
               </Col>
             </Row>

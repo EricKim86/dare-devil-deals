@@ -18,7 +18,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "dotenv": "^16.0.3"
   },
   "dependencies": {
     "swiper": "^9.0.2"

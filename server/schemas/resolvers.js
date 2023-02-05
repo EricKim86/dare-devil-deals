@@ -1,7 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Experiences, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_51MXvksHlEIi5d2ZgjcYBAv2OY2zCniO3CH3QG1OljCtZDJaKE5C1NUJXyrSczQSpneb4B6gW7sSsNkaN2h6cknSH007A81jaH6');
+require('dotenv').config();
+const stripe = require('stripe')(process.env.STRIPE_SK);
 
 const resolvers = {
   Query: {
@@ -62,8 +63,6 @@ const resolvers = {
           description: experience[i].description,
           images: [`${url}/images/${experience[i].image}`]
         });
-
-
 
         const price = await stripe.prices.create({
           product: product.id,

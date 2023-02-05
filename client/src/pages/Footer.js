@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from "react-router-dom";
 
 const styles = {
     icon: {
@@ -21,11 +22,11 @@ export default function Home() {
                 <Row>
                 <Col><div style={styles.icon}>
                     <h2>Site Links</h2>
-                    <Col><h6><a href='/pitch'>Why Dare Devil Deals?</a></h6></Col>
-                    <Col><h6><a href='/motivation'>Motivation and Design</a></h6></Col>
-                    <Col><h6><a href='/technology'>Technology</a></h6></Col>
-                    <Col><h6><a href='/future'>Future Updates</a></h6></Col>
-                    <Col><h6><a href='/members'>Meet the Team</a></h6></Col>
+                    <Col><h6><Link to='/pitch'>Why Dare Devil Deals?</Link></h6></Col>
+                    <Col><h6><Link to='/motivation'>Motivation and Design</Link></h6></Col>
+                    <Col><h6><Link to='/technology'>Technology</Link></h6></Col>
+                    <Col><h6><Link to='/future'>Future Updates</Link></h6></Col>
+                    <Col><h6><Link to='/members'>Meet the Team</Link></h6></Col>
                     </div></Col>
                 <Col><div style={styles.icon}>
                         <h2>Our Company</h2>

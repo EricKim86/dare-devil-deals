@@ -44,8 +44,9 @@ const styles = {
   body: {
     color: '#204c39',
     backgroundColor: 'white',
-    width: '25rem',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    width: '80%',
+    margin: '0 0 20px 50px'
   },
   space: {
     margin: '5px 10px 5px 10px'
@@ -97,7 +98,7 @@ export default function Profile() {
 
   const user = data?.user || {};
 
-console.log(user);
+  console.log(user);
 
   return (
     <div style={styles.height} className="y-1 ">
@@ -108,27 +109,30 @@ console.log(user);
 
         <Row>
           <Col>
-            <div className="container"></div>
-
-            <Card style={styles.body} className='border border-tertiary'>
-              <div style={styles.topCard}>
-                <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/56/200/200' />
+            <h3 style={styles.contact} className='border border-tertiary'>Profile</h3>
+        
+              <div>
+                <Card style={styles.body} className='border border-tertiary'>
+                  <div style={styles.topCard}>
+                    <Card.Img style={styles.image} variant="top" src='https://picsum.photos/id/56/200/200' />
+                  </div>
+                  <Card.Body style={styles.space}>
+                    <Card.Title>{user.userName}</Card.Title>
+                    <Card.Subtitle className="mb-2">{user.firstName} {user.lastName}</Card.Subtitle>
+                    <Card.Subtitle className="mb-2">{user.location}</Card.Subtitle>
+                    <Card.Text>
+                      {user.bio}
+                    </Card.Text>
+                    <div style={styles.contact}>
+                      <i style={styles.font} className="fa-solid fa-envelope"></i>
+                      <i style={styles.font} className="fa-brands fa-facebook-f"></i>
+                      <i style={styles.font} className="fa-brands fa-instagram"></i>
+                      <i style={styles.font} className="fa-brands fa-twitter"></i>
+                    </div>
+                  </Card.Body>
+                </Card>
               </div>
-              <Card.Body style={styles.space}>
-                <Card.Title>{user.userName}</Card.Title>
-                <Card.Subtitle className="mb-2">{user.firstName} {user.lastName}</Card.Subtitle>
-                <Card.Subtitle className="mb-2">{user.location}</Card.Subtitle>
-                <Card.Text>
-                  {user.bio}
-                </Card.Text>
-                <div style={styles.contact}>
-                  <i style={styles.font} className="fa-solid fa-envelope"></i>
-                  <i style={styles.font} className="fa-brands fa-facebook-f"></i>
-                  <i style={styles.font} className="fa-brands fa-instagram"></i>
-                  <i style={styles.font} className="fa-brands fa-twitter"></i>
-                </div>
-              </Card.Body>
-            </Card>
+           
           </Col>
           <Col style={styles.containerTwo}>
             <h3 style={styles.contact} className='border border-tertiary'>Friends List</h3>

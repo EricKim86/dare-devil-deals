@@ -17,7 +17,6 @@ const styles = {
         color: 'white',
         justifyContent: 'center',
         textAlign: 'center',
-        height: '45vh'
     },
     gray: {
         color: 'gray',
@@ -26,7 +25,6 @@ const styles = {
         color: 'white',
         backgroundColor: '#204c39',
         borderRadius: '10px',
-        width: '20rem',
         padding: '20px',
         minHeight: '20rem'
     },

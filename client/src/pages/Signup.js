@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 const styles = {
     form: {
         color: 'white',
-        width: '25rem',
+        width: '20rem',
     }
 }
 

@@ -17,7 +17,6 @@ const styles = {
         color: 'white',
         justifyContent: 'center',
         textAlign: 'center',
-        height: '48vh'
     },
     gray: {
         color: 'gray',
@@ -26,7 +25,6 @@ const styles = {
         color: 'white',
         backgroundColor: '#204c39',
         borderRadius: '10px',
-        width: '20rem',
         padding: '20px',
         minHeight: '22rem'
     },
@@ -71,27 +69,38 @@ function Feed() {
                             <SwiperSlide>
                                 <Card style={styles.body}>
                                     <Card.Title><h2>Danny Bedrossian</h2></Card.Title>
-                                    <Card.Text>text</Card.Text>
+                                    <Card.Text>Reducers and Mutations</Card.Text>
+                                    <Card.Text>Queries</Card.Text>
+                                    <Card.Text>Actions</Card.Text>
+                                    <Card.Text>Filter Functionality</Card.Text>
+                                    <Card.Text>Typedef</Card.Text>
+                                    <Card.Text>stripe</Card.Text>
                                 </Card>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Card style={styles.body}>
                                     <Card.Title><h2>Rahel Hailu</h2></Card.Title>
-                                    <Card.Text>text</Card.Text>
+                                    <Card.Text>typeDefs</Card.Text>
+                                    <Card.Text>Resolves</Card.Text>
+                                    <Card.Text>Auth</Card.Text>
+                                    <Card.Text>Power Point</Card.Text>
                                 </Card>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Card style={styles.body}>
                                     <Card.Title><h2>Joshua Carter</h2></Card.Title>
-                                    <Card.Text>text</Card.Text>
+                                    <Card.Text>Models</Card.Text>
+                                    <Card.Text>Seed File</Card.Text>
+                                    <Card.Text>TypeDefs</Card.Text>
+                                    <Card.Text>ReadMe</Card.Text>
                                 </Card>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Card style={styles.body}>
                                     <Card.Title><h2>Eric Kim</h2></Card.Title>
                                     <Card.Text>Front-end Development</Card.Text>
-                                    <Card.Text>Stripe Integration</Card.Text>
                                     <Card.Text>Auth/Web Token</Card.Text>
+                                    <Card.Text>Filter Functionality and Stripe</Card.Text>
                                     <Card.Text>TypeDefs and Resolvers</Card.Text>
                                     <Card.Text>Queries and Mutations</Card.Text>
                                     <Card.Text>Additional Seeds</Card.Text>

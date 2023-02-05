@@ -15,12 +15,10 @@ import Button from 'react-bootstrap/Button'
 
 const styles = {
   height: {
-    height: '55vh'
   },
   main: {
     color: 'white',
     backgroundColor: '#204c39',
-    width: '30rem',
     borderRadius: '10px',
     textAlign: 'center',
   },
@@ -119,6 +117,13 @@ const Cart = () => {
               You have not added any experiences to your shopping cart.
               <br />
               <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              
             </h5>
           )}
         </Container>

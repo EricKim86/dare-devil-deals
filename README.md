@@ -3,13 +3,15 @@
 *Devilishly Good Deals*
 
 ## Table Of Contents
-- [Background](#background)
-- [Creation](#creation)
-- [Screenshot](#screenshot)
-- [Link](#link)
-- [Usage](#usage)
-- [Creators](#creators)
-- [Credits](#credits)
+- [Dare Devil Deals](#dare-devil-deals)
+  - [Table Of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Creation](#creation)
+  - [Screenshot](#screenshot)
+  - [Link](#link)
+  - [Usage](#usage)
+  - [Creators](#creators)
+  - [Credits](#credits)
 
 
 ## Background
@@ -37,7 +39,7 @@ Repo:
 https://github.com/EricKim86/dare-devil-deals
 
 Heroku:
-https://.herokuapp.com/home
+[https://.herokuapp.com/home](https://lit-dusk-01074.herokuapp.com/)
 
 ## Usage
 

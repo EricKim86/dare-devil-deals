@@ -22,6 +22,12 @@ import Profile from './pages/Profile';
 import Experience from './pages/Experience';
 import UserFeed from './pages/UserFeed';
 
+import Pitch from './pages/Pitch';
+import Motivation from './pages/Motivation';
+import Technology from './pages/Technology';
+import Future from './pages/Future';
+import Members from './pages/Members';
+
 const httpLink = createHttpLink({
     uri: '/graphql',
 });
@@ -88,6 +94,26 @@ function App() {
                              <Route
                                 path="/user/:id"
                                 element={<UserFeed />}
+                            />
+                               <Route
+                                path="/motivation"
+                                element={<Motivation />}
+                            />
+                              <Route
+                                path="/pitch"
+                                element={<Pitch />}
+                            />
+                            <Route
+                                path="/technology"
+                                element={<Technology />}
+                            />
+                             <Route
+                                path="/future"
+                                element={<Future />}
+                            />
+                                <Route
+                                path="/members"
+                                element={<Members />}
                             />
                         </Routes>
                     </StoreProvider>

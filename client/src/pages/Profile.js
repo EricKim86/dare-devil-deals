@@ -173,57 +173,6 @@ console.log(user);
 
           <div className="container">
             <h3 style={styles.contact} className='border border-tertiary'>My Experiences</h3>
-            <Swiper
-              style={styles.white}
-              freeMode={true}
-              grabCursor={true}
-              modules={[FreeMode]}
-              className='mySwiper'
-              scrollbar={true}
-              slidesPerView={3}
-              spaceBetween={10}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                1100: {
-                  slidesPerView: 2,
-                  spaceBetween: 10,
-                },
-                1500: {
-                  slidesPerView: 3,
-                  spaceBetween: 10,
-                }
-              }}
-            >
-              <SwiperSlide>
-
-                <Col>Laser Tag</Col>
-                <img style={styles.experienceImg} className="img-fluid" src={Experience1} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Kayak</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience2} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Laser Tag</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience3} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Museum</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience4} alt='Experience' />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Col>Theme Park</Col>
-                <img style={styles.experienceImg} lassName="img-fluid" src={Experience5} alt='Experience' />
-              </SwiperSlide>
-
-            </Swiper>
           </div>
         </Row>
       </Container >
